@@ -1,0 +1,85 @@
+/*
+  ThriveNow Mathematics
+  KS3 Foundations in Number — shared learner-facing shell
+*/
+
+:root {
+  --tn-page: #ece7dc;
+  --tn-paper: #f7f3ea;
+  --tn-ink: #2f2f2f;
+  --tn-green: #46533d;
+  --tn-link: #315d72;
+  --tn-border: #d7ccb7;
+  --tn-focus: #8b5e00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--tn-page);
+  color: var(--tn-ink);
+}
+
+.thrivenow-skip-link {
+  position: absolute;
+  left: 12px;
+  top: -80px;
+  z-index: 1000;
+  padding: 10px 14px;
+  background: #ffffff;
+  color: var(--tn-link);
+  border: 2px solid var(--tn-link);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.thrivenow-skip-link:focus {
+  top: 12px;
+}
+
+.thrivenow-session-nav {
+  max-width: 1000px;
+  margin: 14px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.thrivenow-session-nav a {
+  display: inline-block;
+  padding: 9px 12px;
+  background: #fffaf0;
+  color: var(--tn-link);
+  border: 1px solid var(--tn-border);
+  border-radius: 9px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.thrivenow-session-nav a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--tn-focus);
+  outline-offset: 3px;
+}
+
+details > summary {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .thrivenow-session-nav {
+    padding: 0 12px;
+  }
+}

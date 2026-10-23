@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparing and Ordering Fractions | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Comparing and Ordering Fractions
+     Combined Verse-al lesson, three interactive investigations
+     and an in-page progressive practice session.
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">Comparing and Ordering Fractions</h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question: <em>How can we tell which fraction is greater when they look so different?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        comparing and ordering fractions using visual models, equivalent fractions, common denominators and benchmark values.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>Seeds of Change:</strong>
+        compare and order fractions with the same or different denominators; use equivalent fractions and common denominators;
+        compare fractions with benchmarks such as 0, 1/2 and 1; place fractions on a number line; and justify comparisons clearly.
+      </p>
+    </div>
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧠 The Knowing World</summary>
+
+      <h3>How can fractions be compared?</h3>
+
+      <p>
+        Fractions can be compared in several ways. A strong mathematician chooses the method that makes the comparison easiest to see.
+      </p>
+
+      <ul>
+        <li><strong>Same denominator:</strong> compare the numerators.</li>
+        <li><strong>Same numerator:</strong> the fraction with the smaller denominator is larger.</li>
+        <li><strong>Benchmark values:</strong> compare each fraction with 0, 1/2 or 1.</li>
+        <li><strong>Equivalent fractions:</strong> rewrite both fractions using a common denominator.</li>
+        <li><strong>Number lines:</strong> the fraction further to the right is greater.</li>
+      </ul>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>Example:</strong>
+        3/4 and 5/8 can be rewritten as 6/8 and 5/8, so <strong>3/4 &gt; 5/8</strong>.
+      </p>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>compare, order, ascending, descending, equivalent, common denominator, benchmark, numerator, denominator, greater than, less than</strong>
+      </p>
+
+      <h3>Interactive investigation: Drag-and-Drop Fraction Number Line</h3>
+
+      <p>
+        Drag each fraction card onto the number line. You can also click a card and then click the line.
+        The app checks how close your placement is to the correct position.
+      </p>
+
+      <div id="numberLineApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <div style="background:#e5edf4; border-left:6px solid #315d72; padding:13px; border-radius:10px; margin-bottom:15px;">
+          <strong>Round:</strong>
+          <span id="numberLineRoundLabel"></span>
+        </div>
+
+        <div id="fractionCardBank"
+             style="display:flex; flex-wrap:wrap; gap:10px; background:#ffffff; padding:14px; border-radius:12px; min-height:60px;">
+        </div>
+
+        <div id="numberLineTrack"
+             tabindex="0"
+             role="application"
+             aria-label="Fraction number line from zero to one. Select a fraction card, then use the left and right arrow keys to move the keyboard marker. Press Enter or Space to place the fraction."
+             onclick="placeSelectedFraction(event)"
+             onkeydown="handleNumberLineKeydown(event)"
+             ondragover="event.preventDefault()"
+             ondrop="dropFractionOnLine(event)"
+             style="position:relative; height:120px; margin:30px 18px 18px; cursor:crosshair;">
+
+          <div style="position:absolute; left:0; right:0; top:55px; height:4px; background:#46533d;"></div>
+
+          <div style="position:absolute; left:0; top:42px; width:3px; height:30px; background:#46533d;"></div>
+          <div style="position:absolute; left:50%; top:42px; width:3px; height:30px; background:#46533d;"></div>
+          <div style="position:absolute; right:0; top:42px; width:3px; height:30px; background:#46533d;"></div>
+
+          <span style="position:absolute; left:-4px; top:78px;">0</span>
+          <span style="position:absolute; left:48%; top:78px;">1/2</span>
+          <span style="position:absolute; right:-4px; top:78px;">1</span>
+
+          <div id="numberLineKeyboardCursor"
+               aria-hidden="true"
+               style="display:none; position:absolute; left:50%; top:34px; width:3px; height:44px; background:#315d72; transform:translateX(-50%);"></div>
+
+          <div id="numberLineMarkers"></div>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px;">
+          <button type="button"
+                  onclick="resetNumberLineRound()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Round
+          </button>
+
+          <button type="button"
+                  onclick="nextNumberLineRound()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            Next Round →
+          </button>
+        </div>
+
+        <div id="numberLineFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;">
+        </div>
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Which fractions were close to 1/2?</li>
+        <li>Which comparison could you make without finding a common denominator?</li>
+        <li>How does a number line prove that one fraction is greater than another?</li>
+      </ul>
+    </details>
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌍 The Human Story</summary>
+
+      <h3>Fair Shares at the Community Celebration</h3>
+
+      <p>
+        At a community celebration, groups may receive different fractions of identical cakes, trays or activity time.
+        Deciding whether the shares are fair requires comparing the actual amounts, not only the number of pieces.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Group A receives <strong>3/5</strong> of a cake. Group B receives <strong>5/8</strong> of an identical cake.
+        Which group receives more?
+      </p>
+
+      <h3>Fairness questions</h3>
+
+      <ul>
+        <li>Does a larger numerator always mean a larger fraction?</li>
+        <li>Could more pieces still represent a smaller amount?</li>
+        <li>What mathematical evidence would make the decision feel fair?</li>
+      </ul>
+
+      <h3>Interactive investigation: Community Celebration Share Checker</h3>
+
+      <div id="shareCheckerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="shareLabel" style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="shareQuestion" style="font-size:1.1em;"></div>
+
+        <label for="shareDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Which share is greater?</strong>
+        </label>
+
+        <select id="shareDecision" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="first">The first share</option>
+          <option value="second">The second share</option>
+          <option value="equal">They are equal</option>
+        </select>
+
+        <label for="shareMethod" style="display:block; margin:14px 0 6px;">
+          <strong>Which method did you use?</strong>
+        </label>
+
+        <select id="shareMethod" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose a method</option>
+          <option value="benchmark">Benchmark such as 1/2 or 1</option>
+          <option value="common">Common denominator</option>
+          <option value="visual">Visual model or number line</option>
+          <option value="same">Same numerator or denominator reasoning</option>
+        </select>
+
+        <label for="shareReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain your reasoning</strong>
+        </label>
+
+        <textarea id="shareReason"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showSharePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showShareHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkShareAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="shareSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="shareFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="sharePrevious"
+                  type="button"
+                  onclick="previousShareQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="shareNext"
+                  type="button"
+                  onclick="nextShareQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+    </details>
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🎨 The Expressive Self</summary>
+
+      <h3>Explain a difficult comparison</h3>
+
+      <p>
+        Choose two fractions that initially look difficult to compare.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>Examples:</strong>
+        5/6 and 7/9 &nbsp; | &nbsp;
+        4/7 and 3/5 &nbsp; | &nbsp;
+        7/12 and 5/8
+      </p>
+
+      <h3>Choose how to show your thinking</h3>
+
+      <ul>
+        <li>Draw both fractions on a number line.</li>
+        <li>Create equivalent fractions with a common denominator.</li>
+        <li>Use a benchmark such as 1/2 or 1.</li>
+        <li>Write a short argument using &lt;, &gt; or =.</li>
+        <li>Create a comic in which two fractions debate which is greater.</li>
+      </ul>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stem:
+        <strong>“I know ___ is greater than ___ because…”</strong>
+      </p>
+    </details>
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧩 The Designed World</summary>
+
+      <h3>Interactive design challenge: Build a Fraction Ranking Board</h3>
+
+      <p>
+        Enter four fractions, order them from least to greatest and create a visual ranking board.
+        The checker verifies the order and asks you to justify the hardest comparison.
+      </p>
+
+      <div id="rankingBoardApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <h3 style="margin-top:0;">🏗️ Fraction Ranking Board</h3>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px;">
+          <div>
+            <label for="rankFraction1"><strong>Fraction 1</strong></label>
+            <input id="rankFraction1" type="text" placeholder="Example: 3/5"
+                   style="width:100%; box-sizing:border-box; padding:9px; margin-top:5px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="rankFraction2"><strong>Fraction 2</strong></label>
+            <input id="rankFraction2" type="text" placeholder="Example: 2/3"
+                   style="width:100%; box-sizing:border-box; padding:9px; margin-top:5px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="rankFraction3"><strong>Fraction 3</strong></label>
+            <input id="rankFraction3" type="text" placeholder="Example: 3/4"
+                   style="width:100%; box-sizing:border-box; padding:9px; margin-top:5px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="rankFraction4"><strong>Fraction 4</strong></label>
+            <input id="rankFraction4" type="text" placeholder="Example: 5/6"
+                   style="width:100%; box-sizing:border-box; padding:9px; margin-top:5px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+        </div>
+
+        <button type="button"
+                onclick="generateRankingBoard()"
+                style="margin-top:14px; padding:10px 15px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+          Generate Ranking Cards
+        </button>
+
+        <div id="rankingCards"
+             style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; min-height:60px;">
+        </div>
+
+        <p style="margin-top:16px;">
+          <strong>Type your order from least to greatest:</strong>
+        </p>
+
+        <input id="rankingOrder"
+               type="text"
+               placeholder="Example: 3/5 < 2/3 < 3/4 < 5/6"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;" aria-label="Order the fractions from least to greatest">
+
+        <label for="rankingJustification" style="display:block; margin:14px 0 6px;">
+          <strong>Explain your most difficult comparison</strong>
+        </label>
+
+        <textarea id="rankingJustification"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showRankingHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Show Benchmark Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkRankingBoard()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Ranking
+          </button>
+        </div>
+
+        <div id="rankingFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Design reflection</h3>
+
+      <ul>
+        <li>Which comparison needed a common denominator?</li>
+        <li>Which fraction could be placed quickly using a benchmark?</li>
+        <li>How could your ranking board help another learner?</li>
+      </ul>
+    </details>
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌱 The Living Body</summary>
+
+      <h3>Pause before choosing a method</h3>
+
+      <p>
+        When fractions look different, it can feel as though you need a long calculation.
+        First pause and look for an easier comparison.
+      </p>
+
+      <ol>
+        <li>Are the denominators the same?</li>
+        <li>Are the numerators the same?</li>
+        <li>Can I compare each fraction with 1/2 or 1?</li>
+        <li>Would a common denominator make the comparison clearer?</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can compare fractions using a visual model.”</li>
+        <li>“I can choose between benchmarks and common denominators.”</li>
+        <li>“I can order several fractions and justify my decisions.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I do not need to use the same method every time. I can choose the comparison that makes the fractions easiest to see.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A benchmark that helped me was...</li>
+        <li>A comparison method I used successfully was...</li>
+        <li>A pair of fractions I can now compare confidently is...</li>
+      </ul>
+    </details>
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🛠 Final Task</summary>
+
+      <h3>Assignment: Create a Fraction Comparison Guide</h3>
+
+      <p>
+        Design a poster, report, slide or digital guide that teaches another learner how to compare and order fractions.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>one comparison using the same denominator</li>
+        <li>one comparison using the same numerator</li>
+        <li>one comparison using a benchmark such as 1/2 or 1</li>
+        <li>one comparison using a common denominator</li>
+        <li>at least four fractions ordered from least to greatest</li>
+        <li>a number-line or fraction-bar model</li>
+        <li>a written explanation of the hardest comparison</li>
+        <li>a short reflection on which strategy was most efficient</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to compare rational numbers, choose efficient representations,
+        use equivalence flexibly and justify numerical order.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; min-width:850px; border-collapse:collapse; background:#fffaf0;">
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Extending</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Conceptual Understanding</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can compare some fractions using a visual model and support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use familiar benchmarks or equivalent fractions with prompts.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain why one fraction is greater and choose an appropriate comparison method.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can compare methods and justify which is most efficient for different fraction pairs.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Fluency &amp; Accuracy</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can order familiar fractions with support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can compare and order fractions, though I may make occasional equivalence errors.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can accurately compare and order fractions using benchmarks and common denominators.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work efficiently with close or less familiar fractions and check using another method.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Application to Problems</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can attempt a familiar sharing problem when a model is provided.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use comparison in familiar fairness or measure contexts with some support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can apply fraction comparison to practical problems and explain whether a decision is fair.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can design, test and justify my own fraction-ranking situation.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Independence &amp; Reflection</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can begin with support and identify when I need help.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use a suggested model or method and respond to feedback.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can choose a method, check my order and explain what helped me learn.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work independently, refine my reasoning and compare several valid strategies.</td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        How do you decide which comparison method is most useful?
+      </p>
+    </details>
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to the session whenever you need to review a benchmark, number line or common-denominator method.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">Comparing and Ordering Fractions Practice</h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+      <p style="margin-top:0;">
+        Work through eight questions involving comparison symbols, benchmarks, common denominators, ordering and reasoning.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">Your working:</label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">Your final answer:</label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+      <summary style="font-size:1.25em; font-weight:bold;">💛 Reflection</summary>
+
+      <ul>
+        <li>A benchmark that helped me was...</li>
+        <li>A comparison that needed a common denominator was...</li>
+        <li>A fraction order I checked using a number line was...</li>
+        <li>A method I would like to practise again is...</li>
+      </ul>
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+
+<script>
+(function () {
+  const rounds = [
+    [
+      { label: "1/4", value: 0.25 },
+      { label: "1/2", value: 0.5 },
+      { label: "3/4", value: 0.75 }
+    ],
+    [
+      { label: "2/5", value: 0.4 },
+      { label: "3/5", value: 0.6 },
+      { label: "4/5", value: 0.8 }
+    ],
+    [
+      { label: "5/12", value: 5 / 12 },
+      { label: "7/12", value: 7 / 12 },
+      { label: "5/6", value: 5 / 6 }
+    ]
+  ];
+
+  let currentRound = 0;
+  let selectedFraction = null;
+  let placedCount = 0;
+
+  function renderRound() {
+    selectedFraction = null;
+    placedCount = 0;
+
+    document.getElementById("numberLineRoundLabel").textContent =
+      (currentRound + 1) + " of " + rounds.length;
+
+    const bank = document.getElementById("fractionCardBank");
+    const markers = document.getElementById("numberLineMarkers");
+    bank.innerHTML = "";
+    markers.innerHTML = "";
+
+    rounds[currentRound].forEach(function (fraction, index) {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.textContent = fraction.label;
+      card.draggable = true;
+      card.dataset.index = String(index);
+
+      card.onclick = function () {
+        selectedFraction = index;
+        Array.from(bank.children).forEach(function (item) {
+          item.style.boxShadow = "none";
+        });
+        card.style.boxShadow = "0 0 0 3px #d7b765";
+      };
+
+      card.ondragstart = function (event) {
+        event.dataTransfer.setData("text/plain", String(index));
+      };
+
+      card.style.padding = "10px 16px";
+      card.style.borderRadius = "9px";
+      card.style.border = "1px solid #738697";
+      card.style.background = "#fffaf0";
+      card.style.cursor = "grab";
+      card.style.fontWeight = "bold";
+
+      bank.appendChild(card);
+    });
+
+    document.getElementById("numberLineFeedback").style.display = "none";
+  }
+
+  function placeFractionAt(index, xPosition) {
+    const track = document.getElementById("numberLineTrack");
+    const rect = track.getBoundingClientRect();
+    const fraction = rounds[currentRound][index];
+    const proportion = (xPosition - rect.left) / rect.width;
+    const difference = Math.abs(proportion - fraction.value);
+    const feedback = document.getElementById("numberLineFeedback");
+
+    feedback.style.display = "block";
+
+    if (difference <= 0.06) {
+      const marker = document.createElement("div");
+      marker.style.position = "absolute";
+      marker.style.left = (fraction.value * 100) + "%";
+      marker.style.top = "20px";
+      marker.style.transform = "translateX(-50%)";
+      marker.style.padding = "5px 8px";
+      marker.style.background = "#dcebd8";
+      marker.style.border = "1px solid #4d6b47";
+      marker.style.borderRadius = "7px";
+      marker.style.fontWeight = "bold";
+      marker.textContent = fraction.label;
+
+      document.getElementById("numberLineMarkers").appendChild(marker);
+
+      const bank = document.getElementById("fractionCardBank");
+      const card = bank.querySelector('[data-index="' + index + '"]');
+
+      if (card) {
+        card.disabled = true;
+        card.style.opacity = "0.45";
+        card.style.boxShadow = "none";
+      }
+
+      selectedFraction = null;
+      placedCount++;
+
+      feedback.style.background = "#e3f0df";
+      feedback.textContent = "Good placement. This fraction is close to its correct position.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That placement is not close enough yet. Compare the fraction with 1/2 and 1, then try again.";
+    }
+  }
+
+  window.placeSelectedFraction = function (event) {
+    if (selectedFraction === null) {
+      return;
+    }
+
+    placeFractionAt(selectedFraction, event.clientX);
+  };
+
+  window.dropFractionOnLine = function (event) {
+    event.preventDefault();
+    const index = Number(event.dataTransfer.getData("text/plain"));
+
+    if (Number.isInteger(index)) {
+      placeFractionAt(index, event.clientX);
+    }
+  };
+
+
+  let keyboardProportion = 0.5;
+
+  function updateKeyboardCursor() {
+    const cursor = document.getElementById("numberLineKeyboardCursor");
+
+    if (!cursor) {
+      return;
+    }
+
+    cursor.style.display = "block";
+    cursor.style.left = (keyboardProportion * 100) + "%";
+  }
+
+  window.handleNumberLineKeydown = function (event) {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      keyboardProportion = Math.max(0, keyboardProportion - 0.02);
+      updateKeyboardCursor();
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      keyboardProportion = Math.min(1, keyboardProportion + 0.02);
+      updateKeyboardCursor();
+      return;
+    }
+
+    if (event.key === "Home") {
+      event.preventDefault();
+      keyboardProportion = 0;
+      updateKeyboardCursor();
+      return;
+    }
+
+    if (event.key === "End") {
+      event.preventDefault();
+      keyboardProportion = 1;
+      updateKeyboardCursor();
+      return;
+    }
+
+    if ((event.key === "Enter" || event.key === " ") && selectedFraction !== null) {
+      event.preventDefault();
+
+      const track = document.getElementById("numberLineTrack");
+      const rect = track.getBoundingClientRect();
+      const xPosition = rect.left + (keyboardProportion * rect.width);
+
+      placeFractionAt(selectedFraction, xPosition);
+    }
+  };
+
+  window.resetNumberLineRound = renderRound;
+
+  window.nextNumberLineRound = function () {
+    currentRound = (currentRound + 1) % rounds.length;
+    renderRound();
+  };
+
+  renderRound();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Share comparison 1 of 4",
+      question: "Group A receives <strong>3/5</strong> of a cake. Group B receives <strong>5/8</strong>. Which share is greater?",
+      answer: "second",
+      prompt: "Could both fractions be written with denominator 40?",
+      hint: "3/5 = 24/40 and 5/8 = 25/40."
+    },
+    {
+      label: "Share comparison 2 of 4",
+      question: "Group A receives <strong>2/3</strong> of a tray. Group B receives <strong>3/4</strong>. Which share is greater?",
+      answer: "second",
+      prompt: "Which fraction is closer to one whole?",
+      hint: "2/3 = 8/12 and 3/4 = 9/12."
+    },
+    {
+      label: "Share comparison 3 of 4",
+      question: "Group A receives <strong>5/10</strong> of the activity time. Group B receives <strong>1/2</strong>. Which share is greater?",
+      answer: "equal",
+      prompt: "Can 5/10 be simplified?",
+      hint: "Divide 5 and 10 by 5."
+    },
+    {
+      label: "Share comparison 4 of 4",
+      question: "Group A receives <strong>7/12</strong> of the drinks. Group B receives <strong>3/5</strong>. Which share is greater?",
+      answer: "second",
+      prompt: "Could both fractions be compared using denominator 60?",
+      hint: "7/12 = 35/60 and 3/5 = 36/60."
+    }
+  ];
+
+  let current = 0;
+  const decisions = new Array(questions.length).fill("");
+  const methods = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    decisions[current] = document.getElementById("shareDecision").value;
+    methods[current] = document.getElementById("shareMethod").value;
+    reasons[current] = document.getElementById("shareReason").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("shareLabel").textContent = questions[current].label;
+    document.getElementById("shareQuestion").innerHTML = questions[current].question;
+    document.getElementById("shareDecision").value = decisions[current];
+    document.getElementById("shareMethod").value = methods[current];
+    document.getElementById("shareReason").value = reasons[current];
+
+    document.getElementById("shareSupport").style.display = "none";
+    document.getElementById("shareFeedback").style.display = "none";
+
+    const previous = document.getElementById("sharePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("shareNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showSharePrompt = function () {
+    const box = document.getElementById("shareSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showShareHint = function () {
+    const box = document.getElementById("shareSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkShareAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("shareFeedback");
+    feedback.style.display = "block";
+
+    if (!decisions[current] || !methods[current] || reasons[current].trim().length < 8) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a share, select a method and include a brief explanation.";
+      return;
+    }
+
+    if (decisions[current] === questions[current].answer) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct comparison. Your chosen method can support a fair decision.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Rewrite the fractions using a common denominator or compare each with a benchmark.";
+    }
+  };
+
+  window.previousShareQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextShareQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("shareFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 4 comparisons correctly. Review any unfinished questions.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  let rankingFractions = [];
+
+  function parseFraction(value) {
+    const parts = value.trim().split("/");
+
+    if (parts.length !== 2) {
+      return null;
+    }
+
+    const numerator = Number(parts[0]);
+    const denominator = Number(parts[1]);
+
+    if (
+      !Number.isFinite(numerator) ||
+      !Number.isFinite(denominator) ||
+      denominator === 0
+    ) {
+      return null;
+    }
+
+    return {
+      text: numerator + "/" + denominator,
+      value: numerator / denominator
+    };
+  }
+
+  function generateRankingBoard() {
+    const ids = [
+      "rankFraction1",
+      "rankFraction2",
+      "rankFraction3",
+      "rankFraction4"
+    ];
+
+    rankingFractions = ids.map(function (id) {
+      return parseFraction(document.getElementById(id).value);
+    });
+
+    const feedback = document.getElementById("rankingFeedback");
+    const cards = document.getElementById("rankingCards");
+    cards.innerHTML = "";
+
+    if (rankingFractions.some(function (fraction) { return fraction === null; })) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Enter four valid fractions using numerator/denominator notation.";
+      return;
+    }
+
+    feedback.style.display = "none";
+
+    rankingFractions.forEach(function (fraction) {
+      const card = document.createElement("div");
+      card.textContent = fraction.text;
+      card.style.padding = "12px 18px";
+      card.style.background = "#fffaf0";
+      card.style.border = "2px solid #8b8f75";
+      card.style.borderRadius = "10px";
+      card.style.fontWeight = "bold";
+      cards.appendChild(card);
+    });
+  }
+
+  function showRankingHint() {
+    const feedback = document.getElementById("rankingFeedback");
+    feedback.style.display = "block";
+    feedback.style.background = "#fff1cf";
+    feedback.textContent =
+      "Benchmark hint: compare each fraction with 1/2 and 1 first. Fractions still close together may need a common denominator.";
+  }
+
+  function checkRankingBoard() {
+    const orderText = document.getElementById("rankingOrder").value.trim();
+    const justification = document.getElementById("rankingJustification").value.trim();
+    const feedback = document.getElementById("rankingFeedback");
+
+    feedback.style.display = "block";
+
+    if (rankingFractions.length !== 4 || rankingFractions.some(function (f) { return f === null; })) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Generate four valid fraction cards first.";
+      return;
+    }
+
+    if (!orderText || justification.length < 15) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Type the complete order and include a fuller explanation of the hardest comparison.";
+      return;
+    }
+
+    const entered = orderText
+      .replace(/≤/g, "<")
+      .split("<")
+      .map(function (part) {
+        return parseFraction(part.trim());
+      });
+
+    if (entered.length !== 4 || entered.some(function (f) { return f === null; })) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Write the order using fractions separated by < symbols.";
+      return;
+    }
+
+    const expected = rankingFractions
+      .slice()
+      .sort(function (a, b) { return a.value - b.value; });
+
+    const correct = entered.every(function (fraction, index) {
+      return Math.abs(fraction.value - expected[index].value) < 0.000001;
+    });
+
+    if (correct) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your fractions are correctly ordered. Your explanation should name the method that made the closest comparison clear.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "The order is not correct yet. Compare each fraction with 1/2 or rewrite the closest pair using a common denominator.";
+    }
+  }
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Same denominator",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>3/8 ___ 5/8</strong>",
+      answers: ["<"],
+      prompt: "The denominators are equal. Which numerator is larger?",
+      hint: "When denominators are the same, compare the numerators.",
+      solution: "3 eighths is less than 5 eighths, so 3/8 < 5/8."
+    },
+    {
+      label: "Question 2 of 8 · Same numerator",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>3/5 ___ 3/7</strong>",
+      answers: [">"],
+      prompt: "If the numerator stays the same, which denominator gives larger pieces?",
+      hint: "Fifths are larger pieces than sevenths.",
+      solution: "With the same numerator, the smaller denominator gives the larger fraction, so 3/5 > 3/7."
+    },
+    {
+      label: "Question 3 of 8 · Benchmark",
+      text: "Which is greater: <strong>5/8</strong> or <strong>1/2</strong>?",
+      answers: ["5/8"],
+      prompt: "What fraction with denominator 8 is equal to 1/2?",
+      hint: "1/2 = 4/8.",
+      solution: "5/8 is greater than 4/8, so 5/8 > 1/2."
+    },
+    {
+      label: "Question 4 of 8 · Common denominator",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>3/4 ___ 5/6</strong>",
+      answers: ["<"],
+      prompt: "What common denominator could be used for 4 and 6?",
+      hint: "Rewrite both fractions with denominator 12.",
+      solution: "3/4 = 9/12 and 5/6 = 10/12, so 3/4 < 5/6."
+    },
+    {
+      label: "Question 5 of 8 · Ordering",
+      text: "Write these fractions in ascending order:<br><strong>1/2, 3/4, 2/3</strong>",
+      answers: [
+        "1/2 < 2/3 < 3/4",
+        "1/2, 2/3, 3/4"
+      ],
+      prompt: "Which is exactly the benchmark 1/2? Which is closest to 1?",
+      hint: "Use denominator 12: 6/12, 8/12 and 9/12.",
+      solution: "1/2 = 6/12, 2/3 = 8/12 and 3/4 = 9/12."
+    },
+    {
+      label: "Question 6 of 8 · Close fractions",
+      text: "Which is greater: <strong>7/12</strong> or <strong>3/5</strong>?",
+      answers: ["3/5"],
+      prompt: "Could both fractions be rewritten with denominator 60?",
+      hint: "7/12 = 35/60 and 3/5 = 36/60.",
+      solution: "36/60 is greater than 35/60, so 3/5 is greater."
+    },
+    {
+      label: "Question 7 of 8 · Four-fraction order",
+      text: "Write these fractions in descending order:<br><strong>5/6, 2/3, 3/4, 7/12</strong>",
+      answers: [
+        "5/6 > 3/4 > 2/3 > 7/12",
+        "5/6, 3/4, 2/3, 7/12"
+      ],
+      prompt: "Would denominator 12 help compare all four?",
+      hint: "Rewrite them as 10/12, 8/12, 9/12 and 7/12.",
+      solution: "The order is 10/12, 9/12, 8/12, 7/12."
+    },
+    {
+      label: "Question 8 of 8 · Reasoning challenge",
+      text: "A learner says <strong>4/7 is greater than 3/5 because 4 is greater than 3</strong>. Is the learner correct? Type <strong>yes</strong> or <strong>no</strong> and give a brief reason.",
+      answers: [
+        "no",
+        "no 4/7 < 3/5",
+        "no because 20/35 < 21/35"
+      ],
+      prompt: "Can the numerators be compared safely when the denominators are different?",
+      hint: "Rewrite both fractions with denominator 35.",
+      solution: "No. 4/7 = 20/35 and 3/5 = 21/35, so 4/7 is smaller."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = question.label;
+    document.getElementById("practiceQuestion").innerHTML = question.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (item) {
+      const accepted = normalise(item);
+
+      if (current === 7) {
+        return response === accepted || response.indexOf(accepted) === 0;
+      }
+
+      return response === accepted;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your comparison or ordering is accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Decide whether a benchmark or common denominator would make the comparison clearer.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and check the order carefully. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " + questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

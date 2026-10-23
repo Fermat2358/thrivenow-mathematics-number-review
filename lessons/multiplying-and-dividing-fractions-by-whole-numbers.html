@@ -1,0 +1,1887 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multiplying Fractions and Dividing Fractions by Whole Numbers | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Multiplying Fractions and Dividing Fractions by Whole Numbers
+     Includes:
+     • Option 1: Fraction Array and Bar Multiplier
+     • Option 2: Fraction Sharing Divider
+     • Option 5: Community Kitchen Batch Planner
+     • Option 7: Fraction Scaling Machine
+     • Final Task and Assessment Rubric
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">
+      Multiplying Fractions and Dividing Fractions by Whole Numbers
+    </h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question:
+      <em>What happens to a fraction when we repeat it or share it equally?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        fractions, decimals and percentages as connected representations of number.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>Seeds of Change:</strong>
+        multiply proper fractions and mixed numbers by whole numbers; understand multiplication as repeated addition and scaling;
+        divide proper fractions by whole numbers through equal sharing; simplify answers; convert improper fractions to mixed numbers;
+        and solve practical fraction problems.
+      </p>
+    </div>
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧠 The Knowing World</summary>
+
+      <h3>Multiplying a fraction by a whole number</h3>
+
+      <p>
+        Multiplying a fraction by a whole number can be understood as repeated addition.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>3 × 2/5 = 2/5 + 2/5 + 2/5 = 6/5 = 1 1/5</strong>
+      </p>
+
+      <p>
+        The denominator stays the same because the size of each fractional piece does not change.
+        The numerator is multiplied because the number of pieces increases.
+      </p>
+
+      <h3>Dividing a fraction by a whole number</h3>
+
+      <p>
+        Dividing a fraction by a whole number means sharing the fractional amount equally.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>3/4 ÷ 3 = 1/4</strong>
+      </p>
+
+      <p>
+        Three quarters shared equally between three groups gives one quarter to each group.
+        When the numerator does not divide exactly, the fraction can be rewritten in smaller equivalent parts.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>Example:</strong>
+        2/3 ÷ 4 = 2/12 = 1/6.
+      </p>
+
+      <h3>Reasonableness checks</h3>
+
+      <ul>
+        <li>Multiplying by a whole number greater than 1 should make the quantity larger.</li>
+        <li>Dividing by a whole number greater than 1 should make each share smaller.</li>
+        <li>An improper fraction can be rewritten as a mixed number.</li>
+        <li>Final answers should be simplified where possible.</li>
+      </ul>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>multiply, divide, repeated addition, equal sharing, proper fraction, improper fraction, mixed number, simplify, scale</strong>
+      </p>
+
+      <h3>Interactive investigation 1: Fraction Array and Bar Multiplier</h3>
+
+      <p>
+        Choose a fraction and a whole-number multiplier. Predict the result, build repeated copies and enter the final simplified answer.
+      </p>
+
+      <div id="fractionMultiplierApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="multiplierFraction" style="display:block; margin-bottom:6px;">
+          <strong>Choose a fraction</strong>
+        </label>
+
+        <select id="multiplierFraction"
+                onchange="renderMultiplierModel()"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="1/4">1/4</option>
+          <option value="2/5">2/5</option>
+          <option value="3/8">3/8</option>
+          <option value="2/3">2/3</option>
+          <option value="3/4">3/4</option>
+        </select>
+
+        <label for="wholeMultiplier" style="display:block; margin:14px 0 6px;">
+          <strong>Multiply by</strong>
+        </label>
+
+        <select id="wholeMultiplier"
+                onchange="renderMultiplierModel()"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+
+        <label for="multiplierPrediction" style="display:block; margin:14px 0 6px;">
+          <strong>Before calculating, predict the size of the result</strong>
+        </label>
+
+        <select id="multiplierPrediction"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose a prediction</option>
+          <option value="less1">Less than 1</option>
+          <option value="equal1">Equal to 1</option>
+          <option value="greater1">Greater than 1</option>
+        </select>
+
+        <div id="multiplierModel"
+             style="margin-top:16px; background:#ffffff; padding:14px; border-radius:10px;">
+        </div>
+
+        <label for="multiplierAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Final simplified answer</strong>
+        </label>
+
+        <input id="multiplierAnswer"
+               type="text"
+               placeholder="Example: 1 1/5"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showMultiplierPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showMultiplierHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkMultiplierAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="multiplierSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="multiplierFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Interactive investigation 2: Fraction Sharing Divider</h3>
+
+      <p>
+        Choose a fraction and share it equally between a whole number of groups.
+        The visual model shows the starting amount, but you must calculate each group’s share.
+      </p>
+
+      <div id="fractionDividerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px; margin-top:16px;">
+
+        <label for="dividerFraction" style="display:block; margin-bottom:6px;">
+          <strong>Fraction to share</strong>
+        </label>
+
+        <select id="dividerFraction"
+                onchange="renderDividerModel()"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="3/4">3/4</option>
+          <option value="2/3">2/3</option>
+          <option value="4/5">4/5</option>
+          <option value="5/6">5/6</option>
+          <option value="3/8">3/8</option>
+        </select>
+
+        <label for="dividerGroups" style="display:block; margin:14px 0 6px;">
+          <strong>Number of equal groups</strong>
+        </label>
+
+        <select id="dividerGroups"
+                onchange="renderDividerModel()"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="2">2 groups</option>
+          <option value="3">3 groups</option>
+          <option value="4">4 groups</option>
+          <option value="5">5 groups</option>
+        </select>
+
+        <div id="dividerModel"
+             style="margin-top:16px; background:#ffffff; padding:14px; border-radius:10px;">
+        </div>
+
+        <label for="dividerAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Share received by each group</strong>
+        </label>
+
+        <input id="dividerAnswer"
+               type="text"
+               placeholder="Example: 1/4"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showDividerPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showDividerHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkDividerAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="dividerSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="dividerFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why does multiplying by a whole number increase the number of fractional pieces?</li>
+        <li>Why does dividing a fraction between more groups make each share smaller?</li>
+        <li>When does a multiplied fraction become greater than one whole?</li>
+      </ul>
+    </details>
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌍 The Human Story</summary>
+
+      <h3>Scaling food for a community meal</h3>
+
+      <p>
+        Community kitchens often multiply ingredient quantities when preparing several batches of food.
+        Leftover ingredients may then be divided equally between cooking stations, families or storage containers.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        If each tray needs <strong>3/4 kg</strong> of vegetables, then five trays need
+        <strong>5 × 3/4 kg</strong>.
+      </p>
+
+      <h3>Fairness and sustainability</h3>
+
+      <ul>
+        <li>Why is accurate scaling important when many people depend on a meal?</li>
+        <li>How can equal sharing prevent waste or shortage?</li>
+        <li>What might happen if a fractional quantity is multiplied or divided incorrectly?</li>
+      </ul>
+
+      <h3>Interactive investigation: Community Kitchen Batch Planner</h3>
+
+      <div id="batchPlannerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="batchLabel" style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="batchQuestion" style="font-size:1.1em;"></div>
+
+        <label for="batchOperation" style="display:block; margin:14px 0 6px;">
+          <strong>Which operation is needed?</strong>
+        </label>
+
+        <select id="batchOperation"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="multiply">Multiply</option>
+          <option value="divide">Divide</option>
+        </select>
+
+        <label for="batchWorking" style="display:block; margin:14px 0 6px;">
+          <strong>Your working</strong>
+        </label>
+
+        <textarea id="batchWorking"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <label for="batchAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Final simplified answer</strong>
+        </label>
+
+        <input id="batchAnswer"
+               type="text"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showBatchPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showBatchHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkBatchAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="batchSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="batchFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="batchPrevious"
+                  type="button"
+                  onclick="previousBatchQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="batchNext"
+                  type="button"
+                  onclick="nextBatchQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+    </details>
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🎨 The Expressive Self</summary>
+
+      <h3>Explain scaling in your own way</h3>
+
+      <p>
+        Choose one multiplication or division calculation and show what happens to the quantity.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>Choose from:</strong>
+        4 × 2/5 &nbsp; | &nbsp;
+        3 × 3/4 &nbsp; | &nbsp;
+        2/3 ÷ 2 &nbsp; | &nbsp;
+        3/4 ÷ 3
+      </p>
+
+      <h3>Choose how to express your thinking</h3>
+
+      <ul>
+        <li>Draw repeated fraction bars.</li>
+        <li>Create an equal-sharing diagram.</li>
+        <li>Write a short explanation using numerator and denominator.</li>
+        <li>Create a comic showing a fraction being repeated or shared.</li>
+        <li>Record a spoken explanation.</li>
+      </ul>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stems:
+        <strong>“The result becomes larger because…”</strong><br>
+        <strong>“Each share becomes smaller because…”</strong>
+      </p>
+    </details>
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧩 The Designed World</summary>
+
+      <h3>Interactive design challenge: Build a Fraction Scaling Machine</h3>
+
+      <p>
+        Design a machine that accepts a fraction, multiplies or divides it by a whole number and produces a simplified output.
+      </p>
+
+      <div id="scalingMachineApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <h3 style="margin-top:0;">⚙️ Fraction Scaling Machine</h3>
+
+        <label for="machineName" style="display:block; margin-bottom:6px;">
+          <strong>Name your machine</strong>
+        </label>
+
+        <input id="machineName"
+               type="text"
+               placeholder="Example: The Fraction Transformer"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div id="machineRows" style="margin-top:15px;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="addMachineRow()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            + Add Input and Output
+          </button>
+
+          <button type="button"
+                  onclick="checkScalingMachine()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Test My Machine
+          </button>
+
+          <button type="button"
+                  onclick="resetScalingMachine()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Machine
+          </button>
+        </div>
+
+        <label for="machineExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain how your machine changes quantities</strong>
+        </label>
+
+        <textarea id="machineExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div id="machinePreview"
+             style="margin-top:18px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="machineFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Machine requirements</h3>
+
+      <ul>
+        <li>At least two multiplication examples.</li>
+        <li>At least two division examples.</li>
+        <li>One result greater than one.</li>
+        <li>One mixed-number output.</li>
+        <li>One answer that needs simplifying.</li>
+        <li>A written explanation of one input-output rule.</li>
+      </ul>
+    </details>
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌱 The Living Body</summary>
+
+      <h3>Predict before calculating</h3>
+
+      <p>
+        Before multiplying or dividing, pause and predict how the size of the quantity should change.
+      </p>
+
+      <ol>
+        <li>Name the starting fraction.</li>
+        <li>Notice whether you are multiplying or dividing.</li>
+        <li>Predict whether the answer should be larger or smaller.</li>
+        <li>Calculate one step at a time.</li>
+        <li>Simplify and compare the answer with your prediction.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can model repeated addition using fraction bars.”</li>
+        <li>“I can divide a fractional amount into equal shares.”</li>
+        <li>“I can calculate, simplify and check whether my answer is sensible.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I can picture what is happening before I use a rule. My estimate can help me notice an error.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A result that crossed one whole was...</li>
+        <li>An equal-sharing model that helped me was...</li>
+        <li>A prediction that helped me check an answer was...</li>
+      </ul>
+    </details>
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🛠 Final Task</summary>
+
+      <h3>Assignment: Design a Community Kitchen Scaling Plan</h3>
+
+      <p>
+        Create a plan showing how ingredients are scaled for several batches and how leftovers are shared equally.
+        Present your work as a poster, report, slide or digital model.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>two examples of multiplying a fraction by a whole number</li>
+        <li>two examples of dividing a fraction by a whole number</li>
+        <li>one answer greater than one</li>
+        <li>one improper fraction converted to a mixed number</li>
+        <li>one answer simplified</li>
+        <li>one repeated-addition or fraction-bar model</li>
+        <li>one equal-sharing diagram</li>
+        <li>a reasonableness check for at least one answer</li>
+        <li>a written explanation of how accurate scaling supports fairness and reduces waste</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to calculate with rational numbers, interpret multiplication as scaling,
+        understand division as equal sharing and justify whether a result is reasonable.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; min-width:850px; border-collapse:collapse; background:#fffaf0;">
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Extending</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Conceptual Understanding</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can model some repeated fractions or equal shares with support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain multiplication as repeated addition and division as equal sharing using a model.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain how multiplying and dividing change a fractional quantity and connect models to calculations.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can generalise scaling patterns and compare different representations or methods.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Fluency &amp; Accuracy</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can complete some calculations using a model or prompt.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can multiply and divide familiar fractions, though I may make simplifying or conversion errors.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can accurately multiply fractions by whole numbers, divide fractions by whole numbers and simplify results.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work efficiently with less familiar values and verify outputs using an inverse or visual method.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Application to Problems</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can attempt a familiar scaling or sharing problem when the operation is given.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can solve familiar recipe and sharing problems with some support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can select the correct operation, solve practical problems and judge whether answers are reasonable.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can design, test and refine my own fraction-scaling model with meaningful constraints.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Independence &amp; Reflection</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can begin with support and identify when I need help.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use a suggested visual or method and respond to feedback.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can choose a strategy, check my answer and explain what helped me succeed.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work independently, refine a model and reflect on how scaling affects the result.</td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        How can you predict whether a fraction calculation will make a quantity larger or smaller?
+      </p>
+    </details>
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to the session whenever you need to review repeated addition, equal sharing, simplifying or mixed numbers.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">
+      Multiplying and Dividing Fractions Practice
+    </h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+      <p style="margin-top:0;">
+        Work through eight questions involving repeated addition, improper fractions, mixed numbers, equal sharing and practical problems.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">
+        Your working:
+      </label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">
+        Your final answer:
+      </label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+      <summary style="font-size:1.25em; font-weight:bold;">💛 Reflection</summary>
+
+      <ul>
+        <li>A multiplication I modelled as repeated addition was...</li>
+        <li>An equal-sharing calculation I now understand is...</li>
+        <li>A result I converted to a mixed number was...</li>
+        <li>A question I would like to revisit is...</li>
+      </ul>
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+
+<script>
+  function greatestCommonFactor(a, b) {
+    a = Math.abs(a);
+    b = Math.abs(b);
+
+    while (b !== 0) {
+      const temporary = b;
+      b = a % b;
+      a = temporary;
+    }
+
+    return a;
+  }
+
+  function parseFractionText(value) {
+    const cleaned = value.trim();
+
+    if (!cleaned) {
+      return null;
+    }
+
+    if (cleaned.indexOf(" ") !== -1) {
+      const mixedParts = cleaned.split(/\s+/);
+
+      if (mixedParts.length !== 2) {
+        return null;
+      }
+
+      const whole = Number(mixedParts[0]);
+      const fraction = parseFractionText(mixedParts[1]);
+
+      if (!Number.isFinite(whole) || fraction === null) {
+        return null;
+      }
+
+      return {
+        numerator: whole * fraction.denominator + fraction.numerator,
+        denominator: fraction.denominator
+      };
+    }
+
+    if (cleaned.indexOf("/") !== -1) {
+      const parts = cleaned.split("/");
+
+      if (parts.length !== 2) {
+        return null;
+      }
+
+      const numerator = Number(parts[0]);
+      const denominator = Number(parts[1]);
+
+      if (
+        !Number.isInteger(numerator) ||
+        !Number.isInteger(denominator) ||
+        denominator === 0
+      ) {
+        return null;
+      }
+
+      return {
+        numerator: numerator,
+        denominator: denominator
+      };
+    }
+
+    const wholeNumber = Number(cleaned);
+
+    if (!Number.isInteger(wholeNumber)) {
+      return null;
+    }
+
+    return {
+      numerator: wholeNumber,
+      denominator: 1
+    };
+  }
+
+  function simplifyFractionObject(fraction) {
+    const factor = greatestCommonFactor(fraction.numerator, fraction.denominator);
+
+    return {
+      numerator: fraction.numerator / factor,
+      denominator: fraction.denominator / factor
+    };
+  }
+
+  function fractionToMixedText(fraction) {
+    const simplified = simplifyFractionObject(fraction);
+    const numerator = simplified.numerator;
+    const denominator = simplified.denominator;
+
+    if (numerator % denominator === 0) {
+      return String(numerator / denominator);
+    }
+
+    if (Math.abs(numerator) > denominator) {
+      const whole = Math.trunc(numerator / denominator);
+      const remainder = Math.abs(numerator % denominator);
+
+      return whole + " " + remainder + "/" + denominator;
+    }
+
+    return numerator + "/" + denominator;
+  }
+
+  function equivalentFractionValues(first, second) {
+    return (
+      first !== null &&
+      second !== null &&
+      first.numerator * second.denominator ===
+      second.numerator * first.denominator
+    );
+  }
+
+  function createFractionBar(numerator, denominator) {
+    const wrapper = document.createElement("div");
+    wrapper.style.marginBottom = "9px";
+
+    const label = document.createElement("div");
+    label.textContent = numerator + "/" + denominator;
+    label.style.fontWeight = "bold";
+    label.style.marginBottom = "4px";
+
+    const bar = document.createElement("div");
+    bar.style.display = "grid";
+    bar.style.gridTemplateColumns = "repeat(" + denominator + ", 1fr)";
+    bar.style.height = "28px";
+    bar.style.border = "1px solid #666";
+
+    for (let index = 0; index < denominator; index++) {
+      const cell = document.createElement("div");
+      cell.style.borderRight =
+        index === denominator - 1 ? "none" : "1px solid #666";
+      cell.style.background =
+        index < numerator ? "#dce8d3" : "#ffffff";
+      bar.appendChild(cell);
+    }
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(bar);
+
+    return wrapper;
+  }
+</script>
+
+
+<script>
+  function renderMultiplierModel() {
+    const fraction = parseFractionText(
+      document.getElementById("multiplierFraction").value
+    );
+
+    const multiplier = Number(
+      document.getElementById("wholeMultiplier").value
+    );
+
+    const holder = document.getElementById("multiplierModel");
+    holder.innerHTML = "<strong>Repeated fraction bars:</strong>";
+
+    for (let count = 0; count < multiplier; count++) {
+      holder.appendChild(
+        createFractionBar(fraction.numerator, fraction.denominator)
+      );
+    }
+
+    document.getElementById("multiplierFeedback").style.display = "none";
+    document.getElementById("multiplierSupport").style.display = "none";
+  }
+
+  function showMultiplierPrompt() {
+    const box = document.getElementById("multiplierSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> How many fractional pieces are there altogether after repeating the fraction?";
+  }
+
+  function showMultiplierHint() {
+    const fraction = parseFractionText(
+      document.getElementById("multiplierFraction").value
+    );
+
+    const multiplier = Number(
+      document.getElementById("wholeMultiplier").value
+    );
+
+    const box = document.getElementById("multiplierSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> Multiply " +
+      fraction.numerator +
+      " by " +
+      multiplier +
+      ". Keep the denominator " +
+      fraction.denominator +
+      ", then simplify.";
+  }
+
+  function checkMultiplierAnswer() {
+    const fraction = parseFractionText(
+      document.getElementById("multiplierFraction").value
+    );
+
+    const multiplier = Number(
+      document.getElementById("wholeMultiplier").value
+    );
+
+    const prediction =
+      document.getElementById("multiplierPrediction").value;
+
+    const learnerAnswer = parseFractionText(
+      document.getElementById("multiplierAnswer").value
+    );
+
+    const correctAnswer = {
+      numerator: fraction.numerator * multiplier,
+      denominator: fraction.denominator
+    };
+
+    const resultValue =
+      correctAnswer.numerator / correctAnswer.denominator;
+
+    const correctPrediction =
+      resultValue < 1
+        ? "less1"
+        : resultValue === 1
+        ? "equal1"
+        : "greater1";
+
+    const feedback = document.getElementById("multiplierFeedback");
+    feedback.style.display = "block";
+
+    if (!prediction || learnerAnswer === null) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a prediction and enter a valid fraction or mixed number.";
+      return;
+    }
+
+    const answerCorrect =
+      equivalentFractionValues(learnerAnswer, correctAnswer);
+
+    if (answerCorrect && prediction === correctPrediction) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your prediction and simplified result both match the model.";
+    } else if (answerCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your numerical answer is correct. Reconsider whether it is less than, equal to or greater than one.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Count the repeated numerator pieces, keep the denominator and simplify.";
+    }
+  }
+
+  renderMultiplierModel();
+</script>
+
+
+<script>
+  function renderDividerModel() {
+    const fraction = parseFractionText(
+      document.getElementById("dividerFraction").value
+    );
+
+    const groups = Number(
+      document.getElementById("dividerGroups").value
+    );
+
+    const holder = document.getElementById("dividerModel");
+    holder.innerHTML =
+      "<strong>Starting amount:</strong>";
+
+    holder.appendChild(
+      createFractionBar(fraction.numerator, fraction.denominator)
+    );
+
+    const explanation = document.createElement("p");
+    explanation.textContent =
+      "This amount must be shared equally between " +
+      groups +
+      " groups.";
+    holder.appendChild(explanation);
+
+    document.getElementById("dividerFeedback").style.display = "none";
+    document.getElementById("dividerSupport").style.display = "none";
+  }
+
+  function showDividerPrompt() {
+    const box = document.getElementById("dividerSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> How could the starting fractional pieces be split into equal smaller shares?";
+  }
+
+  function showDividerHint() {
+    const fraction = parseFractionText(
+      document.getElementById("dividerFraction").value
+    );
+
+    const groups = Number(
+      document.getElementById("dividerGroups").value
+    );
+
+    const box = document.getElementById("dividerSupport");
+    box.style.display = "block";
+
+    if (fraction.numerator % groups === 0) {
+      box.innerHTML =
+        "<strong>💡 Hint:</strong> The numerator divides exactly by " +
+        groups +
+        ". Divide the numerator and keep the denominator.";
+    } else {
+      box.innerHTML =
+        "<strong>💡 Hint:</strong> Rewrite the amount in smaller equivalent pieces by multiplying the denominator by " +
+        groups +
+        ". Then simplify.";
+    }
+  }
+
+  function checkDividerAnswer() {
+    const fraction = parseFractionText(
+      document.getElementById("dividerFraction").value
+    );
+
+    const groups = Number(
+      document.getElementById("dividerGroups").value
+    );
+
+    const learnerAnswer = parseFractionText(
+      document.getElementById("dividerAnswer").value
+    );
+
+    const correctAnswer = {
+      numerator: fraction.numerator,
+      denominator: fraction.denominator * groups
+    };
+
+    const feedback = document.getElementById("dividerFeedback");
+    feedback.style.display = "block";
+
+    if (learnerAnswer === null) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter a valid fraction for the share received by each group.";
+      return;
+    }
+
+    if (equivalentFractionValues(learnerAnswer, correctAnswer)) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. The starting fraction has been shared equally and your answer is equivalent to the correct share.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Dividing between more groups should make each share smaller. Check how the denominator changes.";
+    }
+  }
+
+  renderDividerModel();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Kitchen challenge 1 of 5",
+      question:
+        "Each tray needs <strong>3/4 kg</strong> of vegetables. The kitchen prepares <strong>5 trays</strong>. How many kilograms are needed?",
+      operation: "multiply",
+      answers: ["3 3/4", "15/4", "3 3/4 kg"],
+      prompt: "Is the same amount being repeated or shared?",
+      hint: "Calculate 5 × 3/4."
+    },
+    {
+      label: "Kitchen challenge 2 of 5",
+      question:
+        "Each soup batch uses <strong>2/3 litre</strong> of stock. The kitchen makes <strong>4 batches</strong>. How much stock is needed?",
+      operation: "multiply",
+      answers: ["2 2/3", "8/3", "2 2/3 litres"],
+      prompt: "How many copies of two thirds are needed?",
+      hint: "Multiply 2 by 4 and keep the denominator 3."
+    },
+    {
+      label: "Kitchen challenge 3 of 5",
+      question:
+        "The kitchen has <strong>3/5 kg</strong> of herbs and shares them equally between <strong>3 stations</strong>. How much does each station receive?",
+      operation: "divide",
+      answers: ["1/5", "1/5 kg"],
+      prompt: "Is the amount being repeated or split into equal shares?",
+      hint: "Three fifths divided between three groups gives one fifth each."
+    },
+    {
+      label: "Kitchen challenge 4 of 5",
+      question:
+        "The kitchen shares <strong>3/4 litre</strong> of sauce equally between <strong>6 containers</strong>. How much goes into each container?",
+      operation: "divide",
+      answers: ["1/8", "1/8 litre"],
+      prompt: "Could three quarters be rewritten in eighths or twenty-fourths?",
+      hint: "3/4 ÷ 6 = 3/24, then simplify."
+    },
+    {
+      label: "Kitchen challenge 5 of 5",
+      question:
+        "A recipe uses <strong>1 1/2 litres</strong> of soup base. It is shared equally between <strong>6 containers</strong>. How much is placed in each container?",
+      operation: "divide",
+      answers: ["1/4", "1/4 litre"],
+      prompt: "How can one and a half be written as an improper fraction?",
+      hint: "1 1/2 = 3/2. Then divide by 6."
+    }
+  ];
+
+  let current = 0;
+  const operations = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+  const answers = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    operations[current] =
+      document.getElementById("batchOperation").value;
+
+    workings[current] =
+      document.getElementById("batchWorking").value;
+
+    answers[current] =
+      document.getElementById("batchAnswer").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("batchLabel").textContent =
+      questions[current].label;
+
+    document.getElementById("batchQuestion").innerHTML =
+      questions[current].question;
+
+    document.getElementById("batchOperation").value =
+      operations[current];
+
+    document.getElementById("batchWorking").value =
+      workings[current];
+
+    document.getElementById("batchAnswer").value =
+      answers[current];
+
+    document.getElementById("batchSupport").style.display =
+      "none";
+
+    document.getElementById("batchFeedback").style.display =
+      "none";
+
+    const previous =
+      document.getElementById("batchPrevious");
+
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("batchNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showBatchPrompt = function () {
+    const box = document.getElementById("batchSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showBatchHint = function () {
+    const box = document.getElementById("batchSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkBatchAnswer = function () {
+    saveCurrent();
+
+    const feedback =
+      document.getElementById("batchFeedback");
+
+    feedback.style.display = "block";
+
+    if (
+      !operations[current] ||
+      !answers[current].trim()
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose an operation and enter an answer before checking.";
+      return;
+    }
+
+    const operationCorrect =
+      operations[current] === questions[current].operation;
+
+    const answerCorrect =
+      questions[current].answers.some(function (answer) {
+        return normalise(answer) === normalise(answers[current]);
+      });
+
+    if (operationCorrect && answerCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your operation and simplified quantity fit the kitchen situation.";
+    } else if (operationCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your operation is correct. Recheck the multiplication, sharing or simplification.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Re-read the situation. Decide whether the quantity is being repeated or shared equally.";
+    }
+  };
+
+  window.previousBatchQuestion = function () {
+    if (current === 0) {
+      return;
+    }
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextBatchQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback =
+        document.getElementById("batchFeedback");
+
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 5 kitchen challenges correctly. Review any unfinished questions.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  let machineRowCount = 0;
+
+  function addMachineRow() {
+    machineRowCount++;
+
+    const holder = document.getElementById("machineRows");
+    const row = document.createElement("div");
+    row.className = "machine-row";
+    row.style.display = "grid";
+    row.style.gridTemplateColumns =
+      "minmax(110px, 1fr) minmax(100px, 1fr) minmax(90px, 1fr) minmax(110px, 1fr)";
+    row.style.gap = "8px";
+    row.style.marginBottom = "10px";
+    row.style.background = "#ffffff";
+    row.style.padding = "10px";
+    row.style.borderRadius = "9px";
+
+    row.innerHTML =
+      '<input class="machine-input" type="text" placeholder="Input fraction" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Fraction machine input">' +
+      '<select class="machine-operation" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Choose the fraction machine operation">' +
+        '<option value="multiply">Multiply by</option>' +
+        '<option value="divide">Divide by</option>' +
+      '</select>' +
+      '<input class="machine-whole" type="number" min="2" placeholder="Whole number" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Whole number used by the fraction machine">' +
+      '<input class="machine-output" type="text" placeholder="Output" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Fraction machine output">';
+
+    holder.appendChild(row);
+    renderMachinePreview();
+  }
+
+  function renderMachinePreview() {
+    const holder = document.getElementById("machinePreview");
+    const name =
+      document.getElementById("machineName").value.trim() ||
+      "Your Fraction Scaling Machine";
+
+    const rows =
+      Array.from(document.querySelectorAll(".machine-row"));
+
+    let html = "<h3 style='margin-top:0;'>" + name + "</h3>";
+
+    rows.forEach(function (row, index) {
+      const input =
+        row.querySelector(".machine-input").value || "?";
+
+      const operation =
+        row.querySelector(".machine-operation").value === "multiply"
+          ? "×"
+          : "÷";
+
+      const whole =
+        row.querySelector(".machine-whole").value || "?";
+
+      const output =
+        row.querySelector(".machine-output").value || "?";
+
+      html +=
+        "<p><strong>Rule " +
+        (index + 1) +
+        ":</strong> " +
+        input +
+        " " +
+        operation +
+        " " +
+        whole +
+        " = " +
+        output +
+        "</p>";
+    });
+
+    holder.innerHTML = html;
+  }
+
+  function checkScalingMachine() {
+    renderMachinePreview();
+
+    const rows =
+      Array.from(document.querySelectorAll(".machine-row"));
+
+    const explanation =
+      document.getElementById("machineExplanation").value.trim();
+
+    const feedback =
+      document.getElementById("machineFeedback");
+
+    feedback.style.display = "block";
+
+    if (rows.length < 4) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add at least four input-output rules to your machine.";
+      return;
+    }
+
+    let multiplyCount = 0;
+    let divideCount = 0;
+    let allCorrect = true;
+    let greaterThanOne = false;
+    let mixedNumberOutput = false;
+
+    rows.forEach(function (row) {
+      const input =
+        parseFractionText(
+          row.querySelector(".machine-input").value
+        );
+
+      const operation =
+        row.querySelector(".machine-operation").value;
+
+      const whole =
+        Number(row.querySelector(".machine-whole").value);
+
+      const output =
+        parseFractionText(
+          row.querySelector(".machine-output").value
+        );
+
+      if (
+        input === null ||
+        output === null ||
+        !Number.isInteger(whole) ||
+        whole < 2
+      ) {
+        allCorrect = false;
+        return;
+      }
+
+      if (operation === "multiply") {
+        multiplyCount++;
+
+        const expected = {
+          numerator: input.numerator * whole,
+          denominator: input.denominator
+        };
+
+        if (!equivalentFractionValues(expected, output)) {
+          allCorrect = false;
+        }
+      } else {
+        divideCount++;
+
+        const expected = {
+          numerator: input.numerator,
+          denominator: input.denominator * whole
+        };
+
+        if (!equivalentFractionValues(expected, output)) {
+          allCorrect = false;
+        }
+      }
+
+      if (output.numerator / output.denominator > 1) {
+        greaterThanOne = true;
+      }
+
+      if (
+        row.querySelector(".machine-output").value.trim().indexOf(" ") !== -1
+      ) {
+        mixedNumberOutput = true;
+      }
+    });
+
+    if (explanation.length < 20) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add a fuller explanation of how multiplication and division change the quantity.";
+    } else if (
+      allCorrect &&
+      multiplyCount >= 2 &&
+      divideCount >= 2 &&
+      greaterThanOne &&
+      mixedNumberOutput
+    ) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your scaling machine works correctly and meets all the design requirements.";
+    } else if (allCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your calculations work, but check the design requirements: two multiplication rules, two division rules, a result greater than one and a mixed-number output.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "At least one input-output rule is not correct. Check each multiplication or equal-sharing step.";
+    }
+  }
+
+  function resetScalingMachine() {
+    document.getElementById("machineName").value = "";
+    document.getElementById("machineExplanation").value = "";
+    document.getElementById("machineRows").innerHTML = "";
+    document.getElementById("machinePreview").innerHTML = "";
+    document.getElementById("machineFeedback").style.display = "none";
+    machineRowCount = 0;
+
+    for (let index = 0; index < 4; index++) {
+      addMachineRow();
+    }
+  }
+
+  document
+    .getElementById("machineName")
+    .addEventListener("input", renderMachinePreview);
+
+  document
+    .getElementById("machineRows")
+    .addEventListener("input", renderMachinePreview);
+
+  resetScalingMachine();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Repeated fraction",
+      text: "Calculate and simplify: <strong>3 × 1/4</strong>",
+      answers: ["3/4"],
+      prompt: "How many quarters are there after repeating one quarter three times?",
+      hint: "Multiply the numerator by 3 and keep the denominator 4.",
+      solution: "3 × 1/4 = 3/4."
+    },
+    {
+      label: "Question 2 of 8 · Improper fraction",
+      text: "Calculate and write as a mixed number: <strong>4 × 2/5</strong>",
+      answers: ["1 3/5", "8/5"],
+      prompt: "How many fifths are there altogether?",
+      hint: "4 × 2/5 = 8/5.",
+      solution: "8/5 = 1 3/5."
+    },
+    {
+      label: "Question 3 of 8 · Simplifying",
+      text: "Calculate and simplify: <strong>6 × 3/8</strong>",
+      answers: ["2 1/4", "9/4", "18/8"],
+      prompt: "What is 6 multiplied by the numerator 3?",
+      hint: "6 × 3/8 = 18/8. Simplify and convert.",
+      solution: "18/8 = 9/4 = 2 1/4."
+    },
+    {
+      label: "Question 4 of 8 · Exact sharing",
+      text: "Calculate and simplify: <strong>3/4 ÷ 3</strong>",
+      answers: ["1/4"],
+      prompt: "How can three quarters be shared between three equal groups?",
+      hint: "Each group receives one of the three quarter-pieces.",
+      solution: "3/4 ÷ 3 = 1/4."
+    },
+    {
+      label: "Question 5 of 8 · Smaller equivalent pieces",
+      text: "Calculate and simplify: <strong>2/3 ÷ 4</strong>",
+      answers: ["1/6", "2/12"],
+      prompt: "Does the numerator divide exactly by 4?",
+      hint: "Rewrite the result as 2/12, then simplify.",
+      solution: "2/3 ÷ 4 = 2/12 = 1/6."
+    },
+    {
+      label: "Question 6 of 8 · Mixed-number input",
+      text: "Calculate and simplify: <strong>1 1/2 ÷ 6</strong>",
+      answers: ["1/4"],
+      prompt: "How can one and a half be written as an improper fraction?",
+      hint: "1 1/2 = 3/2.",
+      solution: "3/2 ÷ 6 = 3/12 = 1/4."
+    },
+    {
+      label: "Question 7 of 8 · Kitchen scaling",
+      text: "Each tray needs <strong>5/6 kg</strong> of food. How much is needed for <strong>6 trays</strong>?",
+      answers: ["5", "5 kg"],
+      prompt: "How many sixths are there after six repetitions?",
+      hint: "6 × 5/6 = 30/6.",
+      solution: "30/6 = 5 kg."
+    },
+    {
+      label: "Question 8 of 8 · Multi-step challenge",
+      text: "Four batches each use <strong>3/5 litre</strong> of stock. The total is shared equally between <strong>6 containers</strong>. How much goes into each container?",
+      answers: ["2/5", "2/5 litre"],
+      prompt: "What is the total amount before it is shared?",
+      hint: "First calculate 4 × 3/5, then divide the result by 6.",
+      solution: "4 × 3/5 = 12/5. Then 12/5 ÷ 6 = 12/30 = 2/5 litre."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] =
+      document.getElementById("practiceAnswer").value;
+
+    workings[current] =
+      document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder =
+      document.getElementById("practiceDots");
+
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML =
+      question.label;
+
+    document.getElementById("practiceQuestion").innerHTML =
+      question.text;
+
+    document.getElementById("practiceAnswer").value =
+      answers[current];
+
+    document.getElementById("practiceWorking").value =
+      workings[current];
+
+    document.getElementById("practiceSupport").style.display =
+      "none";
+
+    document.getElementById("practiceFeedback").style.display =
+      "none";
+
+    const previous =
+      document.getElementById("practicePrevious");
+
+    previous.disabled = current === 0;
+    previous.style.opacity =
+      current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1
+        ? "Finish"
+        : "Next →";
+
+    const solution =
+      document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box =
+      document.getElementById("practiceSupport");
+
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box =
+      document.getElementById("practiceSupport");
+
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response =
+      normalise(answers[current]);
+
+    const feedback =
+      document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct =
+      questions[current].answers.some(function (answer) {
+        return normalise(answer) === response;
+      });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your fraction calculation and final form are accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Decide whether the fraction is being repeated or shared, then check whether the result should be larger or smaller.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and check the simplification. The worked solution is now available.";
+    }
+
+    const solution =
+      document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) {
+      return;
+    }
+
+    const box =
+      document.getElementById("practiceSupport");
+
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " +
+      questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) {
+      return;
+    }
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback =
+        document.getElementById("practiceFeedback");
+
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

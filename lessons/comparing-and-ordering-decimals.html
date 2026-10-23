@@ -1,0 +1,1850 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparing and Ordering Decimals | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Comparing and Ordering Decimals
+     Includes:
+     • Option 1 in The Knowing World: Interactive Decimal Number-Line Challenge
+     • Option 3 in The Knowing World: Column-by-Column Decimal Comparator
+     • Option 6 in The Human Story: Fair Price and Value Comparator
+     • Option 9 in The Designed World: Design a Decimal Ordering Puzzle
+     • Final Task with Assessment Rubric:
+       Emerging | Developing | Secure | Mastering
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">
+      Comparing and Ordering Decimals
+    </h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question:
+      <em>Why can a number with more digits still be smaller?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        Number Sense &amp; Operations — place value, estimation and integers.
+      </p>
+
+      <p>
+        <strong>Seeds of Change:</strong>
+        reason about decimal magnitude; compare corresponding place-value columns;
+        use placeholder zeros; order positive decimals; connect place-value charts, number lines and inequality notation;
+        and justify comparisons using precise mathematical language.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>National Curriculum learning:</strong>
+        understand and use place value for decimals; order positive decimals;
+        use the symbols &lt;, &gt; and =; move fluently between numerical representations;
+        and use number lines and place-value structures to support reasoning.
+      </p>
+
+    </div>
+
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧠 The Knowing World
+      </summary>
+
+      <h3>How do we compare decimals?</h3>
+
+      <p>
+        Compare decimals from left to right. Begin with the whole-number part, then compare tenths,
+        hundredths and thousandths until the first difference appears.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        To compare <strong>4.506</strong> and <strong>4.56</strong>, rewrite 4.56 as <strong>4.560</strong>.<br>
+        The whole-number parts match. The tenths match. At the hundredths column,
+        0 hundredths is less than 6 hundredths, so <strong>4.506 &lt; 4.560</strong>.
+      </p>
+
+      <h3>Placeholder zeros</h3>
+
+      <p>
+        Adding zeros to the end of a decimal does not change its value.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>0.8 = 0.80 = 0.800</strong>
+      </p>
+
+      <p>
+        Placeholder zeros can make comparison easier because they align corresponding place-value columns.
+      </p>
+
+      <h3>Inequality symbols</h3>
+
+      <ul>
+        <li><strong>&lt;</strong> means less than.</li>
+        <li><strong>&gt;</strong> means greater than.</li>
+        <li><strong>=</strong> means equal in value.</li>
+      </ul>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>decimal, magnitude, compare, order, inequality, equivalent, interval, tenths, hundredths, thousandths, ascending, descending</strong>
+      </p>
+
+
+      <h3>Interactive investigation 1: Decimal Number-Line Challenge</h3>
+
+      <p>
+        Estimate where the target decimal belongs, then place the marker on the number line.
+        The intervals become increasingly precise.
+      </p>
+
+      <div id="decimalLineApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="decimalLineRound" style="font-weight:bold; color:#587088;"></p>
+
+        <p id="decimalLineQuestion" style="font-size:1.1em;"></p>
+
+        <div style="background:#ffffff; padding:18px; border-radius:10px; margin-top:12px;">
+
+          <div style="display:flex; justify-content:space-between; font-weight:bold;">
+            <span id="decimalLineMinimum"></span>
+            <span id="decimalLineMaximum"></span>
+          </div>
+
+          <input id="decimalLineSlider"
+                 type="range"
+                 min="0"
+                 max="1000"
+                 value="500"
+                 oninput="updateDecimalLinePrediction()"
+                 style="width:100%; margin-top:12px;" aria-label="Move the decimal number-line marker">
+
+          <p style="text-align:center; margin-bottom:0;">
+            Your estimated position:
+            <strong id="decimalLinePrediction"></strong>
+          </p>
+
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showDecimalLinePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showDecimalLineHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkDecimalLineAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Position
+          </button>
+
+        </div>
+
+        <div id="decimalLineSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="decimalLineFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="decimalLinePrevious"
+                  type="button"
+                  onclick="previousDecimalLineRound()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="decimalLineNext"
+                  type="button"
+                  onclick="nextDecimalLineRound()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <h3>Interactive investigation 2: Column-by-Column Decimal Comparator</h3>
+
+      <p>
+        Compare two decimals by examining one place-value column at a time.
+      </p>
+
+      <div id="decimalComparatorApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px; margin-top:16px;">
+
+        <label for="comparatorLeft" style="display:block; margin-bottom:6px;">
+          <strong>First decimal</strong>
+        </label>
+
+        <input id="comparatorLeft"
+               type="text"
+               value="4.506"
+               inputmode="decimal"
+               oninput="resetComparator()"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="comparatorRight" style="display:block; margin:14px 0 6px;">
+          <strong>Second decimal</strong>
+        </label>
+
+        <input id="comparatorRight"
+               type="text"
+               value="4.56"
+               inputmode="decimal"
+               oninput="resetComparator()"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <button type="button"
+                onclick="revealNextComparatorColumn()"
+                style="margin-top:14px; padding:10px 15px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+          🔍 Reveal Next Column
+        </button>
+
+        <div id="comparatorColumns"
+             style="margin-top:16px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <label for="comparatorSymbol" style="display:block; margin:14px 0 6px;">
+          <strong>Choose the correct symbol</strong>
+        </label>
+
+        <select id="comparatorSymbol"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="<">&lt;</option>
+          <option value=">">&gt;</option>
+          <option value="=">=</option>
+        </select>
+
+        <label for="comparatorReason" style="display:block; margin:14px 0 6px;">
+          <strong>Which place-value column decided the comparison?</strong>
+        </label>
+
+        <select id="comparatorReason"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="whole">Whole-number part</option>
+          <option value="tenths">Tenths</option>
+          <option value="hundredths">Hundredths</option>
+          <option value="thousandths">Thousandths</option>
+          <option value="equal">All compared places are equal</option>
+        </select>
+
+        <button type="button"
+                onclick="checkComparatorAnswer()"
+                style="margin-top:14px; padding:10px 15px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+          ✅ Check My Comparison
+        </button>
+
+        <div id="comparatorFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why is 0.8 greater than 0.75?</li>
+        <li>How do placeholder zeros support comparison?</li>
+        <li>Why should we stop at the first place-value column that differs?</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌍 The Human Story
+      </summary>
+
+      <h3>Decimals, prices and fair choices</h3>
+
+      <p>
+        Prices, weights and quantities are often written as decimals.
+        Misreading a decimal can lead to unfair comparisons or poor financial decisions.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        A product costing <strong>£3.05</strong> is cheaper than one costing <strong>£3.50</strong>,
+        even though the first price ends in a larger digit.
+      </p>
+
+      <h3>Questions about fairness</h3>
+
+      <ul>
+        <li>How might confusing £4.08 with £4.80 affect a customer?</li>
+        <li>Why should quantities be compared using the same units?</li>
+        <li>How can clear decimal notation support informed decisions?</li>
+      </ul>
+
+      <h3>Interactive investigation: Fair Price and Value Comparator</h3>
+
+      <div id="fairPriceApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="fairPriceLabel" style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="fairPriceQuestion" style="font-size:1.1em;"></div>
+
+        <label for="fairPriceChoice" style="display:block; margin:14px 0 6px;">
+          <strong>Choose the correct comparison</strong>
+        </label>
+
+        <select id="fairPriceChoice"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="first">The first value is greater</option>
+          <option value="second">The second value is greater</option>
+          <option value="equal">The values are equal</option>
+        </select>
+
+        <label for="fairPriceDifference" style="display:block; margin:14px 0 6px;">
+          <strong>Difference between the values</strong>
+        </label>
+
+        <input id="fairPriceDifference"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="fairPriceReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain which place-value column decided the comparison</strong>
+        </label>
+
+        <textarea id="fairPriceReason"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showFairPricePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showFairPriceHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkFairPriceAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+
+        </div>
+
+        <div id="fairPriceSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="fairPriceFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="fairPricePrevious"
+                  type="button"
+                  onclick="previousFairPriceQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="fairPriceNext"
+                  type="button"
+                  onclick="nextFairPriceQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🎨 The Expressive Self
+      </summary>
+
+      <h3>Explain the first difference</h3>
+
+      <p>
+        Choose two decimals and explain exactly where their values first differ.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence structure:<br>
+        <strong>
+          “The whole-number parts are equal. The tenths are equal.
+          At the hundredths column, ___ is greater than ___, so…”
+        </strong>
+      </p>
+
+      <h3>Choose how to express your thinking</h3>
+
+      <ul>
+        <li>Create an annotated place-value chart.</li>
+        <li>Draw a number-line explanation.</li>
+        <li>Record a spoken comparison.</li>
+        <li>Create a short teaching poster.</li>
+        <li>Write a dialogue between two decimals arguing about which is greater.</li>
+      </ul>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Try comparing:
+        <strong>3.9 and 3.15</strong>,
+        <strong>0.52 and 0.506</strong>,
+        or <strong>5.009 and 5.09</strong>.
+      </p>
+
+    </details>
+
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧩 The Designed World
+      </summary>
+
+      <h3>Interactive design challenge: Create a Decimal Ordering Puzzle</h3>
+
+      <p>
+        Design a set of decimal cards that another learner must arrange from smallest to largest.
+      </p>
+
+      <div id="decimalPuzzleApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="decimalPuzzleName" style="display:block; margin-bottom:6px;">
+          <strong>Name your puzzle</strong>
+        </label>
+
+        <input id="decimalPuzzleName"
+               type="text"
+               placeholder="Example: The Decimal Trap"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div id="decimalPuzzleRows" style="margin-top:15px;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="addDecimalPuzzleRow()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            + Add Decimal Card
+          </button>
+
+          <button type="button"
+                  onclick="checkDecimalPuzzle()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Verify My Puzzle
+          </button>
+
+          <button type="button"
+                  onclick="resetDecimalPuzzle()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Puzzle
+          </button>
+
+        </div>
+
+        <label for="decimalPuzzleSolution" style="display:block; margin:14px 0 6px;">
+          <strong>Write your verified order from smallest to largest</strong>
+        </label>
+
+        <input id="decimalPuzzleSolution"
+               type="text"
+               placeholder="Example: 0.705, 0.75, 0.78, 0.8, 0.805"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="decimalPuzzleExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain how your distractors could challenge another learner</strong>
+        </label>
+
+        <textarea id="decimalPuzzleExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div id="decimalPuzzlePreview"
+             style="margin-top:18px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="decimalPuzzleFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Puzzle requirements</h3>
+
+      <ul>
+        <li>At least six decimal cards.</li>
+        <li>At least one pair with equal values written differently.</li>
+        <li>At least one placeholder zero.</li>
+        <li>Two numbers differing only in the thousandths place.</li>
+        <li>One distractor based on whole-number thinking.</li>
+        <li>A verified smallest-to-largest solution.</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌱 The Living Body
+      </summary>
+
+      <h3>Slow the comparison down</h3>
+
+      <p>
+        Similar-looking decimals can feel confusing. Compare one place-value column at a time.
+      </p>
+
+      <ol>
+        <li>Align the decimal points.</li>
+        <li>Add placeholder zeros if helpful.</li>
+        <li>Compare whole-number parts.</li>
+        <li>Compare tenths, then hundredths, then thousandths.</li>
+        <li>Stop at the first difference.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can place decimals on a number line.”</li>
+        <li>“I can compare decimals using corresponding columns.”</li>
+        <li>“I can order several decimals and justify my sequence.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “More digits do not automatically mean a greater value. I can compare corresponding places.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A placeholder zero that helped me was...</li>
+        <li>A comparison where the hundredths decided the order was...</li>
+        <li>A misconception I will avoid is...</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🛠 Final Task
+      </summary>
+
+      <h3>Assignment: Design a Fair Decimal Comparison Guide</h3>
+
+      <p>
+        Create a poster, slide, report or digital guide that teaches another learner how to compare and order decimals accurately.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>at least six decimals ordered from smallest to largest</li>
+        <li>a number line showing at least four of the decimals</li>
+        <li>three correct inequality statements</li>
+        <li>one pair of equivalent decimals written differently</li>
+        <li>one comparison decided by the tenths column</li>
+        <li>one comparison decided by the hundredths column</li>
+        <li>one comparison decided by the thousandths column</li>
+        <li>one price, mass or capacity comparison</li>
+        <li>one corrected misconception</li>
+        <li>a reflection explaining which comparison strategy was most reliable</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to reason about magnitude, use inequality notation,
+        interpret decimal measures and justify ordered numerical relationships.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+
+        <table style="width:100%; min-width:900px; border-collapse:collapse; background:#fffaf0;">
+
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Mastering</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Conceptual Understanding</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can compare some familiar decimals using a model or prompt.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain comparisons using tenths and hundredths in familiar examples.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain decimal magnitude, equivalent forms and the first differing place-value column.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can generalise comparison strategies and connect place-value, number-line and inequality representations.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Fluency &amp; Accuracy</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can order a small set of decimals with support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can compare and order familiar decimals, though I may make occasional placeholder errors.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can accurately compare and order decimals with several decimal places and use inequality symbols correctly.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can work efficiently with very close decimal values and verify an ordering independently.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Application to Problems</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can attempt a familiar price or measure comparison when a model is provided.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can compare familiar prices and measures with some support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can apply decimal comparison to money, mass, capacity and fair-choice problems.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can design, evaluate and refine decimal comparison problems involving subtle constraints.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Independence &amp; Reflection</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can begin with support and identify when I need help.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can use a place-value chart or number line and respond to feedback.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can choose a reliable strategy, check my ordering and explain what helped me.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can work independently, compare strategies and justify which representation is most effective.
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        What is the most reliable method for comparing two decimals that look very similar?
+      </p>
+
+    </details>
+
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to this session whenever you need to review number lines, placeholder zeros or column-by-column comparison.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">
+      Comparing and Ordering Decimals Practice
+    </h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+
+      <p style="margin-top:0;">
+        Work through eight questions involving equivalent decimals, inequalities, number lines, ordering and contextual comparison.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">
+        Your working:
+      </label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">
+        Your final answer:
+      </label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+
+      <summary style="font-size:1.25em; font-weight:bold;">
+        💛 Reflection
+      </summary>
+
+      <ul>
+        <li>A placeholder zero that helped me was...</li>
+        <li>A number-line comparison I understood was...</li>
+        <li>A question where the thousandths decided the order was...</li>
+        <li>A comparison I would like to revisit is...</li>
+      </ul>
+
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function normaliseDecimalText(value) {
+    return value
+      .toLowerCase()
+      .replace(/£/g, "")
+      .replace(/kg/g, "")
+      .replace(/litres/g, "")
+      .replace(/litre/g, "")
+      .replace(/l/g, "")
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function nearlyEqual(first, second) {
+    return Math.abs(first - second) < 0.000001;
+  }
+</script>
+
+
+<script>
+(function () {
+  const rounds = [
+    {
+      label: "Round 1 of 5",
+      minimum: 0,
+      maximum: 1,
+      target: 0.6,
+      tolerance: 0.03,
+      prompt: "Is the target closer to 0, 0.5 or 1?",
+      hint: "Six tenths lies just to the right of one half."
+    },
+    {
+      label: "Round 2 of 5",
+      minimum: 2,
+      maximum: 3,
+      target: 2.45,
+      tolerance: 0.025,
+      prompt: "Where is 2.45 in relation to 2.4 and 2.5?",
+      hint: "It is halfway between 2.4 and 2.5."
+    },
+    {
+      label: "Round 3 of 5",
+      minimum: 0.4,
+      maximum: 0.5,
+      target: 0.475,
+      tolerance: 0.004,
+      prompt: "What is halfway between 0.45 and 0.50?",
+      hint: "0.475 is three quarters of the way from 0.4 to 0.5."
+    },
+    {
+      label: "Round 4 of 5",
+      minimum: 3.27,
+      maximum: 3.28,
+      target: 3.276,
+      tolerance: 0.0007,
+      prompt: "How many thousandths above 3.270 is 3.276?",
+      hint: "It is 6 thousandths above 3.270."
+    },
+    {
+      label: "Round 5 of 5",
+      minimum: 5.009,
+      maximum: 5.019,
+      target: 5.014,
+      tolerance: 0.0007,
+      prompt: "How far is the target from each endpoint?",
+      hint: "The target lies exactly halfway between the endpoints."
+    }
+  ];
+
+  let current = 0;
+  const sliderValues = new Array(rounds.length).fill(500);
+  const completed = new Array(rounds.length).fill(false);
+
+  function calculatePrediction() {
+    const round = rounds[current];
+    const slider = Number(document.getElementById("decimalLineSlider").value);
+    return round.minimum + (round.maximum - round.minimum) * slider / 1000;
+  }
+
+  function renderRound() {
+    const round = rounds[current];
+
+    document.getElementById("decimalLineRound").textContent = round.label;
+    document.getElementById("decimalLineQuestion").innerHTML =
+      "Place <strong>" + round.target + "</strong> on the number line.";
+
+    document.getElementById("decimalLineMinimum").textContent = round.minimum;
+    document.getElementById("decimalLineMaximum").textContent = round.maximum;
+    document.getElementById("decimalLineSlider").value = sliderValues[current];
+
+    document.getElementById("decimalLineSupport").style.display = "none";
+    document.getElementById("decimalLineFeedback").style.display = "none";
+
+    const previous = document.getElementById("decimalLinePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("decimalLineNext").textContent =
+      current === rounds.length - 1 ? "Finish" : "Next →";
+
+    updateDecimalLinePrediction();
+  }
+
+  window.updateDecimalLinePrediction = function () {
+    sliderValues[current] =
+      Number(document.getElementById("decimalLineSlider").value);
+
+    document.getElementById("decimalLinePrediction").textContent =
+      Number(calculatePrediction().toFixed(4));
+  };
+
+  window.showDecimalLinePrompt = function () {
+    const box = document.getElementById("decimalLineSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + rounds[current].prompt;
+  };
+
+  window.showDecimalLineHint = function () {
+    const box = document.getElementById("decimalLineSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + rounds[current].hint;
+  };
+
+  window.checkDecimalLineAnswer = function () {
+    const prediction = calculatePrediction();
+    const round = rounds[current];
+    const feedback = document.getElementById("decimalLineFeedback");
+
+    feedback.style.display = "block";
+
+    const difference = Math.abs(prediction - round.target);
+
+    if (difference <= round.tolerance) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Well placed. Your estimate is within the target interval.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Use the endpoints and interval size to refine the position.";
+    }
+  };
+
+  window.previousDecimalLineRound = function () {
+    if (current === 0) return;
+    current--;
+    renderRound();
+  };
+
+  window.nextDecimalLineRound = function () {
+    if (current < rounds.length - 1) {
+      current++;
+      renderRound();
+    } else {
+      const feedback = document.getElementById("decimalLineFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You accurately placed " +
+        completed.filter(Boolean).length +
+        " of 5 target decimals.";
+    }
+  };
+
+  renderRound();
+})();
+</script>
+
+
+<script>
+  let comparatorRevealIndex = 0;
+
+  function getComparatorData() {
+    const leftText = document.getElementById("comparatorLeft").value.trim();
+    const rightText = document.getElementById("comparatorRight").value.trim();
+
+    const left = Number(leftText);
+    const right = Number(rightText);
+
+    return { leftText, rightText, left, right };
+  }
+
+  function decimalDigits(value, places) {
+    const fixed = Number(value).toFixed(3);
+    const parts = fixed.split(".");
+
+    return {
+      whole: parts[0],
+      tenths: parts[1][0],
+      hundredths: parts[1][1],
+      thousandths: parts[1][2]
+    };
+  }
+
+  function firstDifferencePlace(left, right) {
+    const leftDigits = decimalDigits(left, 3);
+    const rightDigits = decimalDigits(right, 3);
+
+    if (Number(leftDigits.whole) !== Number(rightDigits.whole)) return "whole";
+    if (leftDigits.tenths !== rightDigits.tenths) return "tenths";
+    if (leftDigits.hundredths !== rightDigits.hundredths) return "hundredths";
+    if (leftDigits.thousandths !== rightDigits.thousandths) return "thousandths";
+    return "equal";
+  }
+
+  function resetComparator() {
+    comparatorRevealIndex = 0;
+    document.getElementById("comparatorColumns").innerHTML =
+      "Press <strong>Reveal Next Column</strong> to begin.";
+    document.getElementById("comparatorFeedback").style.display = "none";
+  }
+
+  function revealNextComparatorColumn() {
+    const data = getComparatorData();
+    const holder = document.getElementById("comparatorColumns");
+
+    if (!Number.isFinite(data.left) || !Number.isFinite(data.right)) {
+      holder.textContent = "Enter two valid decimal numbers.";
+      return;
+    }
+
+    const leftDigits = decimalDigits(data.left, 3);
+    const rightDigits = decimalDigits(data.right, 3);
+
+    const places = [
+      { key: "whole", label: "Whole-number part" },
+      { key: "tenths", label: "Tenths" },
+      { key: "hundredths", label: "Hundredths" },
+      { key: "thousandths", label: "Thousandths" }
+    ];
+
+    comparatorRevealIndex =
+      Math.min(comparatorRevealIndex + 1, places.length);
+
+    let html =
+      "<table style='width:100%; border-collapse:collapse;'>" +
+      "<tr><th style='border:1px solid #ccc; padding:7px;'>Place</th>" +
+      "<th style='border:1px solid #ccc; padding:7px;'>" + data.leftText + "</th>" +
+      "<th style='border:1px solid #ccc; padding:7px;'>" + data.rightText + "</th></tr>";
+
+    for (let index = 0; index < comparatorRevealIndex; index++) {
+      const place = places[index];
+
+      html +=
+        "<tr><td style='border:1px solid #ccc; padding:7px;'>" +
+        place.label +
+        "</td><td style='border:1px solid #ccc; padding:7px; text-align:center;'>" +
+        leftDigits[place.key] +
+        "</td><td style='border:1px solid #ccc; padding:7px; text-align:center;'>" +
+        rightDigits[place.key] +
+        "</td></tr>";
+    }
+
+    html += "</table>";
+    holder.innerHTML = html;
+  }
+
+  function checkComparatorAnswer() {
+    const data = getComparatorData();
+    const chosenSymbol = document.getElementById("comparatorSymbol").value;
+    const chosenReason = document.getElementById("comparatorReason").value;
+    const feedback = document.getElementById("comparatorFeedback");
+
+    feedback.style.display = "block";
+
+    if (
+      !Number.isFinite(data.left) ||
+      !Number.isFinite(data.right) ||
+      !chosenSymbol ||
+      !chosenReason
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter two decimals, choose a symbol and identify the deciding place.";
+      return;
+    }
+
+    const correctSymbol =
+      data.left < data.right ? "<" :
+      data.left > data.right ? ">" : "=";
+
+    const correctReason = firstDifferencePlace(data.left, data.right);
+
+    if (chosenSymbol === correctSymbol && chosenReason === correctReason) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You identified both the relationship and the first place-value difference.";
+    } else if (chosenSymbol === correctSymbol) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your symbol is correct. Recheck which place-value column first differs.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Align the decimal places and compare from left to right.";
+    }
+  }
+
+  resetComparator();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Fair-price challenge 1 of 5",
+      question:
+        "Item A costs <strong>£3.50</strong>. Item B costs <strong>£3.05</strong>. Which price is greater, and what is the difference?",
+      choice: "first",
+      difference: 0.45,
+      prompt: "Compare the tenths before the hundredths.",
+      hint: "£3.50 = £3.500 and £3.05 = £3.050."
+    },
+    {
+      label: "Fair-price challenge 2 of 5",
+      question:
+        "One fruit bag has a mass of <strong>0.75 kg</strong>. Another has a mass of <strong>0.705 kg</strong>. Which mass is greater, and by how much?",
+      choice: "first",
+      difference: 0.045,
+      prompt: "Could 0.75 be written with three decimal places?",
+      hint: "0.75 = 0.750."
+    },
+    {
+      label: "Fair-price challenge 3 of 5",
+      question:
+        "Container A holds <strong>2.4 litres</strong>. Container B holds <strong>2.399 litres</strong>. Which amount is greater, and by how much?",
+      choice: "first",
+      difference: 0.001,
+      prompt: "Write 2.4 using three decimal places.",
+      hint: "2.4 = 2.400."
+    },
+    {
+      label: "Fair-price challenge 4 of 5",
+      question:
+        "Two labels show <strong>£4.80</strong> and <strong>£4.8</strong>. Which value is greater, and what is the difference?",
+      choice: "equal",
+      difference: 0,
+      prompt: "Do trailing zeros change a decimal’s value?",
+      hint: "£4.80 and £4.8 represent the same amount."
+    },
+    {
+      label: "Fair-price challenge 5 of 5",
+      question:
+        "Pack A has a mass of <strong>1.506 kg</strong>. Pack B has a mass of <strong>1.56 kg</strong>. Which mass is greater, and by how much?",
+      choice: "second",
+      difference: 0.054,
+      prompt: "Align the values as 1.506 and 1.560.",
+      hint: "The tenths match, but the hundredths do not."
+    }
+  ];
+
+  let current = 0;
+  const choices = new Array(questions.length).fill("");
+  const differences = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    choices[current] = document.getElementById("fairPriceChoice").value;
+    differences[current] = document.getElementById("fairPriceDifference").value;
+    reasons[current] = document.getElementById("fairPriceReason").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("fairPriceLabel").textContent =
+      questions[current].label;
+
+    document.getElementById("fairPriceQuestion").innerHTML =
+      questions[current].question;
+
+    document.getElementById("fairPriceChoice").value = choices[current];
+    document.getElementById("fairPriceDifference").value = differences[current];
+    document.getElementById("fairPriceReason").value = reasons[current];
+
+    document.getElementById("fairPriceSupport").style.display = "none";
+    document.getElementById("fairPriceFeedback").style.display = "none";
+
+    const previous = document.getElementById("fairPricePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("fairPriceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showFairPricePrompt = function () {
+    const box = document.getElementById("fairPriceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showFairPriceHint = function () {
+    const box = document.getElementById("fairPriceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkFairPriceAnswer = function () {
+    saveCurrent();
+
+    const difference = Number(normaliseDecimalText(differences[current]));
+    const feedback = document.getElementById("fairPriceFeedback");
+
+    feedback.style.display = "block";
+
+    if (
+      !choices[current] ||
+      !Number.isFinite(difference) ||
+      reasons[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a comparison, enter the difference and explain your reasoning.";
+      return;
+    }
+
+    const choiceCorrect =
+      choices[current] === questions[current].choice;
+
+    const differenceCorrect =
+      nearlyEqual(difference, questions[current].difference);
+
+    if (choiceCorrect && differenceCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You compared the values and calculated the difference accurately.";
+    } else if (choiceCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your comparison is correct. Recheck the subtraction used to find the difference.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Align the decimal points and compare corresponding columns.";
+    }
+  };
+
+  window.previousFairPriceQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextFairPriceQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("fairPriceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 5 fair-price challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  let decimalPuzzleRowCount = 0;
+
+  function addDecimalPuzzleRow() {
+    decimalPuzzleRowCount++;
+
+    const holder = document.getElementById("decimalPuzzleRows");
+    const row = document.createElement("div");
+
+    row.className = "decimal-puzzle-row";
+    row.style.display = "grid";
+    row.style.gridTemplateColumns = "minmax(120px, 1fr) minmax(180px, 2fr)";
+    row.style.gap = "8px";
+    row.style.marginBottom = "10px";
+    row.style.background = "#ffffff";
+    row.style.padding = "10px";
+    row.style.borderRadius = "9px";
+
+    row.innerHTML =
+      '<input class="decimal-puzzle-value" type="text" placeholder="Decimal" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Decimal for this puzzle card">' +
+      '<input class="decimal-puzzle-note" type="text" placeholder="Why this card is useful or challenging" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Explain why this decimal is useful or challenging">';
+
+    holder.appendChild(row);
+    renderDecimalPuzzlePreview();
+  }
+
+  function getPuzzleValues() {
+    return Array.from(
+      document.querySelectorAll(".decimal-puzzle-value")
+    ).map(function (input) {
+      return input.value.trim();
+    });
+  }
+
+  function renderDecimalPuzzlePreview() {
+    const preview = document.getElementById("decimalPuzzlePreview");
+    const name =
+      document.getElementById("decimalPuzzleName").value.trim() ||
+      "Your Decimal Ordering Puzzle";
+
+    const values = getPuzzleValues().filter(function (value) {
+      return value.length > 0;
+    });
+
+    preview.innerHTML =
+      "<h3 style='margin-top:0;'>" + name + "</h3>" +
+      "<p><strong>Decimal cards:</strong> " +
+      (values.length ? values.join(" &nbsp; | &nbsp; ") : "No cards entered") +
+      "</p>";
+  }
+
+  function checkDecimalPuzzle() {
+    renderDecimalPuzzlePreview();
+
+    const rows = Array.from(
+      document.querySelectorAll(".decimal-puzzle-row")
+    );
+
+    const valueTexts = getPuzzleValues();
+    const values = valueTexts.map(Number);
+    const solutionText =
+      document.getElementById("decimalPuzzleSolution").value.trim();
+
+    const explanation =
+      document.getElementById("decimalPuzzleExplanation").value.trim();
+
+    const feedback =
+      document.getElementById("decimalPuzzleFeedback");
+
+    feedback.style.display = "block";
+
+    if (rows.length < 6) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add at least six decimal cards.";
+      return;
+    }
+
+    if (values.some(function (value) { return !Number.isFinite(value); })) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Every card must contain a valid decimal.";
+      return;
+    }
+
+    const notesComplete = rows.every(function (row) {
+      return row.querySelector(".decimal-puzzle-note").value.trim().length >= 8;
+    });
+
+    const sorted = values.slice().sort(function (a, b) {
+      return a - b;
+    });
+
+    const solutionValues = solutionText
+      .split(",")
+      .map(function (value) {
+        return Number(value.trim());
+      });
+
+    const solutionCorrect =
+      solutionValues.length === sorted.length &&
+      solutionValues.every(function (value, index) {
+        return nearlyEqual(value, sorted[index]);
+      });
+
+    let hasEquivalentPair = false;
+
+    for (let first = 0; first < values.length; first++) {
+      for (let second = first + 1; second < values.length; second++) {
+        if (
+          nearlyEqual(values[first], values[second]) &&
+          valueTexts[first] !== valueTexts[second]
+        ) {
+          hasEquivalentPair = true;
+        }
+      }
+    }
+
+    const hasPlaceholderZero =
+      valueTexts.some(function (value) {
+        return /0/.test(value) && value.indexOf(".") !== -1;
+      });
+
+    let hasThousandthsPair = false;
+
+    for (let first = 0; first < values.length; first++) {
+      for (let second = first + 1; second < values.length; second++) {
+        const difference = Math.abs(values[first] - values[second]);
+
+        if (
+          difference > 0 &&
+          difference < 0.01 &&
+          Number(values[first].toFixed(2)) === Number(values[second].toFixed(2))
+        ) {
+          hasThousandthsPair = true;
+        }
+      }
+    }
+
+    if (explanation.length < 25) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add a fuller explanation of how your distractors challenge decimal thinking.";
+    } else if (
+      notesComplete &&
+      solutionCorrect &&
+      hasEquivalentPair &&
+      hasPlaceholderZero &&
+      hasThousandthsPair
+    ) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your puzzle is mathematically verified and includes the required decimal relationships.";
+    } else if (solutionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your order is correct. Check the remaining requirements: equivalent forms, placeholder zero, thousandths pair and clear card notes.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "The proposed solution is not in correct ascending order. Compare the decimals column by column.";
+    }
+  }
+
+  function resetDecimalPuzzle() {
+    document.getElementById("decimalPuzzleName").value = "";
+    document.getElementById("decimalPuzzleSolution").value = "";
+    document.getElementById("decimalPuzzleExplanation").value = "";
+    document.getElementById("decimalPuzzleRows").innerHTML = "";
+    document.getElementById("decimalPuzzlePreview").innerHTML = "";
+    document.getElementById("decimalPuzzleFeedback").style.display = "none";
+    decimalPuzzleRowCount = 0;
+
+    for (let index = 0; index < 6; index++) {
+      addDecimalPuzzleRow();
+    }
+  }
+
+  document
+    .getElementById("decimalPuzzleName")
+    .addEventListener("input", renderDecimalPuzzlePreview);
+
+  document
+    .getElementById("decimalPuzzleRows")
+    .addEventListener("input", renderDecimalPuzzlePreview);
+
+  resetDecimalPuzzle();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Equivalent decimals",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>0.7 ___ 0.700</strong>",
+      answers: ["="],
+      prompt: "Do trailing zeros change a decimal’s value?",
+      hint: "Both numbers represent seven tenths.",
+      solution: "0.7 = 0.700."
+    },
+    {
+      label: "Question 2 of 8 · Tenths comparison",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>3.9 ___ 3.15</strong>",
+      answers: [">"],
+      prompt: "Compare the tenths digits first.",
+      hint: "3.9 can be written as 3.90.",
+      solution: "3.90 > 3.15, so 3.9 > 3.15."
+    },
+    {
+      label: "Question 3 of 8 · Hundredths comparison",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>4.506 ___ 4.56</strong>",
+      answers: ["<"],
+      prompt: "Write both numbers with three decimal places.",
+      hint: "Compare 4.506 and 4.560.",
+      solution: "The tenths match, but 0 hundredths is less than 6 hundredths, so 4.506 < 4.56."
+    },
+    {
+      label: "Question 4 of 8 · Ordering",
+      text: "Order from smallest to largest:<br><strong>0.8, 0.75, 0.805, 0.78</strong>",
+      answers: [
+        "0.75, 0.78, 0.8, 0.805",
+        "0.750, 0.780, 0.800, 0.805"
+      ],
+      prompt: "Rewrite each number using three decimal places.",
+      hint: "Compare 0.800, 0.750, 0.805 and 0.780.",
+      solution: "0.75 < 0.78 < 0.8 < 0.805."
+    },
+    {
+      label: "Question 5 of 8 · Number-line interval",
+      text: "Which number lies between <strong>2.45</strong> and <strong>2.46</strong>?<br><strong>2.405, 2.455, 2.465</strong>",
+      answers: ["2.455"],
+      prompt: "Compare each number with both endpoints.",
+      hint: "The correct number must be greater than 2.450 and less than 2.460.",
+      solution: "2.455 lies between 2.45 and 2.46."
+    },
+    {
+      label: "Question 6 of 8 · Price comparison",
+      text: "A ticket costs <strong>£5.09</strong> and another costs <strong>£5.9</strong>. Which price is greater?",
+      answers: ["£5.9", "5.9", "5.90"],
+      prompt: "Write both prices using two decimal places.",
+      hint: "Compare £5.09 and £5.90.",
+      solution: "£5.90 is greater than £5.09."
+    },
+    {
+      label: "Question 7 of 8 · Close decimals",
+      text: "Order from greatest to smallest:<br><strong>1.506, 1.56, 1.056, 1.5060</strong>",
+      answers: [
+        "1.56, 1.506, 1.5060, 1.056",
+        "1.56, 1.5060, 1.506, 1.056"
+      ],
+      prompt: "Notice that two values in the list are equal.",
+      hint: "1.506 = 1.5060.",
+      solution: "1.56 is greatest, 1.506 and 1.5060 are equal, and 1.056 is smallest."
+    },
+    {
+      label: "Question 8 of 8 · Reasoning challenge",
+      text: "Write a decimal greater than <strong>0.507</strong> but less than <strong>0.508</strong>.",
+      validator: function (answer) {
+        const value = Number(answer);
+        return Number.isFinite(value) && value > 0.507 && value < 0.508;
+      },
+      prompt: "You may need more than three decimal places.",
+      hint: "Try using a number such as 0.5075.",
+      solution: "One possible answer is 0.5075."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/£/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = question.label;
+    document.getElementById("practiceQuestion").innerHTML = question.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    let correct = false;
+
+    if (typeof questions[current].validator === "function") {
+      correct = questions[current].validator(response);
+    } else {
+      correct = questions[current].answers.some(function (answer) {
+        return normalise(answer) === response;
+      });
+    }
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your decimal comparison is accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Align the decimal places and compare corresponding columns from left to right.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and add placeholder zeros where helpful. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " + questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

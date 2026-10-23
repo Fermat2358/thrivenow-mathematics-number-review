@@ -1,0 +1,2128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Understanding Negative Integers | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Understanding Negative Integers
+     Includes:
+     • Option 1 in The Knowing World: Interactive Integer Number-Line Explorer
+     • Option 3 in The Knowing World: Opposites and Additive Inverses Mirror
+     • Option 5 in The Human Story: Climate and Temperature Change Explorer
+     • Option 7 in The Expressive Self: Find and Fix the Negative-Number Mistake
+     • Option 9 in The Designed World: Design an Integer Comparison Adviser
+     • Assessment Rubric:
+       Emerging | Developing | Secure | Mastering
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">
+      Understanding Negative Integers
+    </h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question:
+      <em>How can a number be less than nothing?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        Number Sense &amp; Operations — place value, estimation and integers.
+      </p>
+
+      <p>
+        <strong>Seeds of Change:</strong>
+        recognise negative integers in mathematical and real-world contexts;
+        locate and order signed integers;
+        compare values using &lt;, &gt; and =;
+        understand zero as a reference point;
+        identify opposites and additive inverses;
+        and interpret changes that cross zero.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>National Curriculum learning:</strong>
+        order positive and negative integers;
+        use horizontal and vertical number lines;
+        understand directed number;
+        and solve problems involving temperature, height, depth, money and change.
+      </p>
+
+    </div>
+
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧠 The Knowing World
+      </summary>
+
+      <h3>Negative integers describe values below a reference point</h3>
+
+      <p>
+        Negative integers appear to the left of zero on a horizontal number line
+        and below zero on a vertical number line.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>−6 &lt; −2 &lt; 0 &lt; 4</strong>
+      </p>
+
+      <p>
+        The farther left a number lies, the smaller its value.
+        This means −8 is smaller than −3, even though 8 is a larger digit than 3.
+      </p>
+
+      <h3>Zero is the reference point</h3>
+
+      <ul>
+        <li>Positive integers are greater than zero.</li>
+        <li>Negative integers are less than zero.</li>
+        <li>Zero is neither positive nor negative.</li>
+      </ul>
+
+      <h3>Opposites and additive inverses</h3>
+
+      <p>
+        Two integers are opposites when they are the same distance from zero but lie on opposite sides.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>5 and −5 are opposites.</strong><br>
+        <strong>5 + (−5) = 0</strong>
+      </p>
+
+      <p>
+        The opposite of an integer is also called its <strong>additive inverse</strong>.
+        Zero is its own opposite.
+      </p>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>integer, negative, positive, zero, signed number, opposite, additive inverse, magnitude, ascending, descending, reference point</strong>
+      </p>
+
+
+      <h3>Interactive investigation 1: Integer Number-Line Explorer</h3>
+
+      <p>
+        Move the marker to the target integer, then compare and order signed values.
+      </p>
+
+      <div id="integerLineApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="integerLineLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="integerLineQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <div style="background:#ffffff; padding:18px; border-radius:10px; margin-top:14px;">
+
+          <div style="display:flex; justify-content:space-between; font-weight:bold;">
+            <span id="integerLineMinimum"></span>
+            <span>0</span>
+            <span id="integerLineMaximum"></span>
+          </div>
+
+          <input id="integerLineSlider"
+                 type="range"
+                 min="-10"
+                 max="10"
+                 step="1"
+                 value="0"
+                 oninput="updateIntegerLinePosition()"
+                 style="width:100%; margin-top:12px;" aria-label="Move the integer number-line marker">
+
+          <p style="text-align:center; margin-bottom:0;">
+            Marker position:
+            <strong id="integerLinePosition">0</strong>
+          </p>
+
+        </div>
+
+        <label for="integerLineComparison" style="display:block; margin:14px 0 6px;">
+          <strong>Complete the comparison</strong>
+        </label>
+
+        <select id="integerLineComparison"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="<">&lt;</option>
+          <option value=">">&gt;</option>
+          <option value="=">=</option>
+        </select>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showIntegerLinePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showIntegerLineHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkIntegerLineAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+
+        </div>
+
+        <div id="integerLineSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="integerLineFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="integerLinePrevious"
+                  type="button"
+                  onclick="previousIntegerLineQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="integerLineNext"
+                  type="button"
+                  onclick="nextIntegerLineQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <h3>Interactive investigation 2: Opposites and Additive Inverses Mirror</h3>
+
+      <p>
+        Enter an integer, identify its opposite and explain how the pair is positioned around zero.
+      </p>
+
+      <div id="oppositeMirrorApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px; margin-top:16px;">
+
+        <p id="oppositeMirrorLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="oppositeMirrorQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="oppositeMirrorAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Enter the opposite integer</strong>
+        </label>
+
+        <input id="oppositeMirrorAnswer"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="oppositeMirrorSum" style="display:block; margin:14px 0 6px;">
+          <strong>What is the sum of the integer and its opposite?</strong>
+        </label>
+
+        <input id="oppositeMirrorSum"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="oppositeMirrorReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain the mirror relationship around zero</strong>
+        </label>
+
+        <textarea id="oppositeMirrorReason"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div id="oppositeMirrorVisual"
+             style="margin-top:16px; background:#ffffff; padding:14px; border-radius:10px; text-align:center;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showOppositeMirrorPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showOppositeMirrorHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkOppositeMirrorAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Pair
+          </button>
+
+        </div>
+
+        <div id="oppositeMirrorSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="oppositeMirrorFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="oppositeMirrorPrevious"
+                  type="button"
+                  onclick="previousOppositeMirrorQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="oppositeMirrorNext"
+                  type="button"
+                  onclick="nextOppositeMirrorQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why is −9 smaller than −4?</li>
+        <li>How can two different integers be the same distance from zero?</li>
+        <li>Why is zero its own opposite?</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌍 The Human Story
+      </summary>
+
+      <h3>Negative temperatures and community decisions</h3>
+
+      <p>
+        Temperatures below zero are represented using negative integers.
+        Correctly comparing these values matters when planning travel, heating, clothing and community support.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>−8°C is colder than −3°C</strong>
+        because −8 lies farther below zero.
+      </p>
+
+      <h3>Changes across zero</h3>
+
+      <p>
+        A change from 4°C to −3°C crosses zero.
+        The total fall is 7°C: four degrees to reach zero and three more degrees below zero.
+      </p>
+
+      <h3>Interactive investigation: Climate and Temperature Change Explorer</h3>
+
+      <div id="temperatureExplorerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="temperatureExplorerLabel"
+           style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="temperatureExplorerQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="temperatureExplorerOrder" style="display:block; margin:14px 0 6px;">
+          <strong>Enter the temperatures in ascending order</strong>
+        </label>
+
+        <input id="temperatureExplorerOrder"
+               type="text"
+               placeholder="Example: -8, -3, 0, 4"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="temperatureExplorerChange" style="display:block; margin:14px 0 6px;">
+          <strong>Size of the temperature change</strong>
+        </label>
+
+        <input id="temperatureExplorerChange"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="temperatureExplorerDirection" style="display:block; margin:14px 0 6px;">
+          <strong>Direction of change</strong>
+        </label>
+
+        <select id="temperatureExplorerDirection"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="rise">Temperature rise</option>
+          <option value="fall">Temperature fall</option>
+        </select>
+
+        <label for="temperatureExplorerReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain why your interpretation matters</strong>
+        </label>
+
+        <textarea id="temperatureExplorerReason"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showTemperatureExplorerPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showTemperatureExplorerHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkTemperatureExplorerAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Interpretation
+          </button>
+
+        </div>
+
+        <div id="temperatureExplorerSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="temperatureExplorerFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="temperatureExplorerPrevious"
+                  type="button"
+                  onclick="previousTemperatureExplorerQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="temperatureExplorerNext"
+                  type="button"
+                  onclick="nextTemperatureExplorerQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🎨 The Expressive Self
+      </summary>
+
+      <h3>Interactive investigation: Find and Fix the Negative-Number Mistake</h3>
+
+      <p>
+        Identify the misconception, correct the statement and explain the reasoning using a number line or zero as a reference point.
+      </p>
+
+      <div id="negativeMistakeApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="negativeMistakeLabel"
+           style="color:#587088; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="negativeMistakeQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="negativeMistakeDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Is the statement correct?</strong>
+        </label>
+
+        <select id="negativeMistakeDecision"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="negativeMistakeCorrection" style="display:block; margin:14px 0 6px;">
+          <strong>Write the corrected statement or value</strong>
+        </label>
+
+        <input id="negativeMistakeCorrection"
+               type="text"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="negativeMistakeExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain the misconception</strong>
+        </label>
+
+        <textarea id="negativeMistakeExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showNegativeMistakePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showNegativeMistakeHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkNegativeMistakeAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Correction
+          </button>
+
+        </div>
+
+        <div id="negativeMistakeSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="negativeMistakeFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="negativeMistakePrevious"
+                  type="button"
+                  onclick="previousNegativeMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="negativeMistakeNext"
+                  type="button"
+                  onclick="nextNegativeMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+      <h3>Express your correction</h3>
+
+      <p>
+        Turn one misconception into an annotated number line, mini-poster,
+        comic, spoken explanation or short teaching note.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stem:
+        <strong>“The statement is incorrect because the value farther to the right is…”</strong>
+      </p>
+
+    </details>
+
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧩 The Designed World
+      </summary>
+
+      <h3>Interactive design challenge: Build an Integer Comparison Adviser</h3>
+
+      <p>
+        Create a decision tool that helps another learner compare and order signed integers accurately.
+      </p>
+
+      <div id="integerAdviserApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="integerAdviserName" style="display:block; margin-bottom:6px;">
+          <strong>Name your adviser</strong>
+        </label>
+
+        <input id="integerAdviserName"
+               type="text"
+               placeholder="Example: The Signed Number Navigator"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div id="integerAdviserRules" style="margin-top:15px;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="addIntegerAdviserRule()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            + Add Decision Rule
+          </button>
+
+          <button type="button"
+                  onclick="checkIntegerAdviser()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Test My Adviser
+          </button>
+
+          <button type="button"
+                  onclick="resetIntegerAdviser()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Adviser
+          </button>
+
+        </div>
+
+        <label for="integerAdviserFirst" style="display:block; margin:14px 0 6px;">
+          <strong>First test integer</strong>
+        </label>
+
+        <input id="integerAdviserFirst"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="integerAdviserSecond" style="display:block; margin:14px 0 6px;">
+          <strong>Second test integer</strong>
+        </label>
+
+        <input id="integerAdviserSecond"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="integerAdviserSymbol" style="display:block; margin:14px 0 6px;">
+          <strong>Comparison symbol</strong>
+        </label>
+
+        <select id="integerAdviserSymbol"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="<">&lt;</option>
+          <option value=">">&gt;</option>
+          <option value="=">=</option>
+        </select>
+
+        <label for="integerAdviserExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain how the adviser reaches the decision</strong>
+        </label>
+
+        <textarea id="integerAdviserExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div id="integerAdviserPreview"
+             style="margin-top:18px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="integerAdviserFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Adviser requirements</h3>
+
+      <ul>
+        <li>A rule for two positive integers.</li>
+        <li>A rule for two negative integers.</li>
+        <li>A rule for values on different sides of zero.</li>
+        <li>A rule for comparing a value with zero.</li>
+        <li>A rule for identifying opposites.</li>
+        <li>A rule distinguishing signed value from distance from zero.</li>
+        <li>A rule for selecting &lt;, &gt; or =.</li>
+        <li>At least three test comparisons.</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌱 The Living Body
+      </summary>
+
+      <h3>Pause and picture the number line</h3>
+
+      <p>
+        Negative signs can be easy to overlook.
+        Slow down and imagine the positions before comparing the digits.
+      </p>
+
+      <ol>
+        <li>Locate zero.</li>
+        <li>Decide which side of zero each value lies on.</li>
+        <li>Picture the values on a number line.</li>
+        <li>Remember that farther right means greater.</li>
+        <li>Check whether the question asks for value or distance from zero.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can place negative integers on a number line.”</li>
+        <li>“I can compare two negative integers.”</li>
+        <li>“I can identify an integer and its opposite.”</li>
+        <li>“I can describe a temperature change that crosses zero.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I compare positions, not just digits. The value farther to the right is greater.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A negative integer I placed correctly was...</li>
+        <li>An opposite pair I understood was...</li>
+        <li>A comparison that crossed zero was...</li>
+        <li>A representation that helped me was...</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🛠 Final Task
+      </summary>
+
+      <h3>Assignment: Design a Below-Zero Community Information Guide</h3>
+
+      <p>
+        Create a poster, report, slide or digital guide that teaches another learner how to interpret and compare negative integers.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>a horizontal or vertical number line containing at least eight integers</li>
+        <li>at least three negative integers, zero and three positive integers</li>
+        <li>an ordered list from least to greatest</li>
+        <li>three correct inequality statements</li>
+        <li>two pairs of opposite integers</li>
+        <li>an explanation of additive inverses</li>
+        <li>a temperature comparison</li>
+        <li>a temperature change that crosses zero</li>
+        <li>one corrected misconception</li>
+        <li>an integer-comparison decision rule or flowchart</li>
+        <li>a reflection explaining why −8 is smaller than −3</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to compare directed numbers,
+        reason about position and magnitude,
+        understand additive inverses
+        and interpret signed values in unfamiliar contexts.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+
+        <table style="width:100%; min-width:900px; border-collapse:collapse; background:#fffaf0;">
+
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Mastering</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Conceptual Understanding</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can recognise some negative integers with support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain that negative integers lie below or to the left of zero.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain integer order, opposites, additive inverses and zero as a reference point.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can connect signed values, opposites, distance from zero and contextual interpretations.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Fluency &amp; Accuracy</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can place or compare familiar integers with a number-line prompt.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can order familiar signed integers, though I may occasionally reverse two negative values.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can accurately locate, order and compare positive and negative integers.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can work accurately with close values, opposites and unfamiliar scales independently.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Application to Problems</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can identify a negative temperature or position in a familiar example.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can compare temperatures and describe simple changes with some support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can interpret signed values and changes across zero in temperature, height and financial contexts.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can design, evaluate and explain integer models in unfamiliar multi-step contexts.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Independence &amp; Reflection</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can begin with support and recognise when I need a number line.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can use a number line and respond to feedback.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can select a representation, check my comparison and explain what helped me.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can independently compare methods, refine explanations and justify a reliable comparison rule.
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        Why does moving farther below zero make a value smaller?
+      </p>
+
+    </details>
+
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        Return to the session whenever you need to review number lines, opposites or changes across zero.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">
+      Understanding Negative Integers Practice
+    </h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+
+      <p style="margin-top:0;">
+        Work through eight questions involving number lines, comparison, ordering,
+        opposites and temperature changes.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">
+        Your working:
+      </label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">
+        Your final answer:
+      </label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+
+      <summary style="font-size:1.25em; font-weight:bold;">
+        💛 Reflection
+      </summary>
+
+      <ul>
+        <li>A comparison between two negative integers I understood was...</li>
+        <li>An opposite pair I identified was...</li>
+        <li>A temperature change across zero was...</li>
+        <li>A question I would like to revisit is...</li>
+      </ul>
+
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function normaliseIntegerText(value) {
+    return value
+      .toLowerCase()
+      .replace(/°c/g, "")
+      .replace(/degrees/g, "")
+      .replace(/degree/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Number-line challenge 1 of 5",
+      question: "Place <strong>−6</strong> on the number line, then complete <strong>−6 ___ −2</strong>.",
+      target: -6,
+      symbol: "<",
+      prompt: "Which value is farther left?",
+      hint: "−6 lies to the left of −2."
+    },
+    {
+      label: "Number-line challenge 2 of 5",
+      question: "Place <strong>4</strong> on the number line, then complete <strong>4 ___ −3</strong>.",
+      target: 4,
+      symbol: ">",
+      prompt: "Which side of zero is each value on?",
+      hint: "Every positive integer is greater than every negative integer."
+    },
+    {
+      label: "Number-line challenge 3 of 5",
+      question: "Place <strong>−9</strong> on the number line, then complete <strong>−9 ___ −4</strong>.",
+      target: -9,
+      symbol: "<",
+      prompt: "Which value lies farther to the left?",
+      hint: "Among negative integers, the value farther from zero on the left is smaller."
+    },
+    {
+      label: "Number-line challenge 4 of 5",
+      question: "Place <strong>0</strong> on the number line, then complete <strong>0 ___ −7</strong>.",
+      target: 0,
+      symbol: ">",
+      prompt: "Is zero greater or smaller than a negative integer?",
+      hint: "Zero lies to the right of every negative integer."
+    },
+    {
+      label: "Number-line challenge 5 of 5",
+      question: "Place <strong>−3</strong> on the number line, then complete <strong>−3 ___ 3</strong>.",
+      target: -3,
+      symbol: "<",
+      prompt: "Are these integers on the same side of zero?",
+      hint: "−3 lies to the left of 3."
+    }
+  ];
+
+  let current = 0;
+  const positions = new Array(questions.length).fill(0);
+  const symbols = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    positions[current] = Number(document.getElementById("integerLineSlider").value);
+    symbols[current] = document.getElementById("integerLineComparison").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("integerLineLabel").textContent = questions[current].label;
+    document.getElementById("integerLineQuestion").innerHTML = questions[current].question;
+    document.getElementById("integerLineMinimum").textContent = "−10";
+    document.getElementById("integerLineMaximum").textContent = "10";
+    document.getElementById("integerLineSlider").value = positions[current];
+    document.getElementById("integerLineComparison").value = symbols[current];
+
+    document.getElementById("integerLineSupport").style.display = "none";
+    document.getElementById("integerLineFeedback").style.display = "none";
+
+    const previous = document.getElementById("integerLinePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("integerLineNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    updateIntegerLinePosition();
+  }
+
+  window.updateIntegerLinePosition = function () {
+    const value = Number(document.getElementById("integerLineSlider").value);
+    document.getElementById("integerLinePosition").textContent = value;
+  };
+
+  window.showIntegerLinePrompt = function () {
+    const box = document.getElementById("integerLineSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showIntegerLineHint = function () {
+    const box = document.getElementById("integerLineSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkIntegerLineAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("integerLineFeedback");
+    feedback.style.display = "block";
+
+    const positionCorrect = positions[current] === questions[current].target;
+    const symbolCorrect = symbols[current] === questions[current].symbol;
+
+    if (positionCorrect && symbolCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your marker and comparison match the number-line order.";
+    } else if (positionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your marker is correctly placed. Recheck which value lies farther to the right.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Locate zero first, then count left for negative integers.";
+    }
+  };
+
+  window.previousIntegerLineQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextIntegerLineQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("integerLineFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 number-line challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Opposite challenge 1 of 5",
+      integer: 5,
+      opposite: -5,
+      prompt: "Which integer is the same distance from zero on the other side?",
+      hint: "Change the sign, not the distance from zero."
+    },
+    {
+      label: "Opposite challenge 2 of 5",
+      integer: -8,
+      opposite: 8,
+      prompt: "Where is the reflected point across zero?",
+      hint: "−8 and 8 are both eight units from zero."
+    },
+    {
+      label: "Opposite challenge 3 of 5",
+      integer: 12,
+      opposite: -12,
+      prompt: "What value combines with 12 to make zero?",
+      hint: "The additive inverse has the same magnitude and opposite sign."
+    },
+    {
+      label: "Opposite challenge 4 of 5",
+      integer: -3,
+      opposite: 3,
+      prompt: "Which value lies three units to the right of zero?",
+      hint: "The opposite of −3 is 3."
+    },
+    {
+      label: "Opposite challenge 5 of 5",
+      integer: 0,
+      opposite: 0,
+      prompt: "What happens when zero is reflected across zero?",
+      hint: "Zero is its own opposite."
+    }
+  ];
+
+  let current = 0;
+  const answers = new Array(questions.length).fill("");
+  const sums = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("oppositeMirrorAnswer").value;
+    sums[current] = document.getElementById("oppositeMirrorSum").value;
+    reasons[current] = document.getElementById("oppositeMirrorReason").value;
+  }
+
+  function renderQuestion() {
+    const q = questions[current];
+
+    document.getElementById("oppositeMirrorLabel").textContent = q.label;
+    document.getElementById("oppositeMirrorQuestion").innerHTML =
+      "What is the opposite of <strong>" + q.integer + "</strong>?";
+
+    document.getElementById("oppositeMirrorAnswer").value = answers[current];
+    document.getElementById("oppositeMirrorSum").value = sums[current];
+    document.getElementById("oppositeMirrorReason").value = reasons[current];
+
+    document.getElementById("oppositeMirrorVisual").innerHTML =
+      "<strong>" + q.integer + "</strong> &nbsp; ⟷ &nbsp; <strong>0</strong> &nbsp; ⟷ &nbsp; <strong>?</strong>";
+
+    document.getElementById("oppositeMirrorSupport").style.display = "none";
+    document.getElementById("oppositeMirrorFeedback").style.display = "none";
+
+    const previous = document.getElementById("oppositeMirrorPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("oppositeMirrorNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showOppositeMirrorPrompt = function () {
+    const box = document.getElementById("oppositeMirrorSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showOppositeMirrorHint = function () {
+    const box = document.getElementById("oppositeMirrorSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkOppositeMirrorAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("oppositeMirrorFeedback");
+    feedback.style.display = "block";
+
+    const answer = Number(normaliseIntegerText(answers[current]));
+    const sum = Number(normaliseIntegerText(sums[current]));
+
+    if (
+      !Number.isFinite(answer) ||
+      !Number.isFinite(sum) ||
+      reasons[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter the opposite, the sum and a short explanation.";
+      return;
+    }
+
+    if (
+      answer === questions[current].opposite &&
+      sum === 0
+    ) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. The integers are equally distant from zero and their sum is zero.";
+    } else if (answer === questions[current].opposite) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "The opposite is correct. Recheck the sum of the pair.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Reflect the integer across zero while keeping the same distance.";
+    }
+  };
+
+  window.previousOppositeMirrorQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextOppositeMirrorQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("oppositeMirrorFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 opposite-number challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Temperature challenge 1 of 4",
+      values: [-8, -3, 0, 4],
+      start: 4,
+      finish: -3,
+      change: 7,
+      direction: "fall",
+      prompt: "Which temperature lies farthest below zero?",
+      hint: "Order the values from left to right on a number line."
+    },
+    {
+      label: "Temperature challenge 2 of 4",
+      values: [-6, 2, -1, 5],
+      start: -6,
+      finish: 2,
+      change: 8,
+      direction: "rise",
+      prompt: "How far is it from −6 to zero, then from zero to 2?",
+      hint: "The temperature rises six degrees to zero and two more degrees."
+    },
+    {
+      label: "Temperature challenge 3 of 4",
+      values: [-10, -4, 3, 1],
+      start: 3,
+      finish: -4,
+      change: 7,
+      direction: "fall",
+      prompt: "Does the temperature move upward or downward?",
+      hint: "It falls three degrees to zero and four more below zero."
+    },
+    {
+      label: "Temperature challenge 4 of 4",
+      values: [-2, -9, 6, 0],
+      start: -9,
+      finish: 6,
+      change: 15,
+      direction: "rise",
+      prompt: "How many degrees separate −9 and 6?",
+      hint: "Move nine degrees to zero and six more to 6."
+    }
+  ];
+
+  let current = 0;
+  const orders = new Array(questions.length).fill("");
+  const changes = new Array(questions.length).fill("");
+  const directions = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    orders[current] = document.getElementById("temperatureExplorerOrder").value;
+    changes[current] = document.getElementById("temperatureExplorerChange").value;
+    directions[current] = document.getElementById("temperatureExplorerDirection").value;
+    reasons[current] = document.getElementById("temperatureExplorerReason").value;
+  }
+
+  function parseList(value) {
+    return value.split(",").map(function (item) {
+      return Number(item.trim());
+    });
+  }
+
+  function renderQuestion() {
+    const q = questions[current];
+
+    document.getElementById("temperatureExplorerLabel").textContent = q.label;
+    document.getElementById("temperatureExplorerQuestion").innerHTML =
+      "Temperatures: <strong>" + q.values.join(", ") + "°C</strong><br>" +
+      "The temperature changes from <strong>" + q.start + "°C</strong> to <strong>" + q.finish + "°C</strong>.";
+
+    document.getElementById("temperatureExplorerOrder").value = orders[current];
+    document.getElementById("temperatureExplorerChange").value = changes[current];
+    document.getElementById("temperatureExplorerDirection").value = directions[current];
+    document.getElementById("temperatureExplorerReason").value = reasons[current];
+
+    document.getElementById("temperatureExplorerSupport").style.display = "none";
+    document.getElementById("temperatureExplorerFeedback").style.display = "none";
+
+    const previous = document.getElementById("temperatureExplorerPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("temperatureExplorerNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showTemperatureExplorerPrompt = function () {
+    const box = document.getElementById("temperatureExplorerSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showTemperatureExplorerHint = function () {
+    const box = document.getElementById("temperatureExplorerSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkTemperatureExplorerAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("temperatureExplorerFeedback");
+    feedback.style.display = "block";
+
+    const order = parseList(orders[current]);
+    const expectedOrder = questions[current].values.slice().sort(function (a, b) {
+      return a - b;
+    });
+
+    const orderCorrect =
+      order.length === expectedOrder.length &&
+      order.every(function (value, index) {
+        return value === expectedOrder[index];
+      });
+
+    const changeCorrect =
+      Number(normaliseIntegerText(changes[current])) === questions[current].change;
+
+    const directionCorrect =
+      directions[current] === questions[current].direction;
+
+    if (
+      !orders[current].trim() ||
+      !changes[current].trim() ||
+      !directions[current] ||
+      reasons[current].trim().length < 15
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter the ordered temperatures, size and direction of change, and an explanation.";
+    } else if (orderCorrect && changeCorrect && directionCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You ordered the temperatures and interpreted the change across zero accurately.";
+    } else if (changeCorrect && directionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your change is correct. Recheck the ascending order of the temperatures.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Use zero as a checkpoint and count the distance on each side.";
+    }
+  };
+
+  window.previousTemperatureExplorerQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextTemperatureExplorerQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("temperatureExplorerFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 4 temperature challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Misconception challenge 1 of 5",
+      statement: "−8 is greater than −3 because 8 is greater than 3.",
+      correction: "-8 < -3",
+      prompt: "Which integer lies farther to the left?",
+      hint: "Among negative integers, farther left means smaller."
+    },
+    {
+      label: "Misconception challenge 2 of 5",
+      statement: "The opposite of −4 is 0.",
+      correction: "4",
+      prompt: "Which integer is the same distance from zero on the other side?",
+      hint: "The opposite of −4 is 4."
+    },
+    {
+      label: "Misconception challenge 3 of 5",
+      statement: "−2°C is colder than −9°C.",
+      correction: "-9°C is colder than -2°C",
+      prompt: "Which temperature lies farther below zero?",
+      hint: "−9 is smaller than −2."
+    },
+    {
+      label: "Misconception challenge 4 of 5",
+      statement: "Zero is a positive integer.",
+      correction: "zero is neither positive nor negative",
+      prompt: "Which side of zero are positive and negative integers placed?",
+      hint: "Zero is the boundary between positive and negative values."
+    },
+    {
+      label: "Misconception challenge 5 of 5",
+      statement: "−5 is five places to the right of zero.",
+      correction: "-5 is five units to the left of zero",
+      prompt: "Which direction represents negative values?",
+      hint: "Negative integers lie to the left of zero."
+    }
+  ];
+
+  let current = 0;
+  const decisions = new Array(questions.length).fill("");
+  const corrections = new Array(questions.length).fill("");
+  const explanations = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    decisions[current] = document.getElementById("negativeMistakeDecision").value;
+    corrections[current] = document.getElementById("negativeMistakeCorrection").value;
+    explanations[current] = document.getElementById("negativeMistakeExplanation").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("negativeMistakeLabel").textContent = questions[current].label;
+    document.getElementById("negativeMistakeQuestion").innerHTML =
+      "<strong>" + questions[current].statement + "</strong>";
+
+    document.getElementById("negativeMistakeDecision").value = decisions[current];
+    document.getElementById("negativeMistakeCorrection").value = corrections[current];
+    document.getElementById("negativeMistakeExplanation").value = explanations[current];
+
+    document.getElementById("negativeMistakeSupport").style.display = "none";
+    document.getElementById("negativeMistakeFeedback").style.display = "none";
+
+    const previous = document.getElementById("negativeMistakePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("negativeMistakeNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showNegativeMistakePrompt = function () {
+    const box = document.getElementById("negativeMistakeSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showNegativeMistakeHint = function () {
+    const box = document.getElementById("negativeMistakeSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkNegativeMistakeAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("negativeMistakeFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !decisions[current] ||
+      corrections[current].trim().length < 1 ||
+      explanations[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a decision, write a correction and explain the misconception.";
+      return;
+    }
+
+    if (decisions[current] === "no") {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "You correctly identified the statement as false. Check that your correction uses number-line or zero-reference reasoning.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Reconsider the position of the values relative to zero.";
+    }
+  };
+
+  window.previousNegativeMistakeQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextNegativeMistakeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("negativeMistakeFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 misconception challenges.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  function addIntegerAdviserRule() {
+    const holder = document.getElementById("integerAdviserRules");
+    const row = document.createElement("div");
+
+    row.className = "integer-adviser-rule";
+    row.style.background = "#ffffff";
+    row.style.padding = "11px";
+    row.style.borderRadius = "9px";
+    row.style.marginBottom = "10px";
+
+    row.innerHTML =
+      '<label><strong>Rule type</strong></label>' +
+      '<select class="integer-rule-type" style="width:100%; padding:8px; margin:5px 0 9px; border:1px solid #bcae98; border-radius:7px;" aria-label="Choose the integer rule type">' +
+        '<option value="positive">Compare two positive integers</option>' +
+        '<option value="negative">Compare two negative integers</option>' +
+        '<option value="differentSides">Values lie on different sides of zero</option>' +
+        '<option value="zero">Compare an integer with zero</option>' +
+        '<option value="opposites">Identify opposite integers</option>' +
+        '<option value="distance">Distinguish value from distance from zero</option>' +
+        '<option value="symbol">Select the comparison symbol</option>' +
+      '</select>' +
+      '<label><strong>Decision rule</strong></label>' +
+      '<input class="integer-rule-text" type="text" placeholder="Describe what the learner should check" style="width:100%; box-sizing:border-box; padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Describe what the learner should check">';
+
+    holder.appendChild(row);
+    renderIntegerAdviserPreview();
+  }
+
+  function renderIntegerAdviserPreview() {
+    const preview = document.getElementById("integerAdviserPreview");
+    const name =
+      document.getElementById("integerAdviserName").value.trim() ||
+      "Your Integer Comparison Adviser";
+
+    const rows = Array.from(
+      document.querySelectorAll(".integer-adviser-rule")
+    );
+
+    let html = "<h3 style='margin-top:0;'>" + name + "</h3>";
+
+    rows.forEach(function (row, index) {
+      const type = row.querySelector(".integer-rule-type").value;
+      const text =
+        row.querySelector(".integer-rule-text").value ||
+        "Rule not entered";
+
+      html +=
+        "<p><strong>Rule " + (index + 1) +
+        " — " + type + ":</strong> " + text + "</p>";
+    });
+
+    preview.innerHTML = html;
+  }
+
+  function checkIntegerAdviser() {
+    renderIntegerAdviserPreview();
+
+    const rows = Array.from(
+      document.querySelectorAll(".integer-adviser-rule")
+    );
+
+    const types = rows.map(function (row) {
+      return row.querySelector(".integer-rule-type").value;
+    });
+
+    const completeRules = rows.every(function (row) {
+      return row.querySelector(".integer-rule-text").value.trim().length >= 8;
+    });
+
+    const first = Number(
+      normaliseIntegerText(
+        document.getElementById("integerAdviserFirst").value
+      )
+    );
+
+    const second = Number(
+      normaliseIntegerText(
+        document.getElementById("integerAdviserSecond").value
+      )
+    );
+
+    const symbol = document.getElementById("integerAdviserSymbol").value;
+    const explanation =
+      document.getElementById("integerAdviserExplanation").value.trim();
+
+    const feedback = document.getElementById("integerAdviserFeedback");
+    feedback.style.display = "block";
+
+    const requirementsMet =
+      types.indexOf("positive") !== -1 &&
+      types.indexOf("negative") !== -1 &&
+      types.indexOf("differentSides") !== -1 &&
+      types.indexOf("zero") !== -1 &&
+      types.indexOf("opposites") !== -1 &&
+      types.indexOf("distance") !== -1 &&
+      types.indexOf("symbol") !== -1;
+
+    if (rows.length < 7) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add at least seven rules so every comparison situation is represented.";
+      return;
+    }
+
+    if (
+      !Number.isFinite(first) ||
+      !Number.isFinite(second) ||
+      !symbol ||
+      explanation.length < 25
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter two test integers, choose a symbol and explain how the adviser works.";
+      return;
+    }
+
+    const correctSymbol =
+      first < second ? "<" :
+      first > second ? ">" : "=";
+
+    if (
+      completeRules &&
+      requirementsMet &&
+      symbol === correctSymbol
+    ) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your adviser includes the required rules and correctly compares the test integers.";
+    } else if (completeRules && requirementsMet) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your rule set is complete. Recheck which test integer lies farther to the right.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Check that every required rule type appears and each rule contains a clear action.";
+    }
+  }
+
+  function resetIntegerAdviser() {
+    document.getElementById("integerAdviserName").value = "";
+    document.getElementById("integerAdviserFirst").value = "";
+    document.getElementById("integerAdviserSecond").value = "";
+    document.getElementById("integerAdviserSymbol").value = "";
+    document.getElementById("integerAdviserExplanation").value = "";
+    document.getElementById("integerAdviserRules").innerHTML = "";
+    document.getElementById("integerAdviserPreview").innerHTML = "";
+    document.getElementById("integerAdviserFeedback").style.display = "none";
+
+    for (let index = 0; index < 7; index++) {
+      addIntegerAdviserRule();
+    }
+  }
+
+  document
+    .getElementById("integerAdviserName")
+    .addEventListener("input", renderIntegerAdviserPreview);
+
+  document
+    .getElementById("integerAdviserRules")
+    .addEventListener("input", renderIntegerAdviserPreview);
+
+  resetIntegerAdviser();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Comparison",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>−3 ___ 2</strong>",
+      answers: ["<"],
+      prompt: "Which value lies to the right on a number line?",
+      hint: "Every positive integer is greater than every negative integer.",
+      solution: "−3 < 2."
+    },
+    {
+      label: "Question 2 of 8 · Two negative integers",
+      text: "Insert <strong>&lt;</strong>, <strong>&gt;</strong> or <strong>=</strong>:<br><strong>−8 ___ −5</strong>",
+      answers: ["<"],
+      prompt: "Which value lies farther left?",
+      hint: "−8 is farther below zero than −5.",
+      solution: "−8 < −5."
+    },
+    {
+      label: "Question 3 of 8 · Ordering",
+      text: "Order from smallest to largest:<br><strong>4, −6, 0, −2</strong>",
+      answers: ["-6, -2, 0, 4", "−6, −2, 0, 4"],
+      prompt: "Place the values mentally on a number line.",
+      hint: "Begin with the value farthest to the left.",
+      solution: "−6, −2, 0, 4."
+    },
+    {
+      label: "Question 4 of 8 · Opposites",
+      text: "What is the opposite of <strong>−9</strong>?",
+      answers: ["9"],
+      prompt: "Which value is the same distance from zero on the other side?",
+      hint: "Change the sign while preserving the distance.",
+      solution: "The opposite of −9 is 9."
+    },
+    {
+      label: "Question 5 of 8 · Additive inverse",
+      text: "Complete the statement:<br><strong>7 + ___ = 0</strong>",
+      answers: ["-7", "−7"],
+      prompt: "Which integer cancels 7?",
+      hint: "Use the additive inverse of 7.",
+      solution: "7 + (−7) = 0."
+    },
+    {
+      label: "Question 6 of 8 · Temperature comparison",
+      text: "Which is colder: <strong>−4°C</strong> or <strong>−11°C</strong>?",
+      answers: ["-11", "-11°c", "−11", "−11°c"],
+      prompt: "Which temperature lies farther below zero?",
+      hint: "The smaller signed value is colder.",
+      solution: "−11°C is colder."
+    },
+    {
+      label: "Question 7 of 8 · Change across zero",
+      text: "The temperature falls from <strong>5°C</strong> to <strong>−3°C</strong>. What is the size of the fall?",
+      answers: ["8", "8°c"],
+      prompt: "How far is 5 from zero, then zero from −3?",
+      hint: "5 + 3 gives the total distance.",
+      solution: "The temperature falls by 8°C."
+    },
+    {
+      label: "Question 8 of 8 · Reasoning",
+      text: "Which is greater: <strong>−2</strong> or <strong>−7</strong>?",
+      answers: ["-2", "−2"],
+      prompt: "Which integer lies farther to the right?",
+      hint: "The negative integer closer to zero is greater.",
+      solution: "−2 is greater than −7."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/−/g, "-")
+      .replace(/°c/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = question.label;
+    document.getElementById("practiceQuestion").innerHTML = question.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (answer) {
+      return normalise(answer) === response;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your integer reasoning is accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Picture the values on a number line and use zero as the reference point.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and check which value lies farther to the right. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " +
+      questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equivalent Fractions and Simplifying Fractions | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Equivalent Fractions and Simplifying Fractions
+     Combined Verse-al lesson, three interactive investigations
+     and an in-page progressive practice session.
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">Equivalent Fractions and Simplifying Fractions</h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question: <em>How can a fraction change its appearance without changing its value?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        fractions, decimals and percentages as connected representations of parts and wholes.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>Seeds of Change:</strong>
+        identify and generate equivalent fractions; use common factors to simplify fractions;
+        explain why multiplying or dividing the numerator and denominator by the same number preserves value;
+        and use simplest form when comparing and solving problems.
+      </p>
+    </div>
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧠 The Knowing World</summary>
+
+      <h3>Equivalent fractions</h3>
+
+      <p>
+        Equivalent fractions have different numerators and denominators but represent the same amount.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center; font-size:1.15em;">
+        <strong>1/2 = 2/4 = 3/6 = 4/8</strong>
+      </p>
+
+      <p>
+        When the numerator and denominator are multiplied or divided by the same non-zero number,
+        the value of the fraction stays the same.
+      </p>
+
+      <h3>Simplifying fractions</h3>
+
+      <p>
+        To simplify a fraction, divide the numerator and denominator by a common factor.
+        A fraction is in its <strong>simplest form</strong> when the numerator and denominator have no common factor greater than 1.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>Example:</strong>
+        18/24 → divide both by 6 → 3/4
+      </p>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>numerator, denominator, equivalent, common factor, simplest form, fraction bar, whole, equal parts</strong>
+      </p>
+
+      <h3>Interactive investigation: Drag-and-Drop Equivalent Fraction Bars</h3>
+
+      <p>
+        Drag each fraction bar into the family that represents the same amount.
+        Correct matches stay in place. Incorrect matches return to the starting area with a thinking prompt.
+      </p>
+
+      <div id="fractionBarApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <div style="background:#e5edf4; border-left:6px solid #315d72; padding:13px; border-radius:10px; margin-bottom:15px;">
+          <strong>How to play:</strong>
+          Drag each bar into the matching fraction family.
+          You can also click a bar, then click a family box.
+        </div>
+
+        <div id="fractionBarSource"
+             style="display:flex; flex-wrap:wrap; gap:12px; padding:14px; background:#ffffff; border-radius:12px; min-height:110px; margin-bottom:16px;">
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:12px;">
+
+          <div class="fraction-drop-zone"
+               data-value="0.5"
+               tabindex="0"
+               role="button"
+               aria-label="Family A: one half. Select a fraction bar, then press Enter or Space to place it here."
+               onclick="placeSelectedFractionBar(this)"
+               onkeydown="handleFractionZoneKeydown(event, this)"
+               ondragover="event.preventDefault()"
+               ondrop="dropFractionBar(event, this)"
+               style="background:#fffaf0; border:2px dashed #8b8f75; padding:13px; border-radius:12px; min-height:135px;">
+            <h4 style="margin-top:0;">Family A: 1/2</h4>
+            <div class="fraction-drop-content" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+          </div>
+
+          <div class="fraction-drop-zone"
+               data-value="0.25"
+               tabindex="0"
+               role="button"
+               aria-label="Family B: one quarter. Select a fraction bar, then press Enter or Space to place it here."
+               onclick="placeSelectedFractionBar(this)"
+               onkeydown="handleFractionZoneKeydown(event, this)"
+               ondragover="event.preventDefault()"
+               ondrop="dropFractionBar(event, this)"
+               style="background:#fffaf0; border:2px dashed #8b8f75; padding:13px; border-radius:12px; min-height:135px;">
+            <h4 style="margin-top:0;">Family B: 1/4</h4>
+            <div class="fraction-drop-content" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+          </div>
+
+          <div class="fraction-drop-zone"
+               data-value="0.75"
+               tabindex="0"
+               role="button"
+               aria-label="Family C: three quarters. Select a fraction bar, then press Enter or Space to place it here."
+               onclick="placeSelectedFractionBar(this)"
+               onkeydown="handleFractionZoneKeydown(event, this)"
+               ondragover="event.preventDefault()"
+               ondrop="dropFractionBar(event, this)"
+               style="background:#fffaf0; border:2px dashed #8b8f75; padding:13px; border-radius:12px; min-height:135px;">
+            <h4 style="margin-top:0;">Family C: 3/4</h4>
+            <div class="fraction-drop-content" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+          </div>
+
+          <div class="fraction-drop-zone"
+               data-value="0.4"
+               tabindex="0"
+               role="button"
+               aria-label="Family D: two fifths. Select a fraction bar, then press Enter or Space to place it here."
+               onclick="placeSelectedFractionBar(this)"
+               onkeydown="handleFractionZoneKeydown(event, this)"
+               ondragover="event.preventDefault()"
+               ondrop="dropFractionBar(event, this)"
+               style="background:#fffaf0; border:2px dashed #8b8f75; padding:13px; border-radius:12px; min-height:135px;">
+            <h4 style="margin-top:0;">Family D: 2/5</h4>
+            <div class="fraction-drop-content" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+          </div>
+
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:15px;">
+          <button type="button"
+                  onclick="resetFractionBars()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Bars
+          </button>
+
+          <button type="button"
+                  onclick="checkFractionBarFamilies()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check Families
+          </button>
+        </div>
+
+        <div id="fractionBarFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>What do equivalent bars have in common?</li>
+        <li>Why can a bar have more pieces but still show the same amount?</li>
+        <li>How could the bars help you simplify 6/8?</li>
+      </ul>
+    </details>
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌍 The Human Story</summary>
+
+      <h3>Fair Shares at the Community Café</h3>
+
+      <p>
+        Sharing food fairly often involves equivalent fractions.
+        Two people may receive pieces cut into different shapes or numbers of parts while still receiving the same amount.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        One tray is cut into 6 equal pieces and a learner receives 2 pieces.
+        Another tray is cut into 3 equal pieces and a learner receives 1 piece.
+        Both shares are equal because <strong>2/6 = 1/3</strong>.
+      </p>
+
+      <h3>Fairness inquiry</h3>
+
+      <ul>
+        <li>Does fair always mean the same number of pieces?</li>
+        <li>What matters more: the number of pieces or the total amount?</li>
+        <li>How can simplifying a fraction make a fair share easier to understand?</li>
+      </ul>
+
+      <h3>Interactive investigation: Community Café Share Checker</h3>
+
+      <div id="cafeApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="cafeLabel" style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="cafeQuestion" style="font-size:1.1em;"></div>
+
+        <label for="cafeDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Are the shares equivalent?</strong>
+        </label>
+
+        <select id="cafeDecision" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="cafeSimplified" style="display:block; margin:14px 0 6px;">
+          <strong>Write the common share in simplest form</strong>
+        </label>
+
+        <input id="cafeSimplified"
+               type="text"
+               placeholder="Example: 1/3"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="cafeReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain your reasoning</strong>
+        </label>
+
+        <textarea id="cafeReason"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showCafePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showCafeHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkCafeAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="cafeSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="cafeFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="cafePrevious"
+                  type="button"
+                  onclick="previousCafeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="cafeNext"
+                  type="button"
+                  onclick="nextCafeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+    </details>
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🎨 The Expressive Self</summary>
+
+      <h3>Show equivalence in your own way</h3>
+
+      <p>
+        Choose one equivalent fraction family and communicate why all the fractions represent the same amount.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>Choose from:</strong>
+        1/2 = 2/4 = 3/6 &nbsp; | &nbsp;
+        1/3 = 2/6 = 3/9 &nbsp; | &nbsp;
+        2/5 = 4/10 = 6/15
+      </p>
+
+      <h3>Choose a form</h3>
+
+      <ul>
+        <li>Draw a fraction bar or fraction wall.</li>
+        <li>Create a comic where fractions discover they belong to the same family.</li>
+        <li>Write a short explanation using numerator, denominator and common factor.</li>
+        <li>Record a spoken explanation.</li>
+        <li>Invent a metaphor for simplifying, such as “removing matching layers”.</li>
+      </ul>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stem:
+        <strong>“These fractions are equivalent because…”</strong>
+      </p>
+    </details>
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧩 The Designed World</summary>
+
+      <h3>Interactive design challenge: Build an Equivalent Fraction Wall</h3>
+
+      <p>
+        Choose a fraction family and generate a visual wall.
+        Your wall should show equivalent fractions aligned to the same length.
+      </p>
+
+      <div id="fractionWallApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="wallBaseFraction" style="display:block; margin-bottom:6px;">
+          <strong>Choose a starting fraction</strong>
+        </label>
+
+        <select id="wallBaseFraction" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="1/2">1/2</option>
+          <option value="1/3">1/3</option>
+          <option value="2/5">2/5</option>
+          <option value="3/4">3/4</option>
+        </select>
+
+        <label for="wallRows" style="display:block; margin:14px 0 6px;">
+          <strong>Number of equivalent rows</strong>
+        </label>
+
+        <select id="wallRows" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="3">3 rows</option>
+          <option value="4">4 rows</option>
+          <option value="5">5 rows</option>
+        </select>
+
+        <button type="button"
+                onclick="buildFractionWall()"
+                style="margin-top:14px; padding:10px 15px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+          🧱 Build Fraction Wall
+        </button>
+
+        <div id="fractionWallDisplay"
+             style="margin-top:18px; background:#ffffff; padding:15px; border-radius:12px; min-height:120px;"></div>
+
+        <label for="wallExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain how the wall proves equivalence</strong>
+        </label>
+
+        <textarea id="wallExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <label for="wallSimplify" style="display:block; margin:14px 0 6px;">
+          <strong>Type one fraction from your wall and simplify it</strong>
+        </label>
+
+        <input id="wallSimplify"
+               type="text"
+               placeholder="Example: 6/8 = 3/4"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <button type="button"
+                onclick="checkFractionWallReflection()"
+                style="margin-top:14px; padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+          ✅ Check My Wall Explanation
+        </button>
+
+        <div id="fractionWallFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Design reflection</h3>
+
+      <ul>
+        <li>Which rows align exactly?</li>
+        <li>How do the numerators and denominators change?</li>
+        <li>How could your wall help someone simplify a fraction?</li>
+      </ul>
+    </details>
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌱 The Living Body</summary>
+
+      <h3>Pause before simplifying</h3>
+
+      <p>
+        A fraction can look complicated even when its value is familiar.
+        Pause before calculating and look for a common factor.
+      </p>
+
+      <ol>
+        <li>Look at the numerator and denominator.</li>
+        <li>Ask: what number divides both exactly?</li>
+        <li>Divide both by the same factor.</li>
+        <li>Check whether another common factor remains.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can recognise some equivalent fractions visually.”</li>
+        <li>“I can simplify when I know a common factor.”</li>
+        <li>“I can explain why the fraction’s value stays the same.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I do not need to find the greatest common factor immediately. I can simplify in more than one step.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A common factor I used successfully was...</li>
+        <li>A visual model that helped me was...</li>
+        <li>A fraction I can now simplify confidently is...</li>
+      </ul>
+    </details>
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🛠 Final Task</summary>
+
+      <h3>Assignment: Create an Equivalent Fraction Gallery</h3>
+
+      <p>
+        Design a poster, slide, report or digital display that teaches another learner how equivalent fractions and simplifying work.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>at least three equivalent fraction families</li>
+        <li>a visual fraction bar or fraction wall</li>
+        <li>two fractions simplified using common factors</li>
+        <li>one example simplified in more than one step</li>
+        <li>an explanation of why dividing the numerator and denominator by the same number preserves value</li>
+        <li>one fair-sharing example</li>
+        <li>a short reflection explaining which strategy helped most</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to use equivalence flexibly, simplify fractions efficiently,
+        compare rational numbers and justify multiplicative relationships.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; min-width:850px; border-collapse:collapse; background:#fffaf0;">
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Extending</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Conceptual Understanding</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can recognise some fractions that look the same in a visual model.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can identify equivalent fractions using bars, walls or prompts.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain why equivalent fractions have the same value and why simplifying preserves value.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can generalise how multiplying or dividing both parts by the same factor creates equivalent fractions.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Fluency &amp; Accuracy</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can simplify some familiar fractions with support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use common factors to simplify fractions, though I may stop before simplest form.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can generate equivalent fractions and simplify accurately to simplest form.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can select efficient common factors and check my results using another method.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Application to Problems</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can attempt a familiar fraction problem when the model is provided.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use equivalence in familiar sharing and comparison problems with some support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can apply equivalent fractions and simplifying to explain and solve practical problems.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can design and justify my own visual or real-life fraction model.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Independence &amp; Reflection</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can begin with support and identify when I need help.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use a suggested model or factor strategy and respond to feedback.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can choose a strategy, check my work and explain what helped me learn.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work independently, refine my explanation and compare different simplifying methods.</td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        How can you prove that a simplified fraction still represents the same amount?
+      </p>
+    </details>
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to the session whenever you need to review a model, common factor or simplifying step.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">Equivalent Fractions and Simplifying Practice</h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+      <p style="margin-top:0;">
+        Work through eight questions involving equivalent fractions, common factors, simplest form and reasoning.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">Your working:</label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">Your final answer:</label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+      <summary style="font-size:1.25em; font-weight:bold;">💛 Reflection</summary>
+
+      <ul>
+        <li>A common factor I used successfully was...</li>
+        <li>A fraction family I recognise quickly is...</li>
+        <li>A question I checked using a visual model was...</li>
+        <li>A simplifying step I would like to revisit is...</li>
+      </ul>
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+
+<script>
+(function () {
+  const bars = [
+    { id: "bar-2-4", label: "2/4", value: 0.5, numerator: 2, denominator: 4 },
+    { id: "bar-3-6", label: "3/6", value: 0.5, numerator: 3, denominator: 6 },
+    { id: "bar-4-8", label: "4/8", value: 0.5, numerator: 4, denominator: 8 },
+    { id: "bar-2-8", label: "2/8", value: 0.25, numerator: 2, denominator: 8 },
+    { id: "bar-3-12", label: "3/12", value: 0.25, numerator: 3, denominator: 12 },
+    { id: "bar-6-8", label: "6/8", value: 0.75, numerator: 6, denominator: 8 },
+    { id: "bar-9-12", label: "9/12", value: 0.75, numerator: 9, denominator: 12 },
+    { id: "bar-4-10", label: "4/10", value: 0.4, numerator: 4, denominator: 10 },
+    { id: "bar-6-15", label: "6/15", value: 0.4, numerator: 6, denominator: 15 }
+  ];
+
+  let selectedBarId = null;
+
+  function createVisualBar(bar) {
+    const wrapper = document.createElement("div");
+    wrapper.id = bar.id;
+    wrapper.draggable = true;
+    wrapper.dataset.value = String(bar.value);
+    wrapper.dataset.home = "fractionBarSource";
+    wrapper.onclick = function (event) {
+      event.stopPropagation();
+      selectFractionBar(bar.id);
+    };
+    wrapper.ondragstart = function (event) {
+      event.dataTransfer.setData("text/plain", bar.id);
+    };
+    wrapper.style.width = "180px";
+    wrapper.style.padding = "8px";
+    wrapper.style.background = "#ffffff";
+    wrapper.style.border = "2px solid #7b8a73";
+    wrapper.style.borderRadius = "10px";
+    wrapper.style.cursor = "grab";
+
+    const label = document.createElement("div");
+    label.textContent = bar.label;
+    label.style.fontWeight = "bold";
+    label.style.marginBottom = "6px";
+
+    const strip = document.createElement("div");
+    strip.style.display = "grid";
+    strip.style.gridTemplateColumns = "repeat(" + bar.denominator + ", 1fr)";
+    strip.style.height = "30px";
+    strip.style.border = "1px solid #6f6f6f";
+
+    for (let i = 0; i < bar.denominator; i++) {
+      const cell = document.createElement("div");
+      cell.style.borderRight =
+        i === bar.denominator - 1 ? "none" : "1px solid #6f6f6f";
+      cell.style.background = i < bar.numerator ? "#dce8d3" : "#ffffff";
+      strip.appendChild(cell);
+    }
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(strip);
+
+    return wrapper;
+  }
+
+  function initialiseFractionBars() {
+    const source = document.getElementById("fractionBarSource");
+    source.innerHTML = "";
+
+    bars.forEach(function (bar) {
+      source.appendChild(createVisualBar(bar));
+    });
+
+    document.querySelectorAll(".fraction-drop-content").forEach(function (zone) {
+      zone.innerHTML = "";
+    });
+
+    selectedBarId = null;
+    document.getElementById("fractionBarFeedback").style.display = "none";
+  }
+
+  window.selectFractionBar = function (barId) {
+    selectedBarId = barId;
+
+    document.querySelectorAll("#fractionBarSource > div, .fraction-drop-content > div").forEach(function (bar) {
+      bar.style.boxShadow = "none";
+    });
+
+    const selected = document.getElementById(barId);
+
+    if (selected) {
+      selected.style.boxShadow = "0 0 0 3px #d7b765";
+    }
+  };
+
+  window.placeSelectedFractionBar = function (zone) {
+    if (!selectedBarId) {
+      return;
+    }
+
+    const bar = document.getElementById(selectedBarId);
+    placeBarInZone(bar, zone);
+  };
+
+  window.dropFractionBar = function (event, zone) {
+    event.preventDefault();
+    const barId = event.dataTransfer.getData("text/plain");
+    const bar = document.getElementById(barId);
+    placeBarInZone(bar, zone);
+  };
+
+  function placeBarInZone(bar, zone) {
+    if (!bar) {
+      return;
+    }
+
+    const barValue = Number(bar.dataset.value);
+    const zoneValue = Number(zone.dataset.value);
+    const feedback = document.getElementById("fractionBarFeedback");
+
+    feedback.style.display = "block";
+
+    if (Math.abs(barValue - zoneValue) < 0.000001) {
+      zone.querySelector(".fraction-drop-content").appendChild(bar);
+      bar.style.boxShadow = "none";
+      selectedBarId = null;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct match. The bars cover the same proportion of the whole.";
+    } else {
+      document.getElementById("fractionBarSource").appendChild(bar);
+      bar.style.boxShadow = "none";
+      selectedBarId = null;
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That bar does not match this family. Compare the length covered, not just the number of pieces.";
+    }
+  }
+
+
+  window.handleFractionZoneKeydown = function (event, zone) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      placeSelectedFractionBar(zone);
+    }
+  };
+
+  window.resetFractionBars = initialiseFractionBars;
+
+  window.checkFractionBarFamilies = function () {
+    const placed = document.querySelectorAll(".fraction-drop-content > div").length;
+    const feedback = document.getElementById("fractionBarFeedback");
+
+    feedback.style.display = "block";
+
+    if (placed === bars.length) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "All fraction bars are in equivalent families. Explain how one family could be simplified.";
+    } else {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "You have placed " + placed + " of " + bars.length + " bars. Keep comparing the total length shown.";
+    }
+  };
+
+  initialiseFractionBars();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Café share 1 of 4",
+      question: "One customer receives <strong>2/6</strong> of a tray. Another receives <strong>1/3</strong>. Are the shares equivalent?",
+      decision: "yes",
+      simplest: ["1/3"],
+      prompt: "Can 2 and 6 both be divided by the same number?",
+      hint: "Divide 2/6 by 2/2."
+    },
+    {
+      label: "Café share 2 of 4",
+      question: "One customer receives <strong>3/8</strong> of a tray. Another receives <strong>6/16</strong>. Are the shares equivalent?",
+      decision: "yes",
+      simplest: ["3/8"],
+      prompt: "What happens if 6/16 is divided by 2/2?",
+      hint: "Simplify 6/16 and compare."
+    },
+    {
+      label: "Café share 3 of 4",
+      question: "One customer receives <strong>4/10</strong> of a tray. Another receives <strong>1/2</strong>. Are the shares equivalent?",
+      decision: "no",
+      simplest: ["2/5"],
+      prompt: "Simplify 4/10 before comparing it with 1/2.",
+      hint: "4/10 simplifies to 2/5, not 1/2."
+    },
+    {
+      label: "Café share 4 of 4",
+      question: "One table receives <strong>9/12</strong> of a tray. Another receives <strong>3/4</strong>. Are the shares equivalent?",
+      decision: "yes",
+      simplest: ["3/4"],
+      prompt: "What common factor do 9 and 12 share?",
+      hint: "Divide 9 and 12 by 3."
+    }
+  ];
+
+  let current = 0;
+  const savedDecision = new Array(questions.length).fill("");
+  const savedSimplest = new Array(questions.length).fill("");
+  const savedReason = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function normalise(value) {
+    return value.toLowerCase().replace(/\s+/g, "").trim();
+  }
+
+  function saveCurrent() {
+    savedDecision[current] = document.getElementById("cafeDecision").value;
+    savedSimplest[current] = document.getElementById("cafeSimplified").value;
+    savedReason[current] = document.getElementById("cafeReason").value;
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("cafeLabel").textContent = question.label;
+    document.getElementById("cafeQuestion").innerHTML = question.question;
+    document.getElementById("cafeDecision").value = savedDecision[current];
+    document.getElementById("cafeSimplified").value = savedSimplest[current];
+    document.getElementById("cafeReason").value = savedReason[current];
+
+    document.getElementById("cafeSupport").style.display = "none";
+    document.getElementById("cafeFeedback").style.display = "none";
+
+    const previous = document.getElementById("cafePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("cafeNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showCafePrompt = function () {
+    const box = document.getElementById("cafeSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showCafeHint = function () {
+    const box = document.getElementById("cafeSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkCafeAnswer = function () {
+    saveCurrent();
+
+    const feedback = document.getElementById("cafeFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !savedDecision[current] ||
+      !savedSimplest[current].trim() ||
+      savedReason[current].trim().length < 8
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose yes or no, enter the simplest form and add a brief explanation.";
+      return;
+    }
+
+    const decisionCorrect =
+      savedDecision[current] === questions[current].decision;
+
+    const simplestCorrect = questions[current].simplest.some(function (item) {
+      return normalise(item) === normalise(savedSimplest[current]);
+    });
+
+    if (decisionCorrect && simplestCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your decision and simplest form match the mathematical share.";
+    } else if (decisionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your equivalence decision is correct. Recheck the simplest form.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Simplify the fractions before deciding whether the shares are equal.";
+    }
+  };
+
+  window.previousCafeQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextCafeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("cafeFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 4 café shares correctly. Review any unfinished shares.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  function parseSimpleFraction(value) {
+    const parts = value.trim().split("/");
+
+    if (parts.length !== 2) {
+      return null;
+    }
+
+    const numerator = Number(parts[0]);
+    const denominator = Number(parts[1]);
+
+    if (
+      !Number.isInteger(numerator) ||
+      !Number.isInteger(denominator) ||
+      denominator === 0
+    ) {
+      return null;
+    }
+
+    return {
+      numerator: numerator,
+      denominator: denominator,
+      value: numerator / denominator
+    };
+  }
+
+  function buildFractionWall() {
+    const base = parseSimpleFraction(
+      document.getElementById("wallBaseFraction").value
+    );
+
+    const rows = Number(document.getElementById("wallRows").value);
+    const display = document.getElementById("fractionWallDisplay");
+    display.innerHTML = "";
+
+    if (!base) {
+      return;
+    }
+
+    for (let multiplier = 1; multiplier <= rows; multiplier++) {
+      const numerator = base.numerator * multiplier;
+      const denominator = base.denominator * multiplier;
+
+      const row = document.createElement("div");
+      row.style.marginBottom = "12px";
+
+      const label = document.createElement("div");
+      label.textContent = numerator + "/" + denominator;
+      label.style.fontWeight = "bold";
+      label.style.marginBottom = "5px";
+
+      const bar = document.createElement("div");
+      bar.style.display = "grid";
+      bar.style.gridTemplateColumns = "repeat(" + denominator + ", 1fr)";
+      bar.style.height = "34px";
+      bar.style.border = "1px solid #6f6f6f";
+
+      for (let i = 0; i < denominator; i++) {
+        const cell = document.createElement("div");
+        cell.style.borderRight =
+          i === denominator - 1 ? "none" : "1px solid #6f6f6f";
+        cell.style.background =
+          i < numerator ? "#dce8d3" : "#ffffff";
+        bar.appendChild(cell);
+      }
+
+      row.appendChild(label);
+      row.appendChild(bar);
+      display.appendChild(row);
+    }
+  }
+
+  function checkFractionWallReflection() {
+    const explanation =
+      document.getElementById("wallExplanation").value.trim();
+
+    const simplify =
+      document.getElementById("wallSimplify").value.trim();
+
+    const feedback =
+      document.getElementById("fractionWallFeedback");
+
+    feedback.style.display = "block";
+
+    if (explanation.length < 20 || simplify.length < 5) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add a fuller explanation and include a complete simplifying statement such as 6/8 = 3/4.";
+      return;
+    }
+
+    if (simplify.indexOf("=") === -1 || simplify.indexOf("/") === -1) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Write the simplifying example as an equality, for example 4/8 = 1/2.";
+      return;
+    }
+
+    feedback.style.background = "#e3f0df";
+    feedback.textContent =
+      "Your wall includes a visual equivalence pattern and a simplifying example. Check that your explanation mentions equal lengths and the same factor.";
+  }
+
+  buildFractionWall();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Equivalent fraction",
+      text: "Complete the equivalence: <strong>1/2 = __/8</strong>",
+      answers: ["4"],
+      prompt: "What happened to the denominator from 2 to 8?",
+      hint: "Multiply the denominator by 4. Do the same to the numerator.",
+      solution: "2 × 4 = 8, so 1 × 4 = 4. Therefore 1/2 = 4/8."
+    },
+    {
+      label: "Question 2 of 8 · Simplifying",
+      text: "Simplify <strong>6/10</strong>.",
+      answers: ["3/5"],
+      prompt: "What number divides both 6 and 10?",
+      hint: "Both numbers are even.",
+      solution: "Divide 6 and 10 by 2 to get 3/5."
+    },
+    {
+      label: "Question 3 of 8 · Equivalent family",
+      text: "Which fraction is equivalent to <strong>3/4</strong>? Type one answer: <strong>6/8, 6/10 or 9/16</strong>.",
+      answers: ["6/8"],
+      prompt: "Which option multiplies the numerator and denominator by the same number?",
+      hint: "3 × 2 = 6 and 4 × 2 = 8.",
+      solution: "3/4 = 6/8 because both parts are multiplied by 2."
+    },
+    {
+      label: "Question 4 of 8 · Simplest form",
+      text: "Simplify <strong>18/24</strong> to its simplest form.",
+      answers: ["3/4"],
+      prompt: "What common factor do 18 and 24 share?",
+      hint: "Both numbers can be divided by 6.",
+      solution: "18 ÷ 6 = 3 and 24 ÷ 6 = 4, so the answer is 3/4."
+    },
+    {
+      label: "Question 5 of 8 · Missing denominator",
+      text: "Complete the equivalence: <strong>5/6 = 20/__</strong>",
+      answers: ["24"],
+      prompt: "What happened to the numerator from 5 to 20?",
+      hint: "Multiply both parts by 4.",
+      solution: "6 × 4 = 24, so 5/6 = 20/24."
+    },
+    {
+      label: "Question 6 of 8 · Multi-step simplifying",
+      text: "Simplify <strong>36/48</strong> to its simplest form.",
+      answers: ["3/4"],
+      prompt: "Could you simplify in more than one step?",
+      hint: "Divide both by 4, then check for another common factor.",
+      solution: "36/48 → 9/12 → 3/4. The simplest form is 3/4."
+    },
+    {
+      label: "Question 7 of 8 · Compare by simplifying",
+      text: "Are <strong>8/12</strong> and <strong>10/15</strong> equivalent? Type <strong>yes</strong> or <strong>no</strong>.",
+      answers: ["yes"],
+      prompt: "What does each fraction become in simplest form?",
+      hint: "8/12 simplifies to 2/3. Check 10/15.",
+      solution: "8/12 = 2/3 and 10/15 = 2/3, so they are equivalent."
+    },
+    {
+      label: "Question 8 of 8 · Reasoning challenge",
+      text: "A learner simplifies <strong>12/18</strong> to <strong>6/9</strong> and stops. Is the fraction in simplest form? Type <strong>yes</strong> or <strong>no</strong> and give the simplest form.",
+      answers: [
+        "no 2/3",
+        "no, 2/3",
+        "no 6/9 = 2/3"
+      ],
+      prompt: "Do 6 and 9 still have a common factor greater than 1?",
+      hint: "Both 6 and 9 are divisible by 3.",
+      solution: "No. 6/9 can still be divided by 3, giving 2/3."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] =
+      document.getElementById("practiceAnswer").value;
+
+    workings[current] =
+      document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML =
+      question.label;
+
+    document.getElementById("practiceQuestion").innerHTML =
+      question.text;
+
+    document.getElementById("practiceAnswer").value =
+      answers[current];
+
+    document.getElementById("practiceWorking").value =
+      workings[current];
+
+    document.getElementById("practiceSupport").style.display =
+      "none";
+
+    document.getElementById("practiceFeedback").style.display =
+      "none";
+
+    const previous =
+      document.getElementById("practicePrevious");
+
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution =
+      document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback =
+      document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (item) {
+      return normalise(item) === response;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your fraction is equivalent and accurately simplified.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Look for a common factor or check whether both parts changed by the same factor.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and check whether the fraction can be simplified further. The worked solution is now available.";
+    }
+
+    const solution =
+      document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box =
+      document.getElementById("practiceSupport");
+
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " +
+      questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback =
+        document.getElementById("practiceFeedback");
+
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

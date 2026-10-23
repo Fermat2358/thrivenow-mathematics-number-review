@@ -1,0 +1,2152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimation and Reasonableness | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Estimation and Reasonableness
+     Includes:
+     • Option 1 in The Knowing World: Estimate First Calculation Checker
+     • Option 4 in The Knowing World: Reasonable or Impossible?
+     • Option 5 in The Human Story: Community Event Estimation Planner
+     • Option 7 in The Expressive Self: Find and Fix the Estimation Mistake
+     • Option 10 in The Designed World: Build a Reasonableness Route
+     • Final Task with Assessment Rubric:
+       Emerging | Developing | Secure | Mastering
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">
+      Estimation and Reasonableness
+    </h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question:
+      <em>Can an estimate expose an answer that cannot possibly be correct?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        Number Sense &amp; Operations — place value, estimation and integers.
+      </p>
+
+      <p>
+        <strong>Seeds of Change:</strong>
+        create useful approximations; estimate sums, differences, products and quotients;
+        judge whether answers have a sensible magnitude; compare estimated and exact answers;
+        use inverse operations to check results; and select an appropriate degree of approximation for a purpose.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>National Curriculum learning:</strong>
+        use approximation through rounding to estimate answers;
+        use estimation and inverse operations to check calculations;
+        select appropriate calculation strategies; and solve increasingly complex numerical problems involving integers and decimals.
+      </p>
+
+    </div>
+
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧠 The Knowing World
+      </summary>
+
+      <h3>What makes an estimate useful?</h3>
+
+      <p>
+        An estimate is a deliberately simplified calculation that gives an approximate answer.
+        It should be quick enough to use mentally but close enough to reveal the expected size of the exact answer.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>48.7 × 19.6</strong><br>
+        48.7 is approximately 50 and 19.6 is approximately 20.<br>
+        50 × 20 = <strong>1,000</strong>.<br>
+        Therefore, an exact answer near 1,000 is reasonable.
+      </p>
+
+      <h3>Useful estimation strategies</h3>
+
+      <ul>
+        <li>Round to one significant figure.</li>
+        <li>Round to nearby multiples of 10, 100 or 1,000.</li>
+        <li>Use compatible numbers that are easy to calculate with.</li>
+        <li>Round up when checking whether a budget is definitely sufficient.</li>
+        <li>Use an inverse operation to check the approximate result.</li>
+      </ul>
+
+      <h3>Reasonableness checks</h3>
+
+      <ol>
+        <li>Should the answer be larger or smaller than the starting values?</li>
+        <li>What approximate size should the answer have?</li>
+        <li>Could the decimal point be misplaced?</li>
+        <li>Does the proposed answer lie near the estimate?</li>
+        <li>Can an inverse operation support the result?</li>
+      </ol>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>estimate, approximate, exact, reasonable, magnitude, compatible numbers, inverse operation, overestimate, underestimate, quotient, product</strong>
+      </p>
+
+
+      <h3>Interactive investigation 1: Estimate First Calculation Checker</h3>
+
+      <p>
+        Round the values, calculate an estimate and decide whether the proposed exact answer is reasonable.
+      </p>
+
+      <div id="estimateFirstApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="estimateFirstLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="estimateFirstQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="estimateRoundedFirst" style="display:block; margin:14px 0 6px;">
+          <strong>Round the first number to a useful value</strong>
+        </label>
+
+        <input id="estimateRoundedFirst"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="estimateRoundedSecond" style="display:block; margin:14px 0 6px;">
+          <strong>Round the second number to a useful value</strong>
+        </label>
+
+        <input id="estimateRoundedSecond"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="estimateAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Your estimated answer</strong>
+        </label>
+
+        <input id="estimateAnswer"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="estimateJudgement" style="display:block; margin:14px 0 6px;">
+          <strong>Is the proposed exact answer reasonable?</strong>
+        </label>
+
+        <select id="estimateJudgement"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="yes">Yes, it is reasonable</option>
+          <option value="no">No, it is not reasonable</option>
+        </select>
+
+        <label for="estimateReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain your judgement</strong>
+        </label>
+
+        <textarea id="estimateReason"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showEstimateFirstPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showEstimateFirstHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkEstimateFirstAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Estimate
+          </button>
+
+        </div>
+
+        <div id="estimateFirstSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="estimateFirstFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="estimateFirstPrevious"
+                  type="button"
+                  onclick="previousEstimateFirstQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="estimateFirstNext"
+                  type="button"
+                  onclick="nextEstimateFirstQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <h3>Interactive investigation 2: Reasonable or Impossible?</h3>
+
+      <p>
+        Decide whether each proposed answer could be correct before carrying out the full exact calculation.
+      </p>
+
+      <div id="reasonableApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px; margin-top:16px;">
+
+        <p id="reasonableLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="reasonableQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="reasonableDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Your decision</strong>
+        </label>
+
+        <select id="reasonableDecision"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="reasonable">Reasonable</option>
+          <option value="impossible">Impossible or clearly unreasonable</option>
+        </select>
+
+        <label for="reasonableEstimate" style="display:block; margin:14px 0 6px;">
+          <strong>A useful estimate</strong>
+        </label>
+
+        <input id="reasonableEstimate"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="reasonableExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain what the estimate reveals</strong>
+        </label>
+
+        <textarea id="reasonableExplanation"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showReasonablePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showReasonableHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkReasonableAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Reasoning
+          </button>
+
+        </div>
+
+        <div id="reasonableSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="reasonableFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="reasonablePrevious"
+                  type="button"
+                  onclick="previousReasonableQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="reasonableNext"
+                  type="button"
+                  onclick="nextReasonableQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why should multiplication by a number greater than 1 usually increase a positive quantity?</li>
+        <li>How can a misplaced decimal point be detected through estimation?</li>
+        <li>When might an underestimate be unsafe?</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌍 The Human Story
+      </summary>
+
+      <h3>Estimation in community planning</h3>
+
+      <p>
+        Event organisers often need quick estimates before exact figures are known.
+        Estimates can support budgeting, transport, seating, food orders and safe capacity planning.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        About <strong>198 people</strong> are attending an event.
+        Tables seat <strong>8 people</strong> each.<br>
+        200 ÷ 8 = 25, so approximately 25 tables are needed.
+      </p>
+
+      <h3>Fairness and safety</h3>
+
+      <ul>
+        <li>When should an organiser deliberately overestimate?</li>
+        <li>Who might be excluded if seating or food is underestimated?</li>
+        <li>Why should an estimate be updated when exact information becomes available?</li>
+      </ul>
+
+      <h3>Interactive investigation: Community Event Estimation Planner</h3>
+
+      <div id="eventPlannerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="eventPlannerLabel"
+           style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="eventPlannerQuestion" style="font-size:1.1em;"></div>
+
+        <label for="eventPlannerEstimate" style="display:block; margin:14px 0 6px;">
+          <strong>Your estimate</strong>
+        </label>
+
+        <input id="eventPlannerEstimate"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="eventPlannerDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Planning decision</strong>
+        </label>
+
+        <select id="eventPlannerDecision"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;"></select>
+
+        <label for="eventPlannerReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain why your estimate supports a fair and safe decision</strong>
+        </label>
+
+        <textarea id="eventPlannerReason"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showEventPlannerPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showEventPlannerHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkEventPlannerAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Plan
+          </button>
+
+        </div>
+
+        <div id="eventPlannerSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="eventPlannerFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="eventPlannerPrevious"
+                  type="button"
+                  onclick="previousEventPlannerQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="eventPlannerNext"
+                  type="button"
+                  onclick="nextEventPlannerQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🎨 The Expressive Self
+      </summary>
+
+      <h3>Interactive investigation: Find and Fix the Estimation Mistake</h3>
+
+      <p>
+        Identify the weak estimation decision, improve it and explain why your revision is more useful.
+      </p>
+
+      <div id="estimationMistakeApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="estimationMistakeLabel"
+           style="color:#587088; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="estimationMistakeQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.1em;"></div>
+
+        <label for="estimationMistakeDecision" style="display:block; margin:14px 0 6px;">
+          <strong>Is the estimate useful?</strong>
+        </label>
+
+        <select id="estimationMistakeDecision"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="estimationMistakeCorrection" style="display:block; margin:14px 0 6px;">
+          <strong>Improved estimate</strong>
+        </label>
+
+        <input id="estimationMistakeCorrection"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="estimationMistakeExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain why the original estimate was weak</strong>
+        </label>
+
+        <textarea id="estimationMistakeExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showEstimationMistakePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showEstimationMistakeHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkEstimationMistakeAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Revision
+          </button>
+
+        </div>
+
+        <div id="estimationMistakeSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="estimationMistakeFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="estimationMistakePrevious"
+                  type="button"
+                  onclick="previousEstimationMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="estimationMistakeNext"
+                  type="button"
+                  onclick="nextEstimationMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+      <h3>Express your reasoning</h3>
+
+      <p>
+        Choose one estimation mistake and present its correction as an annotated calculation,
+        short teaching note, comic, voice explanation or warning poster.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stem:
+        <strong>“This estimate is not useful because it changes ___ too much. A better approximation is…”</strong>
+      </p>
+
+    </details>
+
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧩 The Designed World
+      </summary>
+
+      <h3>Interactive design challenge: Build a Reasonableness Route</h3>
+
+      <p>
+        Design a reusable checking pathway that another learner can follow after completing a calculation.
+      </p>
+
+      <div id="reasonablenessRouteApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="routeName" style="display:block; margin-bottom:6px;">
+          <strong>Name your route</strong>
+        </label>
+
+        <input id="routeName"
+               type="text"
+               placeholder="Example: The Answer Reality Check"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div id="routeSteps" style="margin-top:15px;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="addRouteStep()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            + Add Checkpoint
+          </button>
+
+          <button type="button"
+                  onclick="checkReasonablenessRoute()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Test My Route
+          </button>
+
+          <button type="button"
+                  onclick="resetReasonablenessRoute()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Route
+          </button>
+
+        </div>
+
+        <label for="routeTestCalculation" style="display:block; margin:14px 0 6px;">
+          <strong>Test calculation</strong>
+        </label>
+
+        <input id="routeTestCalculation"
+               type="text"
+               placeholder="Example: 61.8 × 4.9 = 30.282"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="routeTestOutcome" style="display:block; margin:14px 0 6px;">
+          <strong>What should your route conclude?</strong>
+        </label>
+
+        <select id="routeTestOutcome"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="reasonable">The answer is reasonable</option>
+          <option value="unreasonable">The answer is unreasonable</option>
+        </select>
+
+        <label for="routeExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain how the checkpoints expose errors</strong>
+        </label>
+
+        <textarea id="routeExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div id="routePreview"
+             style="margin-top:18px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="routeFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Route requirements</h3>
+
+      <ul>
+        <li>A checkpoint about whether the answer should increase or decrease.</li>
+        <li>A checkpoint that creates an estimate.</li>
+        <li>A checkpoint about expected magnitude.</li>
+        <li>A checkpoint for possible decimal-point errors.</li>
+        <li>A checkpoint using an inverse operation.</li>
+        <li>A final decision: reasonable, revise or recalculate.</li>
+        <li>At least one test using an unreasonable answer.</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌱 The Living Body
+      </summary>
+
+      <h3>Pause before accepting an answer</h3>
+
+      <p>
+        Calculator answers can look convincing even when a key has been pressed incorrectly.
+        A short pause can protect against accepting an unreasonable result.
+      </p>
+
+      <ol>
+        <li>Notice the operation.</li>
+        <li>Predict whether the answer should be larger or smaller.</li>
+        <li>Create a simple estimate.</li>
+        <li>Compare the exact result with the estimate.</li>
+        <li>Use an inverse operation if uncertainty remains.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can estimate before calculating.”</li>
+        <li>“I can identify an answer that is too large or too small.”</li>
+        <li>“I can use an inverse operation to check.”</li>
+        <li>“I can explain why an estimate is useful for a particular decision.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I do not have to calculate exactly to know whether an answer makes sense.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>An estimate that helped me reject an answer was...</li>
+        <li>A situation where rounding up was safer was...</li>
+        <li>An inverse operation I used was...</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🛠 Final Task
+      </summary>
+
+      <h3>Assignment: Create an Estimation and Safety Plan</h3>
+
+      <p>
+        Design a poster, report, slide or digital plan for a community event.
+        Use estimation to check costs, seating, food, transport and capacity decisions.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>one estimated addition</li>
+        <li>one estimated subtraction</li>
+        <li>one estimated multiplication</li>
+        <li>one estimated division</li>
+        <li>one calculation involving decimals</li>
+        <li>one example where rounding up is safer</li>
+        <li>one deliberately unreasonable proposed answer</li>
+        <li>one explanation of how estimation exposes the error</li>
+        <li>one inverse-operation check</li>
+        <li>a reasonableness route or flowchart</li>
+        <li>a reflection explaining when an estimate is more useful than an exact answer</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to select efficient approximations, assess numerical magnitude,
+        check calculations independently and apply estimation to multi-step practical problems.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+
+        <table style="width:100%; min-width:900px; border-collapse:collapse; background:#fffaf0;">
+
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Mastering</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Conceptual Understanding</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can recognise that an estimate is an approximate answer when given support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain how rounding creates an estimate in familiar calculations.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain magnitude, overestimation, underestimation and how estimates test reasonableness.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can compare estimation strategies and generalise when each is most useful.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Fluency &amp; Accuracy</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can estimate some simple sums or products using suggested rounded values.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can estimate familiar calculations, though my approximations may sometimes be inefficient.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can efficiently estimate all four operations with integers and decimals.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can select and compare several useful approximations and verify their accuracy independently.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Application to Problems</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can attempt a familiar estimation problem when the method is provided.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can use estimation in familiar money, seating or quantity problems with some support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can apply estimation to budgets, capacity and safety decisions and justify rounding choices.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can design, evaluate and refine estimation plans in unfamiliar multi-step contexts.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Independence &amp; Reflection</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can begin with support and identify when an answer may need checking.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can use a suggested estimate and respond to feedback.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can choose an approximation, use an inverse check and explain what helped me.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can independently build and refine a checking system and justify the most effective strategy.
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        What should you notice first when deciding whether a calculated answer is reasonable?
+      </p>
+
+    </details>
+
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to the session whenever you need to review rounding, magnitude or inverse checks.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">
+      Estimation and Reasonableness Practice
+    </h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+
+      <p style="margin-top:0;">
+        Work through eight questions involving estimation, magnitude, affordability, division in context and inverse checking.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">
+        Your working:
+      </label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">
+        Your final answer:
+      </label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+
+      <summary style="font-size:1.25em; font-weight:bold;">
+        💛 Reflection
+      </summary>
+
+      <ul>
+        <li>An estimate that helped me was...</li>
+        <li>An unreasonable answer I rejected was...</li>
+        <li>An inverse operation I used was...</li>
+        <li>A question I would like to revisit is...</li>
+      </ul>
+
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function normaliseEstimateText(value) {
+    return value
+      .toLowerCase()
+      .replace(/£/g, "")
+      .replace(/,/g, "")
+      .replace(/tables/g, "")
+      .replace(/boxes/g, "")
+      .replace(/buses/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function estimateValuesMatch(first, second, tolerance) {
+    const a = Number(normaliseEstimateText(first));
+    const b = Number(normaliseEstimateText(second));
+    const allowed = typeof tolerance === "number" ? tolerance : 0.000001;
+
+    return Number.isFinite(a) &&
+           Number.isFinite(b) &&
+           Math.abs(a - b) <= allowed;
+  }
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Estimate-first challenge 1 of 5",
+      question: "<strong>48.7 × 19.6</strong><br>Proposed exact answer: <strong>954.52</strong>",
+      roundedFirst: [50],
+      roundedSecond: [20],
+      estimate: 1000,
+      tolerance: 100,
+      judgement: "yes",
+      prompt: "What nearby whole numbers make the multiplication easy?",
+      hint: "Use approximately 50 × 20."
+    },
+    {
+      label: "Estimate-first challenge 2 of 5",
+      question: "<strong>397 + 614</strong><br>Proposed exact answer: <strong>1,011</strong>",
+      roundedFirst: [400],
+      roundedSecond: [600],
+      estimate: 1000,
+      tolerance: 100,
+      judgement: "yes",
+      prompt: "Which nearby hundreds are useful?",
+      hint: "Use approximately 400 + 600."
+    },
+    {
+      label: "Estimate-first challenge 3 of 5",
+      question: "<strong>812 − 389</strong><br>Proposed exact answer: <strong>4,230</strong>",
+      roundedFirst: [800],
+      roundedSecond: [400],
+      estimate: 400,
+      tolerance: 100,
+      judgement: "no",
+      prompt: "Should the difference be in the hundreds or thousands?",
+      hint: "Use approximately 800 − 400."
+    },
+    {
+      label: "Estimate-first challenge 4 of 5",
+      question: "<strong>596 ÷ 29</strong><br>Proposed exact answer: <strong>20.55</strong>",
+      roundedFirst: [600],
+      roundedSecond: [30],
+      estimate: 20,
+      tolerance: 5,
+      judgement: "yes",
+      prompt: "Which compatible numbers divide exactly?",
+      hint: "Use approximately 600 ÷ 30."
+    },
+    {
+      label: "Estimate-first challenge 5 of 5",
+      question: "<strong>61.8 × 4.9</strong><br>Proposed exact answer: <strong>30.282</strong>",
+      roundedFirst: [60],
+      roundedSecond: [5],
+      estimate: 300,
+      tolerance: 40,
+      judgement: "no",
+      prompt: "Should multiplying by almost 5 make 61.8 much larger?",
+      hint: "Use approximately 60 × 5."
+    }
+  ];
+
+  let current = 0;
+  const firstValues = new Array(questions.length).fill("");
+  const secondValues = new Array(questions.length).fill("");
+  const estimates = new Array(questions.length).fill("");
+  const judgements = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    firstValues[current] = document.getElementById("estimateRoundedFirst").value;
+    secondValues[current] = document.getElementById("estimateRoundedSecond").value;
+    estimates[current] = document.getElementById("estimateAnswer").value;
+    judgements[current] = document.getElementById("estimateJudgement").value;
+    reasons[current] = document.getElementById("estimateReason").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("estimateFirstLabel").textContent = questions[current].label;
+    document.getElementById("estimateFirstQuestion").innerHTML = questions[current].question;
+    document.getElementById("estimateRoundedFirst").value = firstValues[current];
+    document.getElementById("estimateRoundedSecond").value = secondValues[current];
+    document.getElementById("estimateAnswer").value = estimates[current];
+    document.getElementById("estimateJudgement").value = judgements[current];
+    document.getElementById("estimateReason").value = reasons[current];
+
+    document.getElementById("estimateFirstSupport").style.display = "none";
+    document.getElementById("estimateFirstFeedback").style.display = "none";
+
+    const previous = document.getElementById("estimateFirstPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("estimateFirstNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showEstimateFirstPrompt = function () {
+    const box = document.getElementById("estimateFirstSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showEstimateFirstHint = function () {
+    const box = document.getElementById("estimateFirstSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkEstimateFirstAnswer = function () {
+    saveCurrent();
+
+    const question = questions[current];
+    const feedback = document.getElementById("estimateFirstFeedback");
+    feedback.style.display = "block";
+
+    const first = Number(normaliseEstimateText(firstValues[current]));
+    const second = Number(normaliseEstimateText(secondValues[current]));
+    const estimate = Number(normaliseEstimateText(estimates[current]));
+
+    if (
+      !Number.isFinite(first) ||
+      !Number.isFinite(second) ||
+      !Number.isFinite(estimate) ||
+      !judgements[current] ||
+      reasons[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Complete both rounded values, the estimate, the judgement and a brief explanation.";
+      return;
+    }
+
+    const firstCorrect = question.roundedFirst.some(function (value) {
+      return Math.abs(first - value) < 0.000001;
+    });
+
+    const secondCorrect = question.roundedSecond.some(function (value) {
+      return Math.abs(second - value) < 0.000001;
+    });
+
+    const estimateCorrect =
+      Math.abs(estimate - question.estimate) <= question.tolerance;
+
+    const judgementCorrect =
+      judgements[current] === question.judgement;
+
+    if (firstCorrect && secondCorrect && estimateCorrect && judgementCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your estimate reveals the expected magnitude and supports the judgement.";
+    } else if (judgementCorrect && estimateCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your estimate and judgement are useful. Recheck the rounded values you recorded.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Choose nearby values that make the calculation simple while keeping a similar magnitude.";
+    }
+  };
+
+  window.previousEstimateFirstQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextEstimateFirstQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("estimateFirstFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 estimate-first challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Reasonableness test 1 of 5",
+      question: "<strong>61.8 × 4.9 = 30.282</strong>",
+      decision: "impossible",
+      estimate: 300,
+      tolerance: 40,
+      prompt: "Should multiplying by almost 5 make the starting number larger or smaller?",
+      hint: "60 × 5 is approximately 300."
+    },
+    {
+      label: "Reasonableness test 2 of 5",
+      question: "<strong>397 + 614 = 1,011</strong>",
+      decision: "reasonable",
+      estimate: 1000,
+      tolerance: 100,
+      prompt: "What is 400 + 600?",
+      hint: "The proposed answer is very close to 1,000."
+    },
+    {
+      label: "Reasonableness test 3 of 5",
+      question: "<strong>812 − 389 = 4,230</strong>",
+      decision: "impossible",
+      estimate: 400,
+      tolerance: 100,
+      prompt: "Can subtracting two three-digit numbers here produce more than 4,000?",
+      hint: "Use 800 − 400."
+    },
+    {
+      label: "Reasonableness test 4 of 5",
+      question: "<strong>596 ÷ 29 = 20.55</strong>",
+      decision: "reasonable",
+      estimate: 20,
+      tolerance: 5,
+      prompt: "What compatible-number division is nearby?",
+      hint: "600 ÷ 30 = 20."
+    },
+    {
+      label: "Reasonableness test 5 of 5",
+      question: "<strong>8.2 × 0.49 = 40.18</strong>",
+      decision: "impossible",
+      estimate: 4,
+      tolerance: 1,
+      prompt: "What happens when a positive number is multiplied by a value less than 1?",
+      hint: "8 × 0.5 is approximately 4."
+    }
+  ];
+
+  let current = 0;
+  const decisions = new Array(questions.length).fill("");
+  const estimates = new Array(questions.length).fill("");
+  const explanations = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    decisions[current] = document.getElementById("reasonableDecision").value;
+    estimates[current] = document.getElementById("reasonableEstimate").value;
+    explanations[current] = document.getElementById("reasonableExplanation").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("reasonableLabel").textContent = questions[current].label;
+    document.getElementById("reasonableQuestion").innerHTML = questions[current].question;
+    document.getElementById("reasonableDecision").value = decisions[current];
+    document.getElementById("reasonableEstimate").value = estimates[current];
+    document.getElementById("reasonableExplanation").value = explanations[current];
+
+    document.getElementById("reasonableSupport").style.display = "none";
+    document.getElementById("reasonableFeedback").style.display = "none";
+
+    const previous = document.getElementById("reasonablePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("reasonableNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showReasonablePrompt = function () {
+    const box = document.getElementById("reasonableSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showReasonableHint = function () {
+    const box = document.getElementById("reasonableSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkReasonableAnswer = function () {
+    saveCurrent();
+
+    const estimate = Number(normaliseEstimateText(estimates[current]));
+    const feedback = document.getElementById("reasonableFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !decisions[current] ||
+      !Number.isFinite(estimate) ||
+      explanations[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a decision, enter an estimate and explain what the estimate reveals.";
+      return;
+    }
+
+    const decisionCorrect =
+      decisions[current] === questions[current].decision;
+
+    const estimateCorrect =
+      Math.abs(estimate - questions[current].estimate) <=
+      questions[current].tolerance;
+
+    if (decisionCorrect && estimateCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your estimate supports the reasonableness judgement.";
+    } else if (decisionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your decision is correct. Improve the estimate so that it reflects the calculation more closely.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Reconsider the expected size of the answer before accepting the proposed result.";
+    }
+  };
+
+  window.previousReasonableQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextReasonableQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("reasonableFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 reasonableness tests correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Planning challenge 1 of 5",
+      question:
+        "About <strong>198 people</strong> will attend. Tables seat <strong>8 people</strong>. Approximately how many tables should be prepared?",
+      estimate: 25,
+      tolerance: 1,
+      options: ["24 tables", "25 tables", "26 tables"],
+      decision: "25 tables",
+      prompt: "What compatible attendance number is close to 198?",
+      hint: "Use approximately 200 ÷ 8."
+    },
+    {
+      label: "Planning challenge 2 of 5",
+      question:
+        "There are <strong>247 guests</strong>. Each food box serves <strong>10 people</strong>. How many boxes should be ordered?",
+      estimate: 25,
+      tolerance: 1,
+      options: ["24 boxes", "25 boxes", "26 boxes"],
+      decision: "25 boxes",
+      prompt: "Would rounding down leave everyone with food?",
+      hint: "247 ÷ 10 is about 24.7, so the context requires rounding up."
+    },
+    {
+      label: "Planning challenge 3 of 5",
+      question:
+        "Three supplies cost <strong>£48.70</strong>, <strong>£31.40</strong> and <strong>£19.60</strong>. Estimate the total and decide whether a £100 budget is likely to be enough.",
+      estimate: 100,
+      tolerance: 10,
+      options: ["The budget is likely enough", "The budget is clearly not enough", "No estimate is possible"],
+      decision: "The budget is likely enough",
+      prompt: "What whole-number values are close to the three prices?",
+      hint: "Use approximately £50 + £30 + £20."
+    },
+    {
+      label: "Planning challenge 4 of 5",
+      question:
+        "A bus seats <strong>52 people</strong>. About <strong>310 people</strong> need transport. How many buses should be arranged?",
+      estimate: 6,
+      tolerance: 1,
+      options: ["5 buses", "6 buses", "7 buses"],
+      decision: "6 buses",
+      prompt: "What is 300 ÷ 50 approximately?",
+      hint: "Six buses provide about 312 seats."
+    },
+    {
+      label: "Planning challenge 5 of 5",
+      question:
+        "The hall limit is <strong>500 people</strong>. Current bookings are <strong>472</strong>, with about <strong>35 more</strong> expected. Is the plan within capacity?",
+      estimate: 510,
+      tolerance: 20,
+      options: ["Yes, safely within capacity", "No, likely over capacity", "The numbers are unrelated"],
+      decision: "No, likely over capacity",
+      prompt: "Estimate 472 + 35.",
+      hint: "470 + 40 is approximately 510."
+    }
+  ];
+
+  let current = 0;
+  const estimates = new Array(questions.length).fill("");
+  const decisions = new Array(questions.length).fill("");
+  const reasons = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    estimates[current] = document.getElementById("eventPlannerEstimate").value;
+    decisions[current] = document.getElementById("eventPlannerDecision").value;
+    reasons[current] = document.getElementById("eventPlannerReason").value;
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("eventPlannerLabel").textContent = question.label;
+    document.getElementById("eventPlannerQuestion").innerHTML = question.question;
+    document.getElementById("eventPlannerEstimate").value = estimates[current];
+    document.getElementById("eventPlannerReason").value = reasons[current];
+
+    const select = document.getElementById("eventPlannerDecision");
+    select.innerHTML = '<option value="">Choose</option>';
+
+    question.options.forEach(function (optionText) {
+      const option = document.createElement("option");
+      option.value = optionText;
+      option.textContent = optionText;
+      select.appendChild(option);
+    });
+
+    select.value = decisions[current];
+
+    document.getElementById("eventPlannerSupport").style.display = "none";
+    document.getElementById("eventPlannerFeedback").style.display = "none";
+
+    const previous = document.getElementById("eventPlannerPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("eventPlannerNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showEventPlannerPrompt = function () {
+    const box = document.getElementById("eventPlannerSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showEventPlannerHint = function () {
+    const box = document.getElementById("eventPlannerSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkEventPlannerAnswer = function () {
+    saveCurrent();
+
+    const estimate = Number(normaliseEstimateText(estimates[current]));
+    const feedback = document.getElementById("eventPlannerFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !Number.isFinite(estimate) ||
+      !decisions[current] ||
+      reasons[current].trim().length < 15
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter an estimate, choose a planning decision and explain why it is fair and safe.";
+      return;
+    }
+
+    const estimateCorrect =
+      Math.abs(estimate - questions[current].estimate) <=
+      questions[current].tolerance;
+
+    const decisionCorrect =
+      decisions[current] === questions[current].decision;
+
+    if (estimateCorrect && decisionCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your estimate supports a practical and responsible planning decision.";
+    } else if (decisionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your decision is suitable. Recheck the approximate calculation.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Reconsider whether the context requires rounding up, staying within a budget or protecting capacity.";
+    }
+  };
+
+  window.previousEventPlannerQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextEventPlannerQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("eventPlannerFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 planning challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Estimation misconception 1 of 4",
+      question:
+        "A learner estimates <strong>48.7 × 19.6</strong> as <strong>40 × 10 = 400</strong>.",
+      decision: "no",
+      estimate: 1000,
+      tolerance: 100,
+      prompt: "Have both values been rounded to their nearest useful tens?",
+      hint: "Use approximately 50 × 20."
+    },
+    {
+      label: "Estimation misconception 2 of 4",
+      question:
+        "A learner estimates <strong>397 + 614</strong> as <strong>300 + 600 = 900</strong>.",
+      decision: "no",
+      estimate: 1000,
+      tolerance: 100,
+      prompt: "Is 397 closer to 300 or 400?",
+      hint: "Use approximately 400 + 600."
+    },
+    {
+      label: "Estimation misconception 3 of 4",
+      question:
+        "A learner accepts <strong>61.8 × 4.9 = 30.282</strong> because the calculator displayed it.",
+      decision: "no",
+      estimate: 300,
+      tolerance: 40,
+      prompt: "Should multiplication by almost 5 produce an answer near 30 or near 300?",
+      hint: "60 × 5 is approximately 300."
+    },
+    {
+      label: "Estimation misconception 4 of 4",
+      question:
+        "A shopper rounds every price down and concludes that a £30 budget is definitely enough.",
+      decision: "no",
+      estimate: 30,
+      tolerance: 5,
+      prompt: "Does rounding every price down create a safe budget estimate?",
+      hint: "Rounding prices up may be safer when checking affordability."
+    }
+  ];
+
+  let current = 0;
+  const decisions = new Array(questions.length).fill("");
+  const corrections = new Array(questions.length).fill("");
+  const explanations = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    decisions[current] = document.getElementById("estimationMistakeDecision").value;
+    corrections[current] = document.getElementById("estimationMistakeCorrection").value;
+    explanations[current] = document.getElementById("estimationMistakeExplanation").value;
+  }
+
+  function renderQuestion() {
+    document.getElementById("estimationMistakeLabel").textContent = questions[current].label;
+    document.getElementById("estimationMistakeQuestion").innerHTML = questions[current].question;
+    document.getElementById("estimationMistakeDecision").value = decisions[current];
+    document.getElementById("estimationMistakeCorrection").value = corrections[current];
+    document.getElementById("estimationMistakeExplanation").value = explanations[current];
+
+    document.getElementById("estimationMistakeSupport").style.display = "none";
+    document.getElementById("estimationMistakeFeedback").style.display = "none";
+
+    const previous = document.getElementById("estimationMistakePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("estimationMistakeNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showEstimationMistakePrompt = function () {
+    const box = document.getElementById("estimationMistakeSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showEstimationMistakeHint = function () {
+    const box = document.getElementById("estimationMistakeSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkEstimationMistakeAnswer = function () {
+    saveCurrent();
+
+    const estimate = Number(normaliseEstimateText(corrections[current]));
+    const feedback = document.getElementById("estimationMistakeFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !decisions[current] ||
+      !Number.isFinite(estimate) ||
+      explanations[current].trim().length < 12
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a decision, enter an improved estimate and explain the weakness.";
+      return;
+    }
+
+    const decisionCorrect = decisions[current] === questions[current].decision;
+    const estimateCorrect =
+      Math.abs(estimate - questions[current].estimate) <=
+      questions[current].tolerance;
+
+    if (decisionCorrect && estimateCorrect) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your revised estimate is more useful and preserves the expected magnitude.";
+    } else if (decisionCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "You correctly identified the weakness. Improve the numerical estimate.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Consider whether the original approximation is close enough and suitable for the purpose.";
+    }
+  };
+
+  window.previousEstimationMistakeQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextEstimationMistakeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("estimationMistakeFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 4 estimation misconceptions correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  function addRouteStep() {
+    const holder = document.getElementById("routeSteps");
+    const row = document.createElement("div");
+
+    row.className = "route-step";
+    row.style.background = "#ffffff";
+    row.style.padding = "11px";
+    row.style.borderRadius = "9px";
+    row.style.marginBottom = "10px";
+
+    row.innerHTML =
+      '<label><strong>Checkpoint type</strong></label>' +
+      '<select class="route-step-type" style="width:100%; padding:8px; margin:5px 0 9px; border:1px solid #bcae98; border-radius:7px;" aria-label="Choose the type of reasonableness step">' +
+        '<option value="direction">Larger or smaller?</option>' +
+        '<option value="estimate">Create an estimate</option>' +
+        '<option value="magnitude">Check expected magnitude</option>' +
+        '<option value="decimal">Check decimal point</option>' +
+        '<option value="inverse">Use an inverse operation</option>' +
+        '<option value="decision">Make a final decision</option>' +
+      '</select>' +
+      '<label><strong>Checkpoint question</strong></label>' +
+      '<input class="route-step-question" type="text" placeholder="What should the learner ask?" style="width:100%; box-sizing:border-box; padding:8px; margin-top:5px; border:1px solid #bcae98; border-radius:7px;" aria-label="Question the learner should ask at this step">';
+
+    holder.appendChild(row);
+    renderRoutePreview();
+  }
+
+  function renderRoutePreview() {
+    const preview = document.getElementById("routePreview");
+    const name =
+      document.getElementById("routeName").value.trim() ||
+      "Your Reasonableness Route";
+
+    const rows = Array.from(document.querySelectorAll(".route-step"));
+    let html = "<h3 style='margin-top:0;'>" + name + "</h3>";
+
+    rows.forEach(function (row, index) {
+      const type = row.querySelector(".route-step-type").value;
+      const question =
+        row.querySelector(".route-step-question").value ||
+        "Checkpoint not written";
+
+      html +=
+        "<p><strong>" + (index + 1) + ". " + type +
+        ":</strong> " + question + "</p>";
+    });
+
+    preview.innerHTML = html;
+  }
+
+  function checkReasonablenessRoute() {
+    renderRoutePreview();
+
+    const rows = Array.from(document.querySelectorAll(".route-step"));
+    const types = rows.map(function (row) {
+      return row.querySelector(".route-step-type").value;
+    });
+
+    const allQuestionsComplete = rows.every(function (row) {
+      return row.querySelector(".route-step-question").value.trim().length >= 8;
+    });
+
+    const testCalculation =
+      document.getElementById("routeTestCalculation").value.trim();
+
+    const testOutcome =
+      document.getElementById("routeTestOutcome").value;
+
+    const explanation =
+      document.getElementById("routeExplanation").value.trim();
+
+    const feedback = document.getElementById("routeFeedback");
+    feedback.style.display = "block";
+
+    const requirementsMet =
+      types.indexOf("direction") !== -1 &&
+      types.indexOf("estimate") !== -1 &&
+      types.indexOf("magnitude") !== -1 &&
+      types.indexOf("decimal") !== -1 &&
+      types.indexOf("inverse") !== -1 &&
+      types.indexOf("decision") !== -1;
+
+    if (rows.length < 6) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add at least six checkpoints to create a complete route.";
+    } else if (
+      !testCalculation ||
+      !testOutcome ||
+      explanation.length < 25
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Add a test calculation, select the expected outcome and explain how the route exposes errors.";
+    } else if (allQuestionsComplete && requirementsMet) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your route includes the required checks and can be tested as a reusable reasonableness system.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Check that each required checkpoint type is included and that every checkpoint contains a clear question.";
+    }
+  }
+
+  function resetReasonablenessRoute() {
+    document.getElementById("routeName").value = "";
+    document.getElementById("routeTestCalculation").value = "";
+    document.getElementById("routeTestOutcome").value = "";
+    document.getElementById("routeExplanation").value = "";
+    document.getElementById("routeSteps").innerHTML = "";
+    document.getElementById("routePreview").innerHTML = "";
+    document.getElementById("routeFeedback").style.display = "none";
+
+    for (let index = 0; index < 6; index++) {
+      addRouteStep();
+    }
+  }
+
+  document
+    .getElementById("routeName")
+    .addEventListener("input", renderRoutePreview);
+
+  document
+    .getElementById("routeSteps")
+    .addEventListener("input", renderRoutePreview);
+
+  resetReasonablenessRoute();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Addition estimate",
+      text: "Estimate <strong>397 + 614</strong> by rounding each number to the nearest hundred.",
+      answers: ["1000", "1,000"],
+      prompt: "Which hundreds are closest to 397 and 614?",
+      hint: "Use 400 + 600.",
+      solution: "397 ≈ 400 and 614 ≈ 600, so the estimate is 1,000."
+    },
+    {
+      label: "Question 2 of 8 · Subtraction estimate",
+      text: "Estimate <strong>812 − 389</strong> by rounding to the nearest hundred.",
+      answers: ["400"],
+      prompt: "What are the nearest hundreds?",
+      hint: "Use 800 − 400.",
+      solution: "812 ≈ 800 and 389 ≈ 400, so the estimate is 400."
+    },
+    {
+      label: "Question 3 of 8 · Multiplication estimate",
+      text: "Estimate <strong>48.7 × 19.6</strong> using one significant figure.",
+      answers: ["1000", "1,000"],
+      prompt: "Round each factor to one significant figure.",
+      hint: "Use 50 × 20.",
+      solution: "50 × 20 = 1,000."
+    },
+    {
+      label: "Question 4 of 8 · Division estimate",
+      text: "Estimate <strong>596 ÷ 29</strong> using compatible numbers.",
+      answers: ["20"],
+      prompt: "Which nearby values divide exactly?",
+      hint: "Use 600 ÷ 30.",
+      solution: "600 ÷ 30 = 20."
+    },
+    {
+      label: "Question 5 of 8 · Reasonableness",
+      text: "Is <strong>61.8 × 4.9 = 30.282</strong> reasonable? Type <strong>yes</strong> or <strong>no</strong>.",
+      answers: ["no"],
+      prompt: "What is 60 × 5 approximately?",
+      hint: "The expected answer is near 300.",
+      solution: "No. The product should be near 300, not 30."
+    },
+    {
+      label: "Question 6 of 8 · Budget check",
+      text:
+        "Estimate the total of <strong>£4.89, £7.15, £12.46 and £3.72</strong>. Is £30 likely to be enough? Type <strong>yes</strong> or <strong>no</strong>.",
+      answers: ["yes"],
+      prompt: "Round each price to the nearest pound.",
+      hint: "Use approximately £5 + £7 + £12 + £4.",
+      solution: "The estimate is £28, so £30 is likely to be enough."
+    },
+    {
+      label: "Question 7 of 8 · Contextual division",
+      text:
+        "About <strong>247 people</strong> need food. Each box serves <strong>10 people</strong>. How many boxes should be ordered?",
+      answers: ["25", "25 boxes"],
+      prompt: "What does the remainder mean in this context?",
+      hint: "24 boxes would serve only 240 people.",
+      solution: "25 boxes are needed because the result must be rounded up."
+    },
+    {
+      label: "Question 8 of 8 · Inverse check",
+      text:
+        "A learner says <strong>596 ÷ 29 ≈ 2</strong>. Use an inverse estimate to decide whether this is reasonable. Type <strong>reasonable</strong> or <strong>unreasonable</strong>.",
+      answers: ["unreasonable"],
+      prompt: "Multiply the proposed quotient by the divisor.",
+      hint: "2 × 30 is only about 60, not about 600.",
+      solution: "The estimate is unreasonable. A quotient near 20 is expected because 20 × 30 ≈ 600."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/£/g, "")
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = question.label;
+    document.getElementById("practiceQuestion").innerHTML = question.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (answer) {
+      return normalise(answer) === response;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your estimate or reasonableness judgement is accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Round to useful values and consider the expected size of the answer.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and test the result with an inverse operation where possible. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " +
+      questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

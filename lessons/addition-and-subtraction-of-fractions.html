@@ -1,0 +1,1716 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adding and Subtracting Fractions | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Adding and Subtracting Fractions
+     Includes:
+     • Option 1 in The Knowing World
+     • Option 5 in The Human Story
+     • Option 8 in The Expressive Self
+     • Option 7 in The Designed World
+     • Final Task and Assessment Rubric
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">Adding and Subtracting Fractions</h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question: <em>How can we combine fractions when their pieces are different sizes?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        fractions, decimals and percentages as connected representations of number.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>Seeds of Change:</strong>
+        add and subtract fractions with the same and different denominators; use equivalent fractions to create common denominators;
+        add and subtract mixed numbers; exchange one whole when necessary; simplify final answers; and solve multi-step fraction problems.
+      </p>
+    </div>
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧠 The Knowing World</summary>
+
+      <h3>When can fractions be combined?</h3>
+
+      <p>
+        Fractions can be added or subtracted directly when their denominators are the same because the pieces are the same size.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>3/8 + 2/8 = 5/8</strong>
+      </p>
+
+      <p>
+        When denominators are different, create equivalent fractions with a common denominator before combining the numerators.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px; text-align:center;">
+        <strong>1/2 + 1/4 = 2/4 + 1/4 = 3/4</strong>
+      </p>
+
+      <h3>Mixed numbers</h3>
+
+      <p>
+        Mixed numbers contain a whole-number part and a fractional part.
+        Whole numbers and fractional parts can be combined separately when the fractional pieces have the same denominator.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>2 1/3 + 1 1/6</strong><br>
+        1/3 = 2/6, so 2 2/6 + 1 1/6 = <strong>3 3/6 = 3 1/2</strong>.
+      </p>
+
+      <p>
+        When subtracting, one whole may need to be exchanged for fractional parts.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>3 1/4 − 1 3/4</strong><br>
+        Exchange one whole: 3 1/4 = 2 5/4.<br>
+        2 5/4 − 1 3/4 = <strong>1 2/4 = 1 1/2</strong>.
+      </p>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>common denominator, equivalent fraction, numerator, denominator, mixed number, improper fraction, exchange, simplify</strong>
+      </p>
+
+      <h3>Interactive investigation: Drag-and-Drop Fraction Bar Combiner</h3>
+
+      <p>
+        Choose a calculation, inspect the fraction bars and decide whether the pieces can be combined immediately.
+        When the denominators differ, exchange the bars for equivalent pieces before entering the final answer.
+      </p>
+
+      <div id="barCombinerApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="barCombinerLabel" style="color:#6a765c; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="barCombinerQuestion" style="font-size:1.15em; margin-bottom:14px;"></div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
+
+          <div style="background:#ffffff; padding:12px; border-radius:10px;">
+            <h4 style="margin-top:0;">First fraction</h4>
+            <div id="firstFractionBar"></div>
+          </div>
+
+          <div style="background:#ffffff; padding:12px; border-radius:10px;">
+            <h4 style="margin-top:0;">Second fraction</h4>
+            <div id="secondFractionBar"></div>
+          </div>
+
+        </div>
+
+        <label for="barCommonDenominator" style="display:block; margin:15px 0 6px;">
+          <strong>Common denominator</strong>
+        </label>
+
+        <input id="barCommonDenominator"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <button type="button"
+                onclick="exchangeFractionBars()"
+                style="margin-top:12px; padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+          🔄 Exchange for Equivalent Pieces
+        </button>
+
+        <div id="exchangedBars"
+             style="display:none; margin-top:15px; background:#ffffff; padding:12px; border-radius:10px;"></div>
+
+        <label for="barCombinerAnswer" style="display:block; margin:15px 0 6px;">
+          <strong>Final simplified answer</strong>
+        </label>
+
+        <input id="barCombinerAnswer"
+               type="text"
+               placeholder="Example: 3/4"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showBarCombinerPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showBarCombinerHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkBarCombinerAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="barCombinerSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="barCombinerFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="barCombinerPrevious"
+                  type="button"
+                  onclick="previousBarQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="barCombinerNext"
+                  type="button"
+                  onclick="nextBarQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why must the fractional pieces be the same size before combining them?</li>
+        <li>Why do we add or subtract numerators but not denominators?</li>
+        <li>How can a fraction bar help you notice an unreasonable answer?</li>
+      </ul>
+    </details>
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌍 The Human Story</summary>
+
+      <h3>Community Kitchen Recipe Planner</h3>
+
+      <p>
+        Community kitchens often combine ingredients from several recipes, calculate how much remains and adjust quantities for larger groups.
+        Accurate fraction calculations help prevent shortages and reduce waste.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        One recipe uses <strong>3/4 kg</strong> of flour and another uses <strong>2/3 kg</strong>.
+        The pieces are measured in different fractional units, so a common denominator is needed before finding the total.
+      </p>
+
+      <h3>Human questions</h3>
+
+      <ul>
+        <li>How can inaccurate measurements affect a shared meal?</li>
+        <li>Why might reducing food waste matter to a community?</li>
+        <li>How can clear fraction calculations help people work together?</li>
+      </ul>
+
+      <h3>Interactive investigation: Community Kitchen Planner</h3>
+
+      <div id="kitchenApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="kitchenLabel" style="color:#82683f; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="kitchenQuestion" style="font-size:1.1em;"></div>
+
+        <label for="kitchenOperation" style="display:block; margin:14px 0 6px;">
+          <strong>Which operation is needed?</strong>
+        </label>
+
+        <select id="kitchenOperation" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="addition">Addition</option>
+          <option value="subtraction">Subtraction</option>
+        </select>
+
+        <label for="kitchenWorking" style="display:block; margin:14px 0 6px;">
+          <strong>Your working</strong>
+        </label>
+
+        <textarea id="kitchenWorking"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <label for="kitchenAnswer" style="display:block; margin:14px 0 6px;">
+          <strong>Final simplified answer</strong>
+        </label>
+
+        <input id="kitchenAnswer"
+               type="text"
+               placeholder="Include the unit where helpful"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showKitchenPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showKitchenHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkKitchenAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Answer
+          </button>
+        </div>
+
+        <div id="kitchenSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="kitchenFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="kitchenPrevious"
+                  type="button"
+                  onclick="previousKitchenQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="kitchenNext"
+                  type="button"
+                  onclick="nextKitchenQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+    </details>
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🎨 The Expressive Self</summary>
+
+      <h3>Interactive investigation: Find and Fix the Fraction Mistake</h3>
+
+      <p>
+        Examine each learner’s method. Identify the first incorrect step, rewrite the calculation correctly and explain the misconception in your own words.
+      </p>
+
+      <div id="mistakeApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="mistakeLabel" style="color:#587088; font-weight:bold; text-transform:uppercase;"></p>
+
+        <div id="mistakeQuestion" style="font-size:1.1em; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <label for="mistakeStep" style="display:block; margin:14px 0 6px;">
+          <strong>Which step contains the first mistake?</strong>
+        </label>
+
+        <select id="mistakeStep" style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose a step</option>
+          <option value="1">Step 1</option>
+          <option value="2">Step 2</option>
+          <option value="3">Step 3</option>
+        </select>
+
+        <label for="mistakeCorrection" style="display:block; margin:14px 0 6px;">
+          <strong>Write the corrected calculation and answer</strong>
+        </label>
+
+        <input id="mistakeCorrection"
+               type="text"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="mistakeExplanation" style="display:block; margin:14px 0 6px;">
+          <strong>Explain the mistake in your own words</strong>
+        </label>
+
+        <textarea id="mistakeExplanation"
+                  rows="4"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="showMistakePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic prompt
+          </button>
+
+          <button type="button"
+                  onclick="showMistakeHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkMistakeAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Correction
+          </button>
+        </div>
+
+        <div id="mistakeSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="mistakeFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+          <button id="mistakePrevious"
+                  type="button"
+                  onclick="previousMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="mistakeNext"
+                  type="button"
+                  onclick="nextMistakeQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+        </div>
+      </div>
+
+      <h3>Express the correction</h3>
+
+      <p>
+        Choose one mistake and present your correction as a comic, voice explanation, annotated diagram or short teaching note.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Sentence stem:
+        <strong>“The first mistake happens when… A better method is…”</strong>
+      </p>
+    </details>
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🧩 The Designed World</summary>
+
+      <h3>Interactive design challenge: Build a Fraction Calculation Trail</h3>
+
+      <p>
+        Design a connected trail of fraction calculations. Each answer must become the starting value for the next step.
+      </p>
+
+      <div id="trailApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <h3 style="margin-top:0;">🏗️ Fraction Calculation Trail</h3>
+
+        <label for="trailStart" style="display:block; margin-bottom:6px;">
+          <strong>Starting value</strong>
+        </label>
+
+        <input id="trailStart"
+               type="text"
+               placeholder="Example: 1/2"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div id="trailSteps" style="margin-top:15px;"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+          <button type="button"
+                  onclick="addTrailStep()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            + Add Trail Step
+          </button>
+
+          <button type="button"
+                  onclick="checkFractionTrail()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Trail
+          </button>
+
+          <button type="button"
+                  onclick="resetFractionTrail()"
+                  style="padding:9px 13px; background:#fffaf0; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            Reset Trail
+          </button>
+        </div>
+
+        <div id="trailPreview"
+             style="margin-top:18px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="trailFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:13px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+      </div>
+
+      <h3>Trail requirements</h3>
+
+      <ul>
+        <li>At least four linked calculations.</li>
+        <li>At least one addition and one subtraction.</li>
+        <li>At least one calculation with different denominators.</li>
+        <li>At least one mixed-number result.</li>
+        <li>All final answers simplified where possible.</li>
+      </ul>
+    </details>
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🌱 The Living Body</summary>
+
+      <h3>Pause before calculating</h3>
+
+      <p>
+        Fraction calculations often contain several small decisions. Work one step at a time.
+      </p>
+
+      <ol>
+        <li>Check whether the denominators match.</li>
+        <li>Choose a common denominator if needed.</li>
+        <li>Check whether a whole must be exchanged.</li>
+        <li>Calculate carefully.</li>
+        <li>Simplify and estimate whether the result is sensible.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can add and subtract fractions with matching denominators.”</li>
+        <li>“I can create equivalent fractions before calculating.”</li>
+        <li>“I can exchange one whole and work with mixed numbers.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I can slow the calculation down. I only need to make one correct decision at a time.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A common denominator I found successfully was...</li>
+        <li>An exchange that helped me was...</li>
+        <li>A mistake I can now recognise is...</li>
+      </ul>
+    </details>
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">🛠 Final Task</summary>
+
+      <h3>Assignment: Plan a Community Meal and Calculation Trail</h3>
+
+      <p>
+        Create a community meal plan that uses fraction addition and subtraction to calculate ingredient totals and remaining quantities.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>one addition with matching denominators</li>
+        <li>one addition with different denominators</li>
+        <li>one subtraction involving a mixed number</li>
+        <li>one calculation that requires exchanging a whole</li>
+        <li>one multi-step ingredient problem</li>
+        <li>all answers simplified</li>
+        <li>a fraction-bar, number-line or diagrammatic model</li>
+        <li>an explanation of how you checked one answer</li>
+        <li>a connected calculation trail of at least four steps</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task prepares learners to calculate with rational numbers, transform representations,
+        solve multi-step problems and justify the structure of a method.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; min-width:850px; border-collapse:collapse; background:#fffaf0;">
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Extending</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Conceptual Understanding</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can combine fractions with matching denominators using support or a model.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain why common denominators are needed and use equivalent fractions with prompts.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can explain and model addition, subtraction and exchange with fractions and mixed numbers.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can compare methods and explain how fraction structure affects the calculation.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Fluency &amp; Accuracy</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can complete some fraction calculations with support.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can calculate with different denominators, though I may make equivalence or simplifying errors.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can accurately add and subtract fractions and mixed numbers, including exchange and simplification.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can choose efficient common denominators and check complex calculations using another representation.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Application to Problems</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can attempt a familiar fraction problem when the operation is given.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can solve familiar measurement problems with some guidance.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can solve multi-step fraction problems and judge whether results are reasonable.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can design and test a connected fraction model with realistic constraints.</td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;"><strong>Independence &amp; Reflection</strong></td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can begin with support and identify when I need help.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can use a suggested model or method and respond to feedback.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can select a strategy, check my work and explain what helped me succeed.</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">I can work independently, identify errors and refine a multi-step design.</td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        Why must fraction pieces be the same size before they can be combined?
+      </p>
+    </details>
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through eight questions that gradually increase in challenge.
+        You can return to the session whenever you need to review a model, common denominator, exchange or correction.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">Adding and Subtracting Fractions Practice</h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+      <p style="margin-top:0;">
+        Work through eight questions involving common denominators, simplification, mixed numbers, exchange and multi-step problems.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check my answer</strong>,
+        then <strong>👀 Worked solution</strong>.
+      </p>
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">Your working:</label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">Your final answer:</label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check my answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked solution
+        </button>
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+      <summary style="font-size:1.25em; font-weight:bold;">💛 Reflection</summary>
+
+      <ul>
+        <li>A useful common denominator I found was...</li>
+        <li>A mixed-number exchange I understand better is...</li>
+        <li>A mistake I can now identify is...</li>
+        <li>A question I would like to revisit is...</li>
+      </ul>
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Bar challenge 1 of 4",
+      first: [1, 2],
+      second: [1, 4],
+      operation: "+",
+      common: "4",
+      answer: ["3/4"],
+      prompt: "Can halves and quarters be combined before the pieces are made the same size?",
+      hint: "Rewrite 1/2 as 2/4."
+    },
+    {
+      label: "Bar challenge 2 of 4",
+      first: [2, 3],
+      second: [1, 6],
+      operation: "+",
+      common: "6",
+      answer: ["5/6"],
+      prompt: "Which denominator is a multiple of both 3 and 6?",
+      hint: "2/3 = 4/6."
+    },
+    {
+      label: "Bar challenge 3 of 4",
+      first: [3, 4],
+      second: [1, 6],
+      operation: "−",
+      common: "12",
+      answer: ["7/12"],
+      prompt: "What common denominator works for 4 and 6?",
+      hint: "3/4 = 9/12 and 1/6 = 2/12."
+    },
+    {
+      label: "Bar challenge 4 of 4",
+      first: [5, 6],
+      second: [1, 4],
+      operation: "−",
+      common: "12",
+      answer: ["7/12"],
+      prompt: "Could both fractions be rewritten using twelfths?",
+      hint: "5/6 = 10/12 and 1/4 = 3/12."
+    }
+  ];
+
+  let current = 0;
+  const commonAnswers = new Array(questions.length).fill("");
+  const finalAnswers = new Array(questions.length).fill("");
+
+  function makeFractionBar(numerator, denominator) {
+    const wrapper = document.createElement("div");
+    const label = document.createElement("div");
+    const bar = document.createElement("div");
+
+    label.textContent = numerator + "/" + denominator;
+    label.style.fontWeight = "bold";
+    label.style.marginBottom = "6px";
+
+    bar.style.display = "grid";
+    bar.style.gridTemplateColumns = "repeat(" + denominator + ", 1fr)";
+    bar.style.height = "38px";
+    bar.style.border = "1px solid #666";
+
+    for (let i = 0; i < denominator; i++) {
+      const piece = document.createElement("div");
+      piece.style.borderRight = i === denominator - 1 ? "none" : "1px solid #666";
+      piece.style.background = i < numerator ? "#dce8d3" : "#ffffff";
+      bar.appendChild(piece);
+    }
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(bar);
+    return wrapper;
+  }
+
+  function renderBarQuestion() {
+    const question = questions[current];
+
+    document.getElementById("barCombinerLabel").textContent = question.label;
+    document.getElementById("barCombinerQuestion").innerHTML =
+      "<strong>" + question.first[0] + "/" + question.first[1] +
+      " " + question.operation + " " +
+      question.second[0] + "/" + question.second[1] + "</strong>";
+
+    const firstHolder = document.getElementById("firstFractionBar");
+    const secondHolder = document.getElementById("secondFractionBar");
+
+    firstHolder.innerHTML = "";
+    secondHolder.innerHTML = "";
+    firstHolder.appendChild(makeFractionBar(question.first[0], question.first[1]));
+    secondHolder.appendChild(makeFractionBar(question.second[0], question.second[1]));
+
+    document.getElementById("barCommonDenominator").value = commonAnswers[current];
+    document.getElementById("barCombinerAnswer").value = finalAnswers[current];
+    document.getElementById("exchangedBars").style.display = "none";
+    document.getElementById("barCombinerSupport").style.display = "none";
+    document.getElementById("barCombinerFeedback").style.display = "none";
+
+    const previous = document.getElementById("barCombinerPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("barCombinerNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  function saveBarQuestion() {
+    commonAnswers[current] = document.getElementById("barCommonDenominator").value;
+    finalAnswers[current] = document.getElementById("barCombinerAnswer").value;
+  }
+
+  window.exchangeFractionBars = function () {
+    saveBarQuestion();
+
+    const holder = document.getElementById("exchangedBars");
+    const feedback = document.getElementById("barCombinerFeedback");
+    const common = commonAnswers[current].trim();
+    const question = questions[current];
+
+    if (common !== question.common) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "That denominator does not create suitable equal-sized pieces yet. Look for a common multiple of both denominators.";
+      return;
+    }
+
+    const denominator = Number(question.common);
+    const firstNumerator = question.first[0] * (denominator / question.first[1]);
+    const secondNumerator = question.second[0] * (denominator / question.second[1]);
+
+    holder.innerHTML = "<strong>Equivalent bars:</strong>";
+    holder.appendChild(makeFractionBar(firstNumerator, denominator));
+
+    const symbol = document.createElement("p");
+    symbol.textContent = question.operation;
+    symbol.style.fontWeight = "bold";
+    holder.appendChild(symbol);
+
+    holder.appendChild(makeFractionBar(secondNumerator, denominator));
+    holder.style.display = "block";
+
+    feedback.style.display = "block";
+    feedback.style.background = "#e5edf4";
+    feedback.textContent =
+      "The pieces now have the same denominator. Combine the numerators and simplify if possible.";
+  };
+
+  window.showBarCombinerPrompt = function () {
+    const box = document.getElementById("barCombinerSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showBarCombinerHint = function () {
+    const box = document.getElementById("barCombinerSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkBarCombinerAnswer = function () {
+    saveBarQuestion();
+
+    const feedback = document.getElementById("barCombinerFeedback");
+    const commonCorrect = commonAnswers[current].trim() === questions[current].common;
+    const answerCorrect = questions[current].answer.indexOf(finalAnswers[current].replace(/\s/g, "")) !== -1;
+
+    feedback.style.display = "block";
+
+    if (!commonAnswers[current].trim() || !finalAnswers[current].trim()) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Enter a common denominator and a final answer before checking.";
+    } else if (commonCorrect && answerCorrect) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You created equal-sized pieces, combined them accurately and simplified the result.";
+    } else if (commonCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your common denominator works. Recheck the numerator calculation and simplest form.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Reconsider the common denominator before completing the calculation.";
+    }
+  };
+
+  window.previousBarQuestion = function () {
+    if (current === 0) return;
+    saveBarQuestion();
+    current--;
+    renderBarQuestion();
+  };
+
+  window.nextBarQuestion = function () {
+    saveBarQuestion();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderBarQuestion();
+    } else {
+      const feedback = document.getElementById("barCombinerFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent = "You have reached the end of the bar-combiner challenges.";
+    }
+  };
+
+  renderBarQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Kitchen challenge 1 of 4",
+      question: "A soup recipe uses <strong>3/4 litre</strong> of stock and another uses <strong>2/3 litre</strong>. How much stock is needed altogether?",
+      operation: "addition",
+      answers: ["1 5/12", "17/12", "1 5/12 litres"],
+      prompt: "What common denominator works for 4 and 3?",
+      hint: "3/4 = 9/12 and 2/3 = 8/12."
+    },
+    {
+      label: "Kitchen challenge 2 of 4",
+      question: "A container holds <strong>4 litres</strong>. The kitchen uses <strong>1 3/4 litres</strong>. How much remains?",
+      operation: "subtraction",
+      answers: ["2 1/4", "9/4", "2 1/4 litres"],
+      prompt: "Could 4 wholes be rewritten so that a fractional part can be subtracted?",
+      hint: "Write 4 as 3 4/4 before subtracting."
+    },
+    {
+      label: "Kitchen challenge 3 of 4",
+      question: "The kitchen uses <strong>2 1/3 kg</strong> of rice at lunchtime and <strong>1 5/6 kg</strong> in the evening. What is the total?",
+      operation: "addition",
+      answers: ["4 1/6", "25/6", "4 1/6 kg"],
+      prompt: "Rewrite one third using sixths.",
+      hint: "2 1/3 = 2 2/6."
+    },
+    {
+      label: "Kitchen challenge 4 of 4",
+      question: "There are <strong>5 1/2 kg</strong> of vegetables. After cooking, <strong>2 3/4 kg</strong> remain unused. How much was used?",
+      operation: "subtraction",
+      answers: ["2 3/4", "11/4", "2 3/4 kg"],
+      prompt: "Can 5 1/2 be rewritten in quarters?",
+      hint: "5 1/2 = 5 2/4. Exchange one whole before subtracting."
+    }
+  ];
+
+  let current = 0;
+  const operations = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+  const answers = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function saveKitchen() {
+    operations[current] = document.getElementById("kitchenOperation").value;
+    workings[current] = document.getElementById("kitchenWorking").value;
+    answers[current] = document.getElementById("kitchenAnswer").value;
+  }
+
+  function renderKitchen() {
+    document.getElementById("kitchenLabel").textContent = questions[current].label;
+    document.getElementById("kitchenQuestion").innerHTML = questions[current].question;
+    document.getElementById("kitchenOperation").value = operations[current];
+    document.getElementById("kitchenWorking").value = workings[current];
+    document.getElementById("kitchenAnswer").value = answers[current];
+
+    document.getElementById("kitchenSupport").style.display = "none";
+    document.getElementById("kitchenFeedback").style.display = "none";
+
+    const previous = document.getElementById("kitchenPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("kitchenNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showKitchenPrompt = function () {
+    const box = document.getElementById("kitchenSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showKitchenHint = function () {
+    const box = document.getElementById("kitchenSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkKitchenAnswer = function () {
+    saveKitchen();
+
+    const feedback = document.getElementById("kitchenFeedback");
+    const operationCorrect = operations[current] === questions[current].operation;
+    const answerCorrect = questions[current].answers.some(function (answer) {
+      return normalise(answer) === normalise(answers[current]);
+    });
+
+    feedback.style.display = "block";
+
+    if (!operations[current] || !answers[current].trim()) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Choose an operation and enter an answer before checking.";
+    } else if (operationCorrect && answerCorrect) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your operation and simplified quantity fit the kitchen situation.";
+    } else if (operationCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your operation is correct. Recheck the common denominator, exchange or simplification.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Re-read what the problem is asking you to find before choosing the operation.";
+    }
+  };
+
+  window.previousKitchenQuestion = function () {
+    if (current === 0) return;
+    saveKitchen();
+    current--;
+    renderKitchen();
+  };
+
+  window.nextKitchenQuestion = function () {
+    saveKitchen();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderKitchen();
+    } else {
+      const feedback = document.getElementById("kitchenFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent = "You have reached the end of the community kitchen challenges.";
+    }
+  };
+
+  renderKitchen();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Mistake 1 of 4",
+      question:
+        "<strong>Calculation:</strong> 1/3 + 1/4<br>" +
+        "Step 1: 1 + 1 = 2<br>" +
+        "Step 2: 3 + 4 = 7<br>" +
+        "Step 3: Answer = 2/7",
+      step: "2",
+      corrections: ["1/3 + 1/4 = 7/12", "7/12"],
+      prompt: "Should denominators be added, or should equal-sized pieces be created?",
+      hint: "Use denominator 12."
+    },
+    {
+      label: "Mistake 2 of 4",
+      question:
+        "<strong>Calculation:</strong> 2/3 + 1/6<br>" +
+        "Step 1: 2/3 = 4/6<br>" +
+        "Step 2: 4/6 + 1/6 = 5/12<br>" +
+        "Step 3: Answer = 5/12",
+      step: "2",
+      corrections: ["2/3 + 1/6 = 5/6", "5/6"],
+      prompt: "Once denominators match, what stays unchanged?",
+      hint: "Add the numerators and keep the denominator 6."
+    },
+    {
+      label: "Mistake 3 of 4",
+      question:
+        "<strong>Calculation:</strong> 3 1/4 − 1 3/4<br>" +
+        "Step 1: 3 − 1 = 2<br>" +
+        "Step 2: 1/4 − 3/4 = 2/4<br>" +
+        "Step 3: Answer = 2 1/2",
+      step: "2",
+      corrections: ["3 1/4 - 1 3/4 = 1 1/2", "1 1/2"],
+      prompt: "Can one quarter subtract three quarters without exchanging a whole?",
+      hint: "Rewrite 3 1/4 as 2 5/4."
+    },
+    {
+      label: "Mistake 4 of 4",
+      question:
+        "<strong>Calculation:</strong> 2/5 + 1/10<br>" +
+        "Step 1: 2/5 = 4/10<br>" +
+        "Step 2: 4/10 + 1/10 = 5/10<br>" +
+        "Step 3: Final answer = 5/10",
+      step: "3",
+      corrections: ["2/5 + 1/10 = 1/2", "1/2"],
+      prompt: "Is 5/10 in its simplest form?",
+      hint: "Divide numerator and denominator by 5."
+    }
+  ];
+
+  let current = 0;
+  const steps = new Array(questions.length).fill("");
+  const corrections = new Array(questions.length).fill("");
+  const explanations = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function saveMistake() {
+    steps[current] = document.getElementById("mistakeStep").value;
+    corrections[current] = document.getElementById("mistakeCorrection").value;
+    explanations[current] = document.getElementById("mistakeExplanation").value;
+  }
+
+  function renderMistake() {
+    document.getElementById("mistakeLabel").textContent = questions[current].label;
+    document.getElementById("mistakeQuestion").innerHTML = questions[current].question;
+    document.getElementById("mistakeStep").value = steps[current];
+    document.getElementById("mistakeCorrection").value = corrections[current];
+    document.getElementById("mistakeExplanation").value = explanations[current];
+
+    document.getElementById("mistakeSupport").style.display = "none";
+    document.getElementById("mistakeFeedback").style.display = "none";
+
+    const previous = document.getElementById("mistakePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("mistakeNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showMistakePrompt = function () {
+    const box = document.getElementById("mistakeSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showMistakeHint = function () {
+    const box = document.getElementById("mistakeSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkMistakeAnswer = function () {
+    saveMistake();
+
+    const feedback = document.getElementById("mistakeFeedback");
+    const stepCorrect = steps[current] === questions[current].step;
+    const correctionCorrect = questions[current].corrections.some(function (answer) {
+      return normalise(answer) === normalise(corrections[current]);
+    });
+
+    feedback.style.display = "block";
+
+    if (!steps[current] || !corrections[current].trim() || explanations[current].trim().length < 12) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose the first incorrect step, write the corrected calculation and explain the misconception.";
+    } else if (stepCorrect && correctionCorrect) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You identified the first error and repaired the calculation accurately.";
+    } else if (stepCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "You found the first incorrect step. Recheck the corrected calculation and simplest form.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Look for the earliest point where the fraction rules are no longer followed.";
+    }
+  };
+
+  window.previousMistakeQuestion = function () {
+    if (current === 0) return;
+    saveMistake();
+    current--;
+    renderMistake();
+  };
+
+  window.nextMistakeQuestion = function () {
+    saveMistake();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderMistake();
+    } else {
+      const feedback = document.getElementById("mistakeFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent = "You have reached the end of the error-analysis challenges.";
+    }
+  };
+
+  renderMistake();
+})();
+</script>
+
+
+<script>
+  let trailStepCount = 0;
+
+  function addTrailStep() {
+    trailStepCount++;
+
+    const holder = document.getElementById("trailSteps");
+    const row = document.createElement("div");
+    row.className = "trail-step";
+    row.style.display = "grid";
+    row.style.gridTemplateColumns = "120px 1fr 1fr";
+    row.style.gap = "8px";
+    row.style.marginBottom = "10px";
+    row.style.background = "#ffffff";
+    row.style.padding = "10px";
+    row.style.borderRadius = "9px";
+
+    row.innerHTML =
+      '<select class="trail-operation" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Choose add or subtract for this trail step">' +
+        '<option value="+">Add</option>' +
+        '<option value="-">Subtract</option>' +
+      '</select>' +
+      '<input class="trail-change" type="text" placeholder="Fraction to add or subtract" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Fraction to add or subtract for this trail step">' +
+      '<input class="trail-result" type="text" placeholder="Result" style="padding:8px; border:1px solid #bcae98; border-radius:7px;" aria-label="Result for this trail step">';
+
+    holder.appendChild(row);
+    renderTrailPreview();
+  }
+
+  function parseMixedFraction(value) {
+    const cleaned = value.trim();
+
+    if (!cleaned) return null;
+
+    if (cleaned.indexOf(" ") !== -1) {
+      const parts = cleaned.split(/\s+/);
+
+      if (parts.length !== 2) return null;
+
+      const whole = Number(parts[0]);
+      const fraction = parseMixedFraction(parts[1]);
+
+      if (!Number.isFinite(whole) || fraction === null) return null;
+
+      return whole + fraction;
+    }
+
+    if (cleaned.indexOf("/") !== -1) {
+      const parts = cleaned.split("/");
+
+      if (parts.length !== 2) return null;
+
+      const numerator = Number(parts[0]);
+      const denominator = Number(parts[1]);
+
+      if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator === 0) {
+        return null;
+      }
+
+      return numerator / denominator;
+    }
+
+    const number = Number(cleaned);
+    return Number.isFinite(number) ? number : null;
+  }
+
+  function renderTrailPreview() {
+    const preview = document.getElementById("trailPreview");
+    const start = document.getElementById("trailStart").value.trim() || "Start";
+    const steps = document.querySelectorAll(".trail-step");
+
+    let text = start;
+
+    steps.forEach(function (step) {
+      const operation = step.querySelector(".trail-operation").value;
+      const change = step.querySelector(".trail-change").value || "?";
+      const result = step.querySelector(".trail-result").value || "?";
+      text += " " + operation + " " + change + " = " + result + " →";
+    });
+
+    preview.textContent = text.replace(/→$/, "");
+  }
+
+  function checkFractionTrail() {
+    renderTrailPreview();
+
+    const feedback = document.getElementById("trailFeedback");
+    const startText = document.getElementById("trailStart").value.trim();
+    const startValue = parseMixedFraction(startText);
+    const steps = Array.from(document.querySelectorAll(".trail-step"));
+
+    feedback.style.display = "block";
+
+    if (startValue === null || steps.length < 4) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter a valid starting fraction or mixed number and create at least four trail steps.";
+      return;
+    }
+
+    let currentValue = startValue;
+    let additionUsed = false;
+    let subtractionUsed = false;
+    let allCorrect = true;
+
+    steps.forEach(function (step) {
+      const operation = step.querySelector(".trail-operation").value;
+      const changeValue = parseMixedFraction(step.querySelector(".trail-change").value);
+      const resultValue = parseMixedFraction(step.querySelector(".trail-result").value);
+
+      if (operation === "+") additionUsed = true;
+      if (operation === "-") subtractionUsed = true;
+
+      if (changeValue === null || resultValue === null) {
+        allCorrect = false;
+        return;
+      }
+
+      const expected =
+        operation === "+"
+          ? currentValue + changeValue
+          : currentValue - changeValue;
+
+      if (Math.abs(expected - resultValue) > 0.000001) {
+        allCorrect = false;
+      }
+
+      currentValue = resultValue;
+    });
+
+    if (allCorrect && additionUsed && subtractionUsed) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your trail is connected and mathematically correct. Check that you have included different denominators and a mixed-number result.";
+    } else if (allCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "The trail is connected, but it must include both addition and subtraction.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "At least one result does not correctly follow from the previous step. Check each link in order.";
+    }
+  }
+
+  function resetFractionTrail() {
+    document.getElementById("trailStart").value = "";
+    document.getElementById("trailSteps").innerHTML = "";
+    document.getElementById("trailPreview").textContent = "";
+    document.getElementById("trailFeedback").style.display = "none";
+    trailStepCount = 0;
+
+    for (let i = 0; i < 4; i++) {
+      addTrailStep();
+    }
+  }
+
+  document.getElementById("trailStart").addEventListener("input", renderTrailPreview);
+  document.getElementById("trailSteps").addEventListener("input", renderTrailPreview);
+
+  resetFractionTrail();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 8 · Matching denominators",
+      text: "Calculate and simplify: <strong>3/8 + 2/8</strong>",
+      answers: ["5/8"],
+      prompt: "Are the fractional pieces already the same size?",
+      hint: "Add the numerators and keep the denominator.",
+      solution: "3/8 + 2/8 = 5/8."
+    },
+    {
+      label: "Question 2 of 8 · Different denominators",
+      text: "Calculate and simplify: <strong>1/2 + 1/4</strong>",
+      answers: ["3/4"],
+      prompt: "What is one half when written in quarters?",
+      hint: "1/2 = 2/4.",
+      solution: "2/4 + 1/4 = 3/4."
+    },
+    {
+      label: "Question 3 of 8 · Subtraction",
+      text: "Calculate and simplify: <strong>5/6 − 1/3</strong>",
+      answers: ["1/2", "3/6"],
+      prompt: "Can one third be rewritten in sixths?",
+      hint: "1/3 = 2/6.",
+      solution: "5/6 − 2/6 = 3/6 = 1/2."
+    },
+    {
+      label: "Question 4 of 8 · Addition over one whole",
+      text: "Calculate and write as a mixed number: <strong>3/4 + 5/6</strong>",
+      answers: ["1 7/12", "19/12"],
+      prompt: "What common denominator works for 4 and 6?",
+      hint: "3/4 = 9/12 and 5/6 = 10/12.",
+      solution: "9/12 + 10/12 = 19/12 = 1 7/12."
+    },
+    {
+      label: "Question 5 of 8 · Mixed-number addition",
+      text: "Calculate and simplify: <strong>2 1/3 + 1 1/6</strong>",
+      answers: ["3 1/2", "7/2"],
+      prompt: "Rewrite one third in sixths.",
+      hint: "2 1/3 = 2 2/6.",
+      solution: "2 2/6 + 1 1/6 = 3 3/6 = 3 1/2."
+    },
+    {
+      label: "Question 6 of 8 · Exchange in subtraction",
+      text: "Calculate and simplify: <strong>4 1/5 − 2 3/5</strong>",
+      answers: ["1 3/5", "8/5"],
+      prompt: "Can one fifth subtract three fifths without exchanging a whole?",
+      hint: "Rewrite 4 1/5 as 3 6/5.",
+      solution: "3 6/5 − 2 3/5 = 1 3/5."
+    },
+    {
+      label: "Question 7 of 8 · Multi-step calculation",
+      text: "Calculate and simplify: <strong>1/2 + 3/4 − 1/3</strong>",
+      answers: ["11/12"],
+      prompt: "What denominator works for 2, 4 and 3?",
+      hint: "Rewrite all fractions using twelfths.",
+      solution: "6/12 + 9/12 − 4/12 = 11/12."
+    },
+    {
+      label: "Question 8 of 8 · Context challenge",
+      text: "A container holds <strong>5 litres</strong>. A kitchen uses <strong>1 3/4 litres</strong> in the morning and <strong>2 1/3 litres</strong> later. How much remains?",
+      answers: ["11/12", "11/12 litre", "11/12 litres"],
+      prompt: "How much is used altogether before subtracting from 5 litres?",
+      hint: "1 3/4 + 2 1/3 = 4 1/12.",
+      solution: "5 − 4 1/12 = 11/12 litre."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/,/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function savePractice() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderPracticeDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        savePractice();
+        current = index;
+        renderPracticeQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderPracticeQuestion() {
+    const question = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = question.label;
+    document.getElementById("practiceQuestion").innerHTML = question.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderPracticeDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    savePractice();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (answer) {
+      return normalise(answer) === response;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your fraction calculation and final form are accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Check the denominators, any exchange and whether the result needs simplifying.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and check one stage at a time. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderPracticeDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked solution:</strong> " + questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+
+    savePractice();
+    current--;
+    renderPracticeQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    savePractice();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderPracticeQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 8 questions correctly. Review any unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderPracticeQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2038 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Number Sense Budget and Temperature Challenge | KS3 Foundations in Number</title>
+  <link rel="stylesheet" href="../assets/css/foundations-number.css">
+</head>
+<body>
+
+<a class="thrivenow-skip-link" href="#lessonView">Skip to session content</a>
+
+<nav class="thrivenow-session-nav"
+     data-thrivenow-shell="number"
+     aria-label="KS3 Foundations in Number navigation">
+  <a href="../index.html">← KS3 Foundations in Number</a>
+</nav>
+
+<!-- KS3 Foundations in Number — Number Sense Budget and Temperature Challenge
+     Includes:
+     • Option 1 in The Knowing World: Estimate–Calculate–Check Control Panel
+     • Option 4 in The Knowing World: Temperature Timeline Constructor
+     • Option 5 in The Human Story: Community Winter Support Mission
+     • Option 7 in The Expressive Self: Mathematical Emergency Broadcast Studio
+     • Option 9 in The Designed World: Design a Winter Decision Dashboard
+     • Assessment Rubric:
+       Emerging | Developing | Secure | Mastering
+     • In-page progressive practice activity
+-->
+
+<div id="lessonView">
+
+  <div style="font-family:Arial, sans-serif; max-width:1000px; margin:auto; padding:20px; background:#f7f3ea; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <p style="margin:0 0 6px; font-size:0.92em; font-weight:bold; letter-spacing:0.04em; text-transform:uppercase; color:#6d765f;">KS3 Foundations in Number</p>
+
+    <h1 style="margin-bottom:6px;">
+      Number Sense Budget and Temperature Challenge
+    </h1>
+
+    <h2 style="margin-top:0; color:#5c6b4f; font-size:1.4em;">
+      Driving Question:
+      <em>Can strong number sense help a community make safer and fairer decisions?</em>
+    </h2>
+
+    <p style="background:#eef3ea; border-left:5px solid #7d9671; padding:10px 12px; border-radius:10px; margin:12px 0 16px;"><strong>Explore one way at a time:</strong> open a section below. Opening another Way of Knowing will close the one you were using.</p>
+
+    <div style="background:#fffaf0; padding:14px; border-left:6px solid #d8b26e; border-radius:12px; margin:18px 0;">
+
+      <p style="margin-top:0;">
+        <strong>Learning pathway:</strong> KS3 Foundations in Number —
+        Number Sense &amp; Operations — end-of-unit application and synthesis.
+      </p>
+
+      <p>
+        <strong>Seeds of Change:</strong>
+        apply place value, estimation and integer operations in connected problems;
+        calculate with money and decimals;
+        model temperature rises and falls;
+        interpret values above and below zero;
+        select efficient strategies;
+        solve multi-step problems;
+        and justify decisions using mathematical evidence.
+      </p>
+
+      <p style="margin-bottom:0;">
+        <strong>National Curriculum learning:</strong>
+        use the four operations with integers and decimals;
+        order and calculate with positive and negative numbers;
+        select appropriate calculation strategies;
+        use estimation and inverse operations to check;
+        and solve increasingly complex problems in financial and measurement contexts.
+      </p>
+
+    </div>
+
+
+    <details style="background:#e8f0e3; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧠 The Knowing World
+      </summary>
+
+      <h3>Number sense is more than finding an exact answer</h3>
+
+      <p>
+        Strong number sense includes predicting the likely size and sign of an answer,
+        selecting a suitable method and checking whether the result is reasonable.
+      </p>
+
+      <h3>The Estimate–Calculate–Check cycle</h3>
+
+      <ol>
+        <li><strong>Estimate:</strong> predict an approximate result or sensible range.</li>
+        <li><strong>Calculate:</strong> use an efficient mental, written or digital method.</li>
+        <li><strong>Check:</strong> use an inverse operation, alternative method or comparison with the estimate.</li>
+      </ol>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        <strong>£1,248.75 − £786.40</strong><br>
+        Estimate: £1,250 − £790 ≈ £460<br>
+        Exact answer: £462.35<br>
+        Check: £786.40 + £462.35 = £1,248.75
+      </p>
+
+      <h3>Temperature change</h3>
+
+      <p>
+        A temperature rise can be represented by a positive integer.
+        A fall can be represented by a negative integer.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Start at −5°C.<br>
+        Rise by 7°C: −5 + 7 = 2°C.<br>
+        Fall by 4°C: 2 − 4 = −2°C.
+      </p>
+
+      <h3>Crossing zero</h3>
+
+      <p>
+        When a change crosses zero, zero can be used as a checkpoint.
+        The change from −6°C to 4°C is 10°C:
+        six degrees to reach zero and four more to reach 4°C.
+      </p>
+
+      <h3>Key vocabulary</h3>
+
+      <p>
+        <strong>estimate, exact, reasonable, inverse, balance, expenditure, income, integer, temperature change, rise, fall, threshold, constraint</strong>
+      </p>
+
+
+      <h3>Interactive investigation 1: Estimate–Calculate–Check Control Panel</h3>
+
+      <div id="eccApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="eccLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="eccQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.12em;"></div>
+
+        <label for="eccEstimate" style="display:block; margin:14px 0 6px;">
+          <strong>Estimate</strong>
+        </label>
+
+        <input id="eccEstimate"
+               type="text"
+               inputmode="decimal"
+               placeholder="Enter an approximate answer"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="eccMethod" style="display:block; margin:14px 0 6px;">
+          <strong>Choose a calculation method</strong>
+        </label>
+
+        <select id="eccMethod"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="mental">Mental strategy</option>
+          <option value="compensation">Compensation</option>
+          <option value="formal">Formal written method</option>
+          <option value="numberLine">Number line or counting through zero</option>
+        </select>
+
+        <label for="eccExact" style="display:block; margin:14px 0 6px;">
+          <strong>Exact answer</strong>
+        </label>
+
+        <input id="eccExact"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="eccCheck" style="display:block; margin:14px 0 6px;">
+          <strong>Write an inverse or reasonableness check</strong>
+        </label>
+
+        <textarea id="eccCheck"
+                  rows="3"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showEccPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic Prompt
+          </button>
+
+          <button type="button"
+                  onclick="showEccHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkEccAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Control Panel
+          </button>
+
+        </div>
+
+        <div id="eccSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="eccFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="eccPrevious"
+                  type="button"
+                  onclick="previousEccQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="eccNext"
+                  type="button"
+                  onclick="nextEccQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <h3>Interactive investigation 2: Temperature Timeline Constructor</h3>
+
+      <div id="timelineApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px; margin-top:16px;">
+
+        <p id="timelineLabel" style="font-weight:bold; color:#587088;"></p>
+
+        <div id="timelineQuestion"
+             style="background:#ffffff; padding:14px; border-radius:10px; font-size:1.12em;"></div>
+
+        <div id="timelineVisual"
+             style="background:#ffffff; padding:15px; border-radius:10px; margin-top:14px; min-height:70px;"></div>
+
+        <label for="timelineFirst" style="display:block; margin:14px 0 6px;">
+          <strong>Temperature after the first change</strong>
+        </label>
+
+        <input id="timelineFirst"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="timelineSecond" style="display:block; margin:14px 0 6px;">
+          <strong>Temperature after the second change</strong>
+        </label>
+
+        <input id="timelineSecond"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="timelineFinal" style="display:block; margin:14px 0 6px;">
+          <strong>Final temperature</strong>
+        </label>
+
+        <input id="timelineFinal"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="timelineCrossings" style="display:block; margin:14px 0 6px;">
+          <strong>How many times does the timeline cross zero?</strong>
+        </label>
+
+        <input id="timelineCrossings"
+               type="number"
+               min="0"
+               max="4"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="playTimeline()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            ▶ Play Timeline
+          </button>
+
+          <button type="button"
+                  onclick="showTimelinePrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic Prompt
+          </button>
+
+          <button type="button"
+                  onclick="showTimelineHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkTimelineAnswer()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Timeline
+          </button>
+
+        </div>
+
+        <div id="timelineSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="timelineFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+        <div style="display:flex; justify-content:space-between; gap:10px; margin-top:14px;">
+
+          <button id="timelinePrevious"
+                  type="button"
+                  onclick="previousTimelineQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #738697; border-radius:8px; cursor:pointer;">
+            ← Previous
+          </button>
+
+          <button id="timelineNext"
+                  type="button"
+                  onclick="nextTimelineQuestion()"
+                  style="padding:9px 14px; background:#ffffff; border:1px solid #54718a; border-radius:8px; cursor:pointer;">
+            Next →
+          </button>
+
+        </div>
+
+      </div>
+
+      <h3>Think and explain</h3>
+
+      <ul>
+        <li>Why should an estimate be made before an exact budget calculation?</li>
+        <li>How does zero help when calculating temperature changes?</li>
+        <li>What would make an exact answer seem unreasonable?</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f1e6d2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌍 The Human Story
+      </summary>
+
+      <h3>Community Winter Support Mission</h3>
+
+      <p>
+        A fictional community centre has a limited budget to support people during a period of cold weather.
+        There may be several reasonable plans, but every decision must be mathematically accurate and clearly justified.
+      </p>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        Available budget: <strong>£2,400</strong><br>
+        Forecast temperatures: <strong>−7°C, −4°C, 1°C and −2°C</strong>
+      </p>
+
+      <h3>Available support actions</h3>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; min-width:700px; border-collapse:collapse; background:#fffaf0;">
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Action</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Cost</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">People supported</th>
+          </tr>
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">Open a warm space</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">£720</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">40</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">Provide hot meals</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">£480</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">60</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">Provide transport</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">£360</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">24</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">Supply emergency blankets</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">£275</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">50</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">Extend opening hours</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">£540</td>
+            <td style="border:1px solid #c8b99a; padding:8px;">35</td>
+          </tr>
+        </table>
+      </div>
+
+      <h3>Interactive mission</h3>
+
+      <div id="missionApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <p id="missionScenario" style="font-weight:bold; color:#82683f;"></p>
+
+        <p>
+          Select the actions your plan will fund.
+        </p>
+
+        <label style="display:block; margin:8px 0;">
+          <input type="checkbox" class="mission-choice" value="720" data-people="40">
+          Open a warm space — £720
+        </label>
+
+        <label style="display:block; margin:8px 0;">
+          <input type="checkbox" class="mission-choice" value="480" data-people="60">
+          Provide hot meals — £480
+        </label>
+
+        <label style="display:block; margin:8px 0;">
+          <input type="checkbox" class="mission-choice" value="360" data-people="24">
+          Provide transport — £360
+        </label>
+
+        <label style="display:block; margin:8px 0;">
+          <input type="checkbox" class="mission-choice" value="275" data-people="50">
+          Supply emergency blankets — £275
+        </label>
+
+        <label style="display:block; margin:8px 0;">
+          <input type="checkbox" class="mission-choice" value="540" data-people="35">
+          Extend opening hours — £540
+        </label>
+
+        <div style="background:#ffffff; padding:14px; border-radius:10px; margin-top:14px;">
+
+          <p>
+            Total planned cost:
+            <strong id="missionCost">£0.00</strong>
+          </p>
+
+          <p>
+            Remaining balance:
+            <strong id="missionBalance">£2,400.00</strong>
+          </p>
+
+          <p>
+            Total people supported:
+            <strong id="missionPeople">0</strong>
+          </p>
+
+        </div>
+
+        <label for="missionPriority" style="display:block; margin:14px 0 6px;">
+          <strong>What is your main priority?</strong>
+        </label>
+
+        <select id="missionPriority"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="people">Support the greatest number of people</option>
+          <option value="cold">Prepare for the coldest temperatures</option>
+          <option value="reserve">Keep an emergency reserve</option>
+          <option value="balanced">Balance several needs</option>
+        </select>
+
+        <label for="missionReason" style="display:block; margin:14px 0 6px;">
+          <strong>Justify your plan using costs, temperatures and people supported</strong>
+        </label>
+
+        <textarea id="missionReason"
+                  rows="5"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showMissionPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic Prompt
+          </button>
+
+          <button type="button"
+                  onclick="showMissionHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkMissionPlan()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Mission Plan
+          </button>
+
+        </div>
+
+        <div id="missionSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="missionFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+    </details>
+
+
+    <details style="background:#e4edf5; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🎨 The Expressive Self
+      </summary>
+
+      <h3>Mathematical Emergency Broadcast Studio</h3>
+
+      <p>
+        Produce a calm and clear public-information broadcast that explains the forecast,
+        available budget and recommended support plan.
+      </p>
+
+      <div id="broadcastApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="broadcastStyle" style="display:block; margin-bottom:6px;">
+          <strong>Choose a broadcast style</strong>
+        </label>
+
+        <select id="broadcastStyle"
+                style="width:100%; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          <option value="">Choose</option>
+          <option value="news">News bulletin</option>
+          <option value="community">Community-centre announcement</option>
+          <option value="radio">Radio update</option>
+          <option value="visual">Illustrated public-information script</option>
+        </select>
+
+        <label for="broadcastTemperature" style="display:block; margin:14px 0 6px;">
+          <strong>Final forecast temperature</strong>
+        </label>
+
+        <input id="broadcastTemperature"
+               type="text"
+               inputmode="numeric"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="broadcastBudget" style="display:block; margin:14px 0 6px;">
+          <strong>Remaining budget</strong>
+        </label>
+
+        <input id="broadcastBudget"
+               type="text"
+               inputmode="decimal"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <label for="broadcastScript" style="display:block; margin:14px 0 6px;">
+          <strong>Broadcast script</strong>
+        </label>
+
+        <textarea id="broadcastScript"
+                  rows="8"
+                  placeholder="Include the forecast, at least one calculation, the budget position and a recommendation."
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="previewBroadcast()"
+                  style="padding:9px 13px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+            Preview Broadcast
+          </button>
+
+          <button type="button"
+                  onclick="showBroadcastPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic Prompt
+          </button>
+
+          <button type="button"
+                  onclick="showBroadcastHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkBroadcast()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Check My Broadcast
+          </button>
+
+        </div>
+
+        <div id="broadcastPreview"
+             style="display:none; margin-top:16px; background:#ffffff; padding:14px; border-radius:10px;"></div>
+
+        <div id="broadcastSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="broadcastFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Communication checklist</h3>
+
+      <ul>
+        <li>State the temperature clearly, including its sign.</li>
+        <li>Explain at least one budget or temperature calculation.</li>
+        <li>Use appropriate units.</li>
+        <li>Distinguish facts from recommendations.</li>
+        <li>Communicate calmly and respectfully.</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#efe4f2; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🧩 The Designed World
+      </summary>
+
+      <h3>Design a Winter Decision Dashboard</h3>
+
+      <p>
+        Build a dashboard that monitors temperature and spending,
+        activates warnings and supports a community decision.
+      </p>
+
+      <div id="dashboardApp" style="background:#f8f4ee; border:1px solid #cdbfa9; padding:18px; border-radius:14px;">
+
+        <label for="dashboardName" style="display:block; margin-bottom:6px;">
+          <strong>Name your dashboard</strong>
+        </label>
+
+        <input id="dashboardName"
+               type="text"
+               placeholder="Example: Winter Support Monitor"
+               style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;">
+
+          <div>
+            <label for="dashboardStartTemp"><strong>Starting temperature</strong></label>
+            <input id="dashboardStartTemp"
+                   type="number"
+                   value="-4"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="dashboardTempChange"><strong>Forecast change</strong></label>
+            <input id="dashboardTempChange"
+                   type="number"
+                   value="-3"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="dashboardBudget"><strong>Starting budget</strong></label>
+            <input id="dashboardBudget"
+                   type="number"
+                   value="2400"
+                   step="0.01"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="dashboardSpend"><strong>Planned spending</strong></label>
+            <input id="dashboardSpend"
+                   type="number"
+                   value="1800"
+                   step="0.01"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="dashboardTempThreshold"><strong>Temperature alert threshold</strong></label>
+            <input id="dashboardTempThreshold"
+                   type="number"
+                   value="-5"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+          <div>
+            <label for="dashboardReserveThreshold"><strong>Minimum reserve</strong></label>
+            <input id="dashboardReserveThreshold"
+                   type="number"
+                   value="400"
+                   step="0.01"
+                   style="width:100%; box-sizing:border-box; margin-top:6px; padding:10px; border:1px solid #bcae98; border-radius:8px;">
+          </div>
+
+        </div>
+
+        <button type="button"
+                onclick="runDashboard()"
+                style="margin-top:15px; padding:10px 15px; background:#e5edf4; border:1px solid #315d72; border-radius:8px; cursor:pointer;">
+          Run Dashboard
+        </button>
+
+        <div id="dashboardDisplay"
+             style="margin-top:16px; background:#ffffff; padding:15px; border-radius:10px;"></div>
+
+        <label for="dashboardReason" style="display:block; margin:14px 0 6px;">
+          <strong>Explain why your thresholds and alerts are useful</strong>
+        </label>
+
+        <textarea id="dashboardReason"
+                  rows="5"
+                  style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #bcae98; border-radius:8px;"></textarea>
+
+        <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:14px;">
+
+          <button type="button"
+                  onclick="showDashboardPrompt()"
+                  style="padding:9px 13px; background:#f3e6f1; border:1px solid #70466b; border-radius:8px; cursor:pointer;">
+            🤔 Socratic Prompt
+          </button>
+
+          <button type="button"
+                  onclick="showDashboardHint()"
+                  style="padding:9px 13px; background:#f8f1d8; border:1px solid #8a7932; border-radius:8px; cursor:pointer;">
+            💡 Hint
+          </button>
+
+          <button type="button"
+                  onclick="checkDashboard()"
+                  style="padding:9px 13px; background:#e5f0e2; border:1px solid #4d6b47; border-radius:8px; cursor:pointer;">
+            ✅ Test My Dashboard
+          </button>
+
+        </div>
+
+        <div id="dashboardSupport"
+             aria-live="polite"
+             style="display:none; margin-top:14px; background:#f7f2e9; padding:12px; border-radius:9px;"></div>
+
+        <div id="dashboardFeedback"
+             aria-live="polite"
+             style="display:none; margin-top:12px; padding:12px; border-radius:9px; font-weight:bold;"></div>
+
+      </div>
+
+      <h3>Dashboard requirements</h3>
+
+      <ul>
+        <li>A current or starting temperature.</li>
+        <li>A signed forecast change.</li>
+        <li>A final-temperature calculation.</li>
+        <li>A starting budget and planned expenditure.</li>
+        <li>A remaining-balance calculation.</li>
+        <li>A temperature warning threshold.</li>
+        <li>A budget reserve warning.</li>
+        <li>A written explanation of the alert decisions.</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#e7efe9; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🌱 The Living Body
+      </summary>
+
+      <h3>Make one decision at a time</h3>
+
+      <p>
+        Multi-step problems can feel crowded.
+        Break the situation into smaller decisions and keep track of units.
+      </p>
+
+      <ol>
+        <li>Underline the starting values.</li>
+        <li>Identify each positive or negative change.</li>
+        <li>Estimate the likely outcome.</li>
+        <li>Complete one calculation at a time.</li>
+        <li>Check whether the sign, unit and size make sense.</li>
+        <li>Explain the decision in your own words.</li>
+      </ol>
+
+      <h3>Confidence check</h3>
+
+      <ul>
+        <li>“I can estimate a budget total before calculating.”</li>
+        <li>“I can track a sequence of temperature changes.”</li>
+        <li>“I can calculate a remaining balance.”</li>
+        <li>“I can justify a decision using mathematical evidence.”</li>
+      </ul>
+
+      <h3>Helpful self-talk</h3>
+
+      <p style="background:#fffaf0; padding:12px; border-radius:10px;">
+        “I do not need to solve everything at once. I can estimate, calculate, check and then decide.”
+      </p>
+
+      <h3>Reflection</h3>
+
+      <ul>
+        <li>A calculation that changed my decision was...</li>
+        <li>An estimate that helped me was...</li>
+        <li>A temperature change I represented clearly was...</li>
+        <li>A community priority I considered was...</li>
+      </ul>
+
+    </details>
+
+
+    <details style="background:#f3eadc; padding:15px; margin:12px 0; border-radius:14px;" class="verse-panel" name="verse-lesson">
+
+      <summary style="font-size:1.25em; font-weight:bold; cursor:pointer;">
+        🛠 Final Task
+      </summary>
+
+      <h3>Assignment: Create a Community Winter Support Proposal</h3>
+
+      <p>
+        Create a report, presentation, dashboard, poster or broadcast that recommends
+        how a fictional community centre should use a limited budget during a period of cold weather.
+      </p>
+
+      <p>Your final product must include:</p>
+
+      <ul>
+        <li>a starting budget</li>
+        <li>at least four planned expenses</li>
+        <li>an estimated total cost</li>
+        <li>an exact total cost</li>
+        <li>a remaining-balance calculation</li>
+        <li>an inverse or alternative check</li>
+        <li>at least four signed temperature readings</li>
+        <li>a temperature sequence containing a rise and a fall</li>
+        <li>one change that crosses zero</li>
+        <li>a temperature alert threshold</li>
+        <li>a budget reserve threshold</li>
+        <li>a justified recommendation linked to fairness or safety</li>
+        <li>a reflection identifying the most important mathematical evidence</li>
+      </ul>
+
+      <h3>KS3 readiness</h3>
+
+      <p>
+        This task brings together place value, decimal calculation, estimation,
+        negative integers, multi-step reasoning, checking and mathematical communication.
+      </p>
+
+      <h3>Final Task Rubric</h3>
+
+      <div style="overflow-x:auto;">
+
+        <table style="width:100%; min-width:900px; border-collapse:collapse; background:#fffaf0;">
+
+          <tr>
+            <th style="border:1px solid #c8b99a; padding:8px;">Criteria</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Emerging</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Developing</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Secure</th>
+            <th style="border:1px solid #c8b99a; padding:8px;">Mastering</th>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Conceptual Understanding</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can identify some budget and temperature values with support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can explain simple balances and signed temperature changes.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can connect estimation, exact calculation, integer change and checking.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can generalise how budget constraints, thresholds and signed changes interact in a decision system.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Fluency &amp; Accuracy</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can complete some familiar calculations using prompts.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can calculate familiar totals and temperature changes with occasional errors.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can accurately calculate budget totals, balances and multi-step integer changes.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can calculate efficiently, compare methods and verify unfamiliar multi-step results independently.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Application to Problems</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can attempt a familiar budget or temperature problem when the operation is identified.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can solve familiar multi-step problems with some support.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can select and apply appropriate strategies in connected budget and temperature problems.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can design, evaluate and refine a mathematically justified plan under unfamiliar constraints.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              <strong>Independence &amp; Reflection</strong>
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can begin with support and recognise when I need a check.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can follow a suggested strategy and respond to feedback.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can estimate, choose methods, check results and explain my decision.
+            </td>
+            <td style="border:1px solid #c8b99a; padding:8px;">
+              I can independently compare plans, evaluate trade-offs and refine my recommendation using evidence.
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <p style="margin-top:14px;">
+        <strong>Exit question:</strong>
+        Which mathematical evidence should matter most when a budget is limited and temperatures are below zero?
+      </p>
+
+    </details>
+
+
+    <div style="background:#fffaf0; padding:20px; margin-top:22px; border-left:6px solid #5c6b4f; border-radius:14px; text-align:center;">
+
+      <h2 style="margin-top:0; color:#46533d; font-size:1.35em;">
+        ✏️ Ready to strengthen your skills?
+      </h2>
+
+      <p>
+        Open the practice activity to work through ten connected questions involving
+        estimates, budget totals, balances, negative temperatures and decision-making.
+      </p>
+
+      <button type="button"
+              onclick="openPracticeSession()"
+              style="padding:13px 22px; background:#5c6b4f; color:#ffffff; border:none; border-radius:10px; font-weight:bold; font-size:1.05em; cursor:pointer;">
+        Open Practice Activity →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="practiceView" hidden>
+
+  <div style="font-family:Georgia, 'Times New Roman', serif; max-width:960px; margin:auto; padding:24px; background:#f8f4ee; color:#2f2f2f; line-height:1.55; border-radius:18px;">
+
+    <h1 style="margin-bottom:5px;">
+      Number Sense Budget and Temperature Practice
+    </h1>
+
+    <h2 style="margin-top:0; color:#66605a; font-size:1.2em;">
+      KS3 Foundations in Number · Practice Companion
+    </h2>
+
+    <button type="button"
+            onclick="returnToLesson()"
+            style="padding:10px 16px; background:#ffffff; color:#315d72; border:1px solid #315d72; border-radius:9px; font-weight:bold; cursor:pointer;">
+      ← Return to the Session
+    </button>
+
+    <div style="background:#e5edf4; border-left:6px solid #315d72; padding:18px; border-radius:12px; margin:22px 0;">
+
+      <p style="margin-top:0;">
+        Work through ten questions that move from individual calculations
+        to a connected winter-support decision.
+      </p>
+
+      <p style="margin-bottom:0;">
+        Use support in this order:
+        <strong>🤔 Socratic Prompt</strong>,
+        <strong>💡 Hint</strong>,
+        <strong>✅ Check My Answer</strong>,
+        then <strong>👀 Worked Solution</strong>.
+      </p>
+
+    </div>
+
+    <div style="display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+      <strong>Progress:</strong>
+      <div id="practiceDots" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cdbfa9; border-radius:12px; padding:22px;">
+
+      <p id="practiceLabel" style="text-transform:uppercase; color:#8a6d43; letter-spacing:1px; font-weight:bold;"></p>
+
+      <div id="practiceQuestion" style="font-size:1.15em; margin-bottom:16px;"></div>
+
+      <label for="practiceWorking" style="display:block; margin-bottom:6px;">
+        Your working:
+      </label>
+
+      <textarea id="practiceWorking"
+                rows="4"
+                style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;"></textarea>
+
+      <label for="practiceAnswer" style="display:block; margin:14px 0 6px;">
+        Your final answer:
+      </label>
+
+      <input id="practiceAnswer"
+             type="text"
+             autocomplete="off"
+             style="width:100%; box-sizing:border-box; padding:10px; border:1px solid #cdbfa9; border-radius:8px; font:inherit;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+
+        <button type="button"
+                onclick="showPracticePrompt()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #70466b; background:#f3e6f1; cursor:pointer;">
+          🤔 Socratic Prompt
+        </button>
+
+        <button type="button"
+                onclick="showPracticeHint()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #8a7932; background:#f8f1d8; cursor:pointer;">
+          💡 Hint
+        </button>
+
+        <button type="button"
+                onclick="checkPracticeAnswer()"
+                style="padding:10px 14px; border-radius:8px; border:1px solid #4d6b47; background:#e5f0e2; cursor:pointer;">
+          ✅ Check My Answer
+        </button>
+
+        <button id="practiceSolutionButton"
+                type="button"
+                onclick="showPracticeSolution()"
+                disabled
+                style="padding:10px 14px; border-radius:8px; border:1px solid #aaa29a; background:#eeeae5; color:#9a938b; cursor:not-allowed;">
+          👀 Worked Solution
+        </button>
+
+      </div>
+
+      <div id="practiceSupport"
+           aria-live="polite"
+           style="display:none; margin-top:16px; background:#f7f2e9; padding:14px; border-radius:10px;"></div>
+
+      <div id="practiceFeedback"
+           aria-live="polite"
+           style="display:none; margin-top:12px; padding:14px; border-radius:10px; font-weight:bold;"></div>
+
+    </div>
+
+    <div style="display:flex; justify-content:space-between; gap:12px; margin-top:16px;">
+
+      <button id="practicePrevious"
+              type="button"
+              onclick="previousPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #8c9cab; background:#ffffff; cursor:pointer;">
+        ← Previous
+      </button>
+
+      <button id="practiceNext"
+              type="button"
+              onclick="nextPracticeQuestion()"
+              style="padding:10px 16px; border-radius:8px; border:1px solid #54718a; background:#ffffff; cursor:pointer;">
+        Next →
+      </button>
+
+    </div>
+
+    <details style="background:#f5edcf; border-left:6px solid #9d8530; padding:16px; border-radius:12px; margin-top:24px;">
+
+      <summary style="font-size:1.25em; font-weight:bold;">
+        💛 Reflection
+      </summary>
+
+      <ul>
+        <li>An estimate that helped me was...</li>
+        <li>A temperature change across zero was...</li>
+        <li>A budget calculation I checked was...</li>
+        <li>A decision I justified using evidence was...</li>
+      </ul>
+
+    </details>
+
+    <div style="text-align:center; margin-top:20px;">
+
+      <button type="button"
+              onclick="returnToLesson()"
+              style="padding:11px 18px; background:#315d72; color:#ffffff; border:none; border-radius:9px; font-weight:bold; cursor:pointer;">
+        ← Return to the Session
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  function openPracticeSession() {
+    document.getElementById("lessonView").hidden = true;
+    document.getElementById("practiceView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function returnToLesson() {
+    document.getElementById("practiceView").hidden = true;
+    document.getElementById("lessonView").hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function normaliseNumberSenseText(value) {
+    return value
+      .toLowerCase()
+      .replace(/−/g, "-")
+      .replace(/£/g, "")
+      .replace(/,/g, "")
+      .replace(/°c/g, "")
+      .replace(/degrees/g, "")
+      .replace(/degree/g, "")
+      .replace(/\s+/g, "")
+      .trim();
+  }
+
+  function numberSenseValueMatches(value, expected, tolerance) {
+    const parsed = Number(normaliseNumberSenseText(value));
+    const allowed = typeof tolerance === "number" ? tolerance : 0.000001;
+
+    return Number.isFinite(parsed) &&
+           Math.abs(parsed - expected) <= allowed;
+  }
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Control panel 1 of 5",
+      question: "A heating budget is <strong>£1,248.75</strong>. Spending is <strong>£786.40</strong>. Find the remaining balance.",
+      answer: 462.35,
+      estimate: 460,
+      tolerance: 40,
+      methods: ["formal", "compensation"],
+      prompt: "What rounded values could give a quick estimate?",
+      hint: "Use £1,250 − £790 for an estimate."
+    },
+    {
+      label: "Control panel 2 of 5",
+      question: "Find the change from <strong>−7°C</strong> to <strong>4°C</strong>.",
+      answer: 11,
+      estimate: 11,
+      tolerance: 2,
+      methods: ["numberLine", "mental"],
+      prompt: "How far is −7 from zero, then zero from 4?",
+      hint: "Use 7 + 4."
+    },
+    {
+      label: "Control panel 3 of 5",
+      question: "Find the total cost of <strong>£720</strong>, <strong>£480</strong> and <strong>£275</strong>.",
+      answer: 1475,
+      estimate: 1500,
+      tolerance: 100,
+      methods: ["mental", "formal"],
+      prompt: "Can you combine two friendly values first?",
+      hint: "£720 + £480 = £1,200."
+    },
+    {
+      label: "Control panel 4 of 5",
+      question: "A temperature starts at <strong>−4°C</strong> and falls by <strong>6°C</strong>. Find the final temperature.",
+      answer: -10,
+      estimate: -10,
+      tolerance: 2,
+      methods: ["numberLine", "mental"],
+      prompt: "Does a fall move the value toward or away from zero?",
+      hint: "Calculate −4 − 6."
+    },
+    {
+      label: "Control panel 5 of 5",
+      question: "A project has <strong>£2,400</strong> and spends <strong>£2,105.50</strong>. Find the reserve.",
+      answer: 294.50,
+      estimate: 300,
+      tolerance: 30,
+      methods: ["formal", "compensation"],
+      prompt: "Is the reserve likely to be closer to £300 or £500?",
+      hint: "Use £2,400 − £2,100 as an estimate."
+    }
+  ];
+
+  let current = 0;
+  const estimates = new Array(questions.length).fill("");
+  const methods = new Array(questions.length).fill("");
+  const answers = new Array(questions.length).fill("");
+  const checks = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    estimates[current] = document.getElementById("eccEstimate").value;
+    methods[current] = document.getElementById("eccMethod").value;
+    answers[current] = document.getElementById("eccExact").value;
+    checks[current] = document.getElementById("eccCheck").value;
+  }
+
+  function renderQuestion() {
+    const q = questions[current];
+
+    document.getElementById("eccLabel").textContent = q.label;
+    document.getElementById("eccQuestion").innerHTML = q.question;
+    document.getElementById("eccEstimate").value = estimates[current];
+    document.getElementById("eccMethod").value = methods[current];
+    document.getElementById("eccExact").value = answers[current];
+    document.getElementById("eccCheck").value = checks[current];
+
+    document.getElementById("eccSupport").style.display = "none";
+    document.getElementById("eccFeedback").style.display = "none";
+
+    const previous = document.getElementById("eccPrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("eccNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.showEccPrompt = function () {
+    const box = document.getElementById("eccSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic Prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showEccHint = function () {
+    const box = document.getElementById("eccSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkEccAnswer = function () {
+    saveCurrent();
+
+    const q = questions[current];
+    const feedback = document.getElementById("eccFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !estimates[current].trim() ||
+      !methods[current] ||
+      !answers[current].trim() ||
+      checks[current].trim().length < 10
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter an estimate, choose a method, calculate exactly and write a check.";
+      return;
+    }
+
+    const estimateCorrect =
+      numberSenseValueMatches(estimates[current], q.estimate, q.tolerance);
+
+    const answerCorrect =
+      numberSenseValueMatches(answers[current], q.answer);
+
+    const methodSuitable =
+      q.methods.indexOf(methods[current]) !== -1;
+
+    if (estimateCorrect && answerCorrect && methodSuitable) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your estimate, method and exact result are consistent.";
+    } else if (answerCorrect) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Your exact answer is correct. Reconsider the estimate or method choice.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Compare the exact result with your estimate and recheck the operation.";
+    }
+  };
+
+  window.previousEccQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextEccQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("eccFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 5 control-panel challenges correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Timeline 1 of 4",
+      start: -5,
+      changes: [7, -4, 3],
+      values: [2, -2, 1],
+      crossings: 3,
+      prompt: "Update the temperature after each signed change.",
+      hint: "−5 + 7 = 2, then 2 − 4, then add 3."
+    },
+    {
+      label: "Timeline 2 of 4",
+      start: 4,
+      changes: [-9, 6, -2],
+      values: [-5, 1, -1],
+      crossings: 3,
+      prompt: "Notice every movement from one side of zero to the other.",
+      hint: "4 − 9 = −5, then add 6, then subtract 2."
+    },
+    {
+      label: "Timeline 3 of 4",
+      start: -8,
+      changes: [3, 4, 5],
+      values: [-5, -1, 4],
+      crossings: 1,
+      prompt: "At which step does the value become positive?",
+      hint: "The first two changes remain below zero."
+    },
+    {
+      label: "Timeline 4 of 4",
+      start: 2,
+      changes: [-2, -5, 8],
+      values: [0, -5, 3],
+      crossings: 1,
+      prompt: "Reaching zero is not yet crossing to the other side.",
+      hint: "2 − 2 = 0, then fall to −5, then rise to 3."
+    }
+  ];
+
+  let current = 0;
+  const firsts = new Array(questions.length).fill("");
+  const seconds = new Array(questions.length).fill("");
+  const finals = new Array(questions.length).fill("");
+  const crossings = new Array(questions.length).fill("");
+  const completed = new Array(questions.length).fill(false);
+
+  function saveCurrent() {
+    firsts[current] = document.getElementById("timelineFirst").value;
+    seconds[current] = document.getElementById("timelineSecond").value;
+    finals[current] = document.getElementById("timelineFinal").value;
+    crossings[current] = document.getElementById("timelineCrossings").value;
+  }
+
+  function renderQuestion() {
+    const q = questions[current];
+
+    document.getElementById("timelineLabel").textContent = q.label;
+    document.getElementById("timelineQuestion").innerHTML =
+      "Start at <strong>" + q.start + "°C</strong>.<br>" +
+      "Changes: <strong>" +
+      q.changes.map(function (change) {
+        return (change >= 0 ? "+" : "") + change + "°C";
+      }).join(", ") +
+      "</strong>";
+
+    document.getElementById("timelineVisual").innerHTML =
+      "<strong>Start:</strong> " + q.start + "°C";
+
+    document.getElementById("timelineFirst").value = firsts[current];
+    document.getElementById("timelineSecond").value = seconds[current];
+    document.getElementById("timelineFinal").value = finals[current];
+    document.getElementById("timelineCrossings").value = crossings[current];
+
+    document.getElementById("timelineSupport").style.display = "none";
+    document.getElementById("timelineFeedback").style.display = "none";
+
+    const previous = document.getElementById("timelinePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("timelineNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+  }
+
+  window.playTimeline = function () {
+    const q = questions[current];
+    const display = document.getElementById("timelineVisual");
+    let step = 0;
+    let html = "<strong>Start:</strong> " + q.start + "°C";
+
+    display.innerHTML = html;
+
+    const interval = setInterval(function () {
+      html +=
+        " → <strong>" +
+        (q.changes[step] >= 0 ? "+" : "") +
+        q.changes[step] +
+        "</strong> → " +
+        q.values[step] +
+        "°C";
+
+      display.innerHTML = html;
+      step++;
+
+      if (step >= q.changes.length) {
+        clearInterval(interval);
+      }
+    }, 500);
+  };
+
+  window.showTimelinePrompt = function () {
+    const box = document.getElementById("timelineSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>🤔 Socratic Prompt:</strong> " + questions[current].prompt;
+  };
+
+  window.showTimelineHint = function () {
+    const box = document.getElementById("timelineSupport");
+    box.style.display = "block";
+    box.innerHTML = "<strong>💡 Hint:</strong> " + questions[current].hint;
+  };
+
+  window.checkTimelineAnswer = function () {
+    saveCurrent();
+
+    const q = questions[current];
+    const feedback = document.getElementById("timelineFeedback");
+    feedback.style.display = "block";
+
+    if (
+      !firsts[current].trim() ||
+      !seconds[current].trim() ||
+      !finals[current].trim() ||
+      crossings[current] === ""
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Enter every temperature and the number of zero crossings.";
+      return;
+    }
+
+    const correct =
+      numberSenseValueMatches(firsts[current], q.values[0]) &&
+      numberSenseValueMatches(seconds[current], q.values[1]) &&
+      numberSenseValueMatches(finals[current], q.values[2]) &&
+      Number(crossings[current]) === q.crossings;
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. You tracked each signed change and identified the zero crossings.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Update the temperature one change at a time and check every movement across zero.";
+    }
+  };
+
+  window.previousTimelineQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextTimelineQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("timelineFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You completed " +
+        completed.filter(Boolean).length +
+        " of 4 timelines correctly.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+
+<script>
+  document.querySelectorAll(".mission-choice").forEach(function (checkbox) {
+    checkbox.addEventListener("change", updateMissionTotals);
+  });
+
+  function updateMissionTotals() {
+    let cost = 0;
+    let people = 0;
+
+    document.querySelectorAll(".mission-choice:checked").forEach(function (checkbox) {
+      cost += Number(checkbox.value);
+      people += Number(checkbox.getAttribute("data-people"));
+    });
+
+    document.getElementById("missionCost").textContent =
+      "£" + cost.toFixed(2);
+
+    document.getElementById("missionBalance").textContent =
+      "£" + (2400 - cost).toFixed(2);
+
+    document.getElementById("missionPeople").textContent =
+      people;
+  }
+
+  document.getElementById("missionScenario").textContent =
+    "Forecast minimum: −7°C · Available budget: £2,400";
+
+  function showMissionPrompt() {
+    const box = document.getElementById("missionSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic Prompt:</strong> Which combination supports your stated priority while remaining within budget?";
+  }
+
+  function showMissionHint() {
+    const box = document.getElementById("missionSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> Calculate the total cost first, then compare the remaining reserve and number of people supported.";
+  }
+
+  function checkMissionPlan() {
+    let cost = 0;
+    let selected = 0;
+
+    document.querySelectorAll(".mission-choice:checked").forEach(function (checkbox) {
+      cost += Number(checkbox.value);
+      selected++;
+    });
+
+    const priority = document.getElementById("missionPriority").value;
+    const reason = document.getElementById("missionReason").value.trim();
+    const feedback = document.getElementById("missionFeedback");
+
+    feedback.style.display = "block";
+
+    if (selected < 2 || !priority || reason.length < 40) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose at least two actions, select a priority and justify the plan with mathematical evidence.";
+    } else if (cost <= 2400) {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your plan is within budget. Check that your explanation links the cost, reserve, forecast and people supported.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Your plan exceeds the £2,400 budget. Revise the selected actions or explain which priority must change.";
+    }
+  }
+</script>
+
+
+<script>
+  function previewBroadcast() {
+    const style = document.getElementById("broadcastStyle").value;
+    const temperature = document.getElementById("broadcastTemperature").value;
+    const budget = document.getElementById("broadcastBudget").value;
+    const script = document.getElementById("broadcastScript").value;
+    const preview = document.getElementById("broadcastPreview");
+
+    preview.style.display = "block";
+    preview.innerHTML =
+      "<h3 style='margin-top:0;'>Broadcast Preview</h3>" +
+      "<p><strong>Style:</strong> " + (style || "Not chosen") + "</p>" +
+      "<p><strong>Forecast:</strong> " + (temperature || "?") + "°C</p>" +
+      "<p><strong>Remaining budget:</strong> £" + (budget || "?") + "</p>" +
+      "<div style='padding:12px; border-left:4px solid #587088;'>" +
+      (script || "<em>Script not written.</em>") +
+      "</div>";
+  }
+
+  function showBroadcastPrompt() {
+    const box = document.getElementById("broadcastSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic Prompt:</strong> Which calculation does your audience need to understand in order to trust the recommendation?";
+  }
+
+  function showBroadcastHint() {
+    const box = document.getElementById("broadcastSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> Include a signed temperature, a budget calculation, appropriate units and a recommendation.";
+  }
+
+  function checkBroadcast() {
+    const style = document.getElementById("broadcastStyle").value;
+    const temperature = document.getElementById("broadcastTemperature").value;
+    const budget = document.getElementById("broadcastBudget").value;
+    const script = document.getElementById("broadcastScript").value.trim();
+    const feedback = document.getElementById("broadcastFeedback");
+
+    feedback.style.display = "block";
+
+    if (!style || !temperature.trim() || !budget.trim() || script.length < 80) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Choose a style, enter the forecast and budget, and write a fuller evidence-based script.";
+    } else {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Your broadcast contains the required numerical information. Review whether the calculation and recommendation are clear to the audience.";
+    }
+  }
+</script>
+
+
+<script>
+  function runDashboard() {
+    const startTemp = Number(document.getElementById("dashboardStartTemp").value);
+    const tempChange = Number(document.getElementById("dashboardTempChange").value);
+    const budget = Number(document.getElementById("dashboardBudget").value);
+    const spend = Number(document.getElementById("dashboardSpend").value);
+    const tempThreshold = Number(document.getElementById("dashboardTempThreshold").value);
+    const reserveThreshold = Number(document.getElementById("dashboardReserveThreshold").value);
+
+    const finalTemp = startTemp + tempChange;
+    const balance = budget - spend;
+
+    const tempAlert =
+      finalTemp <= tempThreshold
+        ? "⚠ Temperature alert active"
+        : "✓ Temperature above alert threshold";
+
+    const budgetAlert =
+      balance < 0
+        ? "⚠ Budget exceeded"
+        : balance < reserveThreshold
+          ? "⚠ Reserve below threshold"
+          : "✓ Reserve meets threshold";
+
+    document.getElementById("dashboardDisplay").innerHTML =
+      "<h3 style='margin-top:0;'>" +
+      (document.getElementById("dashboardName").value.trim() || "Winter Decision Dashboard") +
+      "</h3>" +
+      "<p><strong>Final temperature:</strong> " + finalTemp + "°C</p>" +
+      "<p><strong>Remaining balance:</strong> £" + balance.toFixed(2) + "</p>" +
+      "<p><strong>Temperature status:</strong> " + tempAlert + "</p>" +
+      "<p><strong>Budget status:</strong> " + budgetAlert + "</p>";
+  }
+
+  function showDashboardPrompt() {
+    const box = document.getElementById("dashboardSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic Prompt:</strong> What should happen when the forecast reaches the temperature threshold or the reserve falls below its minimum?";
+  }
+
+  function showDashboardHint() {
+    const box = document.getElementById("dashboardSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> Final temperature = starting temperature + change. Remaining balance = budget − spending.";
+  }
+
+  function checkDashboard() {
+    runDashboard();
+
+    const name = document.getElementById("dashboardName").value.trim();
+    const reason = document.getElementById("dashboardReason").value.trim();
+    const feedback = document.getElementById("dashboardFeedback");
+
+    const values = [
+      "dashboardStartTemp",
+      "dashboardTempChange",
+      "dashboardBudget",
+      "dashboardSpend",
+      "dashboardTempThreshold",
+      "dashboardReserveThreshold"
+    ].map(function (id) {
+      return Number(document.getElementById(id).value);
+    });
+
+    feedback.style.display = "block";
+
+    if (
+      !name ||
+      values.some(function (value) { return !Number.isFinite(value); }) ||
+      reason.length < 35
+    ) {
+      feedback.style.background = "#fff1cf";
+      feedback.textContent =
+        "Name the dashboard, complete all numerical settings and explain the purpose of the thresholds.";
+    } else {
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Dashboard test complete. Your system calculates the forecast, balance and threshold alerts.";
+    }
+  }
+
+  runDashboard();
+</script>
+
+
+<script>
+(function () {
+  const questions = [
+    {
+      label: "Question 1 of 10 · Estimation",
+      text: "Estimate <strong>£1,248.75 − £786.40</strong> to the nearest £10.",
+      answers: ["460", "£460"],
+      prompt: "Round each amount to a nearby multiple of 10.",
+      hint: "£1,250 − £790.",
+      solution: "£1,250 − £790 = approximately £460."
+    },
+    {
+      label: "Question 2 of 10 · Exact balance",
+      text: "Calculate <strong>£1,248.75 − £786.40</strong> exactly.",
+      answers: ["462.35", "£462.35"],
+      prompt: "Align the decimal points.",
+      hint: "Subtract hundredths, tenths, ones, tens and hundreds in matching columns.",
+      solution: "£1,248.75 − £786.40 = £462.35."
+    },
+    {
+      label: "Question 3 of 10 · Temperature change",
+      text: "Find the change from <strong>−7°C</strong> to <strong>4°C</strong>.",
+      answers: ["11", "11°c"],
+      prompt: "Use zero as a checkpoint.",
+      hint: "7 degrees to zero and 4 more to 4.",
+      solution: "The temperature rises by 11°C."
+    },
+    {
+      label: "Question 4 of 10 · Signed sequence",
+      text: "A temperature starts at <strong>−5°C</strong>, rises by <strong>7°C</strong> and falls by <strong>4°C</strong>. Find the final temperature.",
+      answers: ["-2", "−2", "-2°c", "−2°c"],
+      prompt: "Update the value after each change.",
+      hint: "−5 + 7 = 2, then 2 − 4.",
+      solution: "The final temperature is −2°C."
+    },
+    {
+      label: "Question 5 of 10 · Budget total",
+      text: "Find the total cost of <strong>£720</strong>, <strong>£480</strong> and <strong>£275</strong>.",
+      answers: ["1475", "£1475", "£1,475", "1,475"],
+      prompt: "Which two values make £1,200?",
+      hint: "£720 + £480 = £1,200.",
+      solution: "£1,200 + £275 = £1,475."
+    },
+    {
+      label: "Question 6 of 10 · Remaining budget",
+      text: "A centre has <strong>£2,400</strong> and spends <strong>£1,475</strong>. How much remains?",
+      answers: ["925", "£925"],
+      prompt: "Subtract the total spending from the starting budget.",
+      hint: "£2,400 − £1,475.",
+      solution: "The remaining budget is £925."
+    },
+    {
+      label: "Question 7 of 10 · Negative balance",
+      text: "A plan costs <strong>£2,485</strong> but the budget is <strong>£2,400</strong>. Enter the signed balance.",
+      answers: ["-85", "−85", "-£85", "−£85"],
+      prompt: "How far beyond the budget is the plan?",
+      hint: "£2,400 − £2,485.",
+      solution: "The signed balance is −£85."
+    },
+    {
+      label: "Question 8 of 10 · Alert threshold",
+      text: "A temperature alert activates at <strong>−5°C or below</strong>. Should it activate for <strong>−7°C</strong>? Type <strong>yes</strong> or <strong>no</strong>.",
+      answers: ["yes"],
+      prompt: "Compare −7 with the threshold −5.",
+      hint: "−7 is below −5.",
+      solution: "Yes, the alert should activate."
+    },
+    {
+      label: "Question 9 of 10 · Reserve threshold",
+      text: "A plan leaves <strong>£325</strong>. The minimum reserve is <strong>£400</strong>. How far below the reserve is the plan?",
+      answers: ["75", "£75"],
+      prompt: "Find the difference between £400 and £325.",
+      hint: "£400 − £325.",
+      solution: "The plan is £75 below the reserve."
+    },
+    {
+      label: "Question 10 of 10 · Connected decision",
+      text:
+        "A £2,400 budget funds actions costing <strong>£720</strong>, <strong>£480</strong>, <strong>£360</strong> and <strong>£275</strong>. Find the remaining balance.",
+      answers: ["565", "£565"],
+      prompt: "Find the total cost before subtracting it from the budget.",
+      hint: "The total cost is £1,835.",
+      solution: "£2,400 − £1,835 = £565."
+    }
+  ];
+
+  let current = 0;
+  const attempts = new Array(questions.length).fill(0);
+  const completed = new Array(questions.length).fill(false);
+  const answers = new Array(questions.length).fill("");
+  const workings = new Array(questions.length).fill("");
+
+  function normalise(value) {
+    return value
+      .toLowerCase()
+      .replace(/−/g, "-")
+      .replace(/£/g, "")
+      .replace(/,/g, "")
+      .replace(/°c/g, "")
+      .replace(/\s+/g, "")
+      .trim();
+  }
+
+  function saveCurrent() {
+    answers[current] = document.getElementById("practiceAnswer").value;
+    workings[current] = document.getElementById("practiceWorking").value;
+  }
+
+  function renderDots() {
+    const holder = document.getElementById("practiceDots");
+    holder.innerHTML = "";
+
+    questions.forEach(function (_, index) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = index + 1;
+      button.style.width = "34px";
+      button.style.height = "34px";
+      button.style.borderRadius = "50%";
+      button.style.cursor = "pointer";
+      button.style.fontWeight = "bold";
+
+      if (completed[index]) {
+        button.style.background = "#dcebd8";
+        button.style.border = "2px solid #4d6b47";
+      } else if (index === current) {
+        button.style.background = "#f5f0e6";
+        button.style.border = "2px solid #315d72";
+      } else {
+        button.style.background = "#ded9cf";
+        button.style.border = "1px solid #ded9cf";
+      }
+
+      button.onclick = function () {
+        saveCurrent();
+        current = index;
+        renderQuestion();
+      };
+
+      holder.appendChild(button);
+    });
+  }
+
+  function renderQuestion() {
+    const q = questions[current];
+
+    document.getElementById("practiceLabel").innerHTML = q.label;
+    document.getElementById("practiceQuestion").innerHTML = q.text;
+    document.getElementById("practiceAnswer").value = answers[current];
+    document.getElementById("practiceWorking").value = workings[current];
+
+    document.getElementById("practiceSupport").style.display = "none";
+    document.getElementById("practiceFeedback").style.display = "none";
+
+    const previous = document.getElementById("practicePrevious");
+    previous.disabled = current === 0;
+    previous.style.opacity = current === 0 ? "0.45" : "1";
+
+    document.getElementById("practiceNext").textContent =
+      current === questions.length - 1 ? "Finish" : "Next →";
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    } else {
+      solution.disabled = true;
+      solution.style.background = "#eeeae5";
+      solution.style.color = "#9a938b";
+      solution.style.cursor = "not-allowed";
+    }
+
+    renderDots();
+  }
+
+  window.showPracticePrompt = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>🤔 Socratic Prompt:</strong> " +
+      questions[current].prompt;
+  };
+
+  window.showPracticeHint = function () {
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>💡 Hint:</strong> " +
+      questions[current].hint;
+  };
+
+  window.checkPracticeAnswer = function () {
+    saveCurrent();
+
+    const response = normalise(answers[current]);
+    const feedback = document.getElementById("practiceFeedback");
+
+    if (!response) {
+      feedback.style.display = "block";
+      feedback.style.background = "#fff1cf";
+      feedback.textContent = "Type an answer before checking.";
+      return;
+    }
+
+    attempts[current]++;
+
+    const correct = questions[current].answers.some(function (answer) {
+      return normalise(answer) === response;
+    });
+
+    feedback.style.display = "block";
+
+    if (correct) {
+      completed[current] = true;
+      feedback.style.background = "#e3f0df";
+      feedback.textContent =
+        "Correct. Your number-sense reasoning is accurate.";
+    } else if (attempts[current] === 1) {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "Not quite yet. Estimate the likely result, identify the operation and check the sign and units.";
+    } else {
+      feedback.style.background = "#f6dddd";
+      feedback.textContent =
+        "That is still not correct. Use the hint and compare the result with a sensible estimate. The worked solution is now available.";
+    }
+
+    const solution = document.getElementById("practiceSolutionButton");
+
+    if (attempts[current] >= 2) {
+      solution.disabled = false;
+      solution.style.background = "#f5efe8";
+      solution.style.color = "#403d39";
+      solution.style.cursor = "pointer";
+    }
+
+    renderDots();
+  };
+
+  window.showPracticeSolution = function () {
+    if (attempts[current] < 2) return;
+
+    const box = document.getElementById("practiceSupport");
+    box.style.display = "block";
+    box.innerHTML =
+      "<strong>👀 Worked Solution:</strong> " +
+      questions[current].solution;
+  };
+
+  window.previousPracticeQuestion = function () {
+    if (current === 0) return;
+    saveCurrent();
+    current--;
+    renderQuestion();
+  };
+
+  window.nextPracticeQuestion = function () {
+    saveCurrent();
+
+    if (current < questions.length - 1) {
+      current++;
+      renderQuestion();
+    } else {
+      const feedback = document.getElementById("practiceFeedback");
+      feedback.style.display = "block";
+      feedback.style.background = "#e5edf4";
+      feedback.textContent =
+        "You have completed " +
+        completed.filter(Boolean).length +
+        " of 10 questions correctly. Review unfinished questions, then complete the reflection.";
+    }
+  };
+
+  renderQuestion();
+})();
+</script>
+
+<script>
+(() => {
+  const panels = [...document.querySelectorAll('#lessonView details.verse-panel')];
+  panels.forEach(panel => {
+    panel.addEventListener('toggle', () => {
+      if (!panel.open) return;
+      panels.forEach(other => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
